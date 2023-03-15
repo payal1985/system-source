@@ -1,0 +1,1712 @@
+    <Submission Id="132325894">
+            <Form Id="4279798">
+                <Name>Inventory Collection - All Barcodes</Name>
+                <Status>published</Status>
+                <Version>5</Version>
+            </Form>
+            <Date>2021.07.30 19:40:18</Date>
+            <DeviceDate>2021.07.30 19:39:52</DeviceDate>
+            <UserName>rpadilla@systemsource.com</UserName>
+            <FirstName>R</FirstName>
+            <LastName>Padilla</LastName>
+            <ResponseID>C97F4554-7589-4A42-8BF1-D8738F029214</ResponseID>
+            <No.>00013</No.>
+            <SubmissionNumber>00013</SubmissionNumber>
+            <Sections>
+                <Section>
+                    <Name>Start of Day</Name>
+                    <Screens>
+                        <Screen>
+                            <Name>Start of Day</Name>
+                            <Responses>
+                                <Response Guid="DC0E088A4C9B05F6E6F7AC816A7A2EE410ACA921">
+                                    <Label>Date of Activity</Label>
+                                    <Value>07/30/2021</Value>
+                                    <Type>Date</Type>
+                                </Response>
+                                <Response Guid="C9D1D3DB27473A03FF157DB4D12EE34E6E1D0696">
+                                    <Label>Time of Activity</Label>
+                                    <Value>11:22</Value>
+                                    <Type>Time</Type>
+                                </Response>
+                                <Response Guid="E0E61D5F8AE329973F091142ABFE6EDA456D50C9">
+                                    <Label>PM or Installer Name</Label>
+                                    <Value>Richard Padilla </Value>
+                                    <Type>Text Box</Type>
+                                </Response>
+                                <Response Guid="D21B3DE35791AE268ABBEAB43C80FB42B708A72B">
+                                    <Label>Client</Label>
+                                    <Value>SSI Seattle Showroom</Value>
+                                    <Type>Value List</Type>
+                                </Response>
+                                <Response Guid="D5B5482FF2D54423FFBC15A160A967936E0D675F">
+                                    <Label>Address</Label>
+                                    <Value>1200 5th Street, Suite 2000</Value>
+                                    <Type>Value List</Type>
+                                </Response>
+                                <Response Guid="2208AD73B56F4DACF6B2B9FC2991C13687AC9138">
+                                    <Label>GPS</Label>
+                                    <Value>Location Not Found</Value>
+                                    <Type>GPS</Type>
+                                </Response>
+                            </Responses>
+                        </Screen>
+                    </Screens>
+                </Section>
+                <Section>
+                    <Name>Inventory Collection</Name>
+                    <Screens>
+                        <Screen>
+                            <Name>Inventory Collection</Name>
+                            <ResponseGroups>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>5145387993851</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Ottoman</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Ottoman - Ottoman</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>Muuto Sq ottomans fix glides </Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>KNO</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value>KN03</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value>16”</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value>20”x20”</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Yellow </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>5</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>3</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522729</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522730</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522731</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>3396028558027</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Other</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Rockwell mobile cart with 3 shelf’s fix</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value></Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value>43” 1/2</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value>38”</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value>20”</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value>Bright White (118) - Laminate</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Bright White (118T)  - Paint</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Bright White</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>1</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522754</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522755</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>3284576518306</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Credenza</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Rockwell, antenna with suspended overhead</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>Overhead with 2 double doors, a frame</Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value>29” 1/2</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value>62” 1/4</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value>24” 3/4</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value>Bright White (118) - Laminate</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Bright White (118T)  - Paint</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Bright White</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>1</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522779</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522780</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>3410803361647</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Rockwell Conference table</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Rockwell conference table with power module cuts qty. USB, HDM, Phone cat6</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>3 piece top, Base wood frame</Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value>28”</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value>12’</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value>60”</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value>Birch (037) - Rockwell</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Birtch wood legs, metal base painted folkstone</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>1</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>4</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522819</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522822</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522824</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522826</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>7354424538209</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>K series guess chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value></Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Black - Paint</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Black</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Fabric / black</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Wood back</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Black Suede </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>3</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522891</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522893</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522895</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>5505120095912</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Guess chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>Metal frame</Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Black - Paint</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Black</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Mesh fabric </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Mesh fabric</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Mesh fabric </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>3</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522920</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522921</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522922</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>8684055261405</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Indoor guest chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>Custom metal , one shell frame</Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Black - Paint</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Black</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Metal</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Metal</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Painted black</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>3</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522945</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522946</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522947</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>8523024785316</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>2 piece guest chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>K Series </Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Black - Paint</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Wood stain black</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Fabric </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Fabric</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Light gray </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522970</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522971</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>8652682936102</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Studio guest chair Light maple</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value></Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Custom wood shape</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>LT maple</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Wood</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Wood</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>No Fabric, wood</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522995</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515522996</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>7357878285712</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Guest chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value></Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Black stain</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Black</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Cross cross pattern </Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Cross cross pattern</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>2” w strap</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515523032</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515523033</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>3085133764439</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Guest chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value>Perforated wood seat and back, arm pad painted metal</Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Chrome (Polished) - Metal</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Chrome</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Perforated wood</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Perforated wood</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Wood</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>1</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515523078</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515523079</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                                <ResponseGroup Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                    <Response Guid="55CAB84FDCCACADA6A70470C371AE0352F7E689E">
+                                        <Label>Barcode</Label>
+                                        <Value>3087602605694</Value>
+                                        <Type>Text Box</Type>
+                                    </Response>
+                                    <Section>
+                                        <Name>Inventory Collection (Detail)</Name>
+                                        <Screens>
+                                            <Screen>
+                                                <Name>Inventory Collection Start No Barcode</Name>
+                                                <Responses>
+                                                    <Response Guid="4B0F2DC504118C6B6E103001FAC01AF222DB5312">
+                                                        <Label>Area or Room Number</Label>
+                                                        <Value>Large Conference Room</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1177C794DFB7AABA22827216B535829A9D5EB564">
+                                                        <Label>Item Type</Label>
+                                                        <Value>Chair</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="1D273A538E177DA94DD20E89AFF445E027052885">
+                                                        <Label>Description</Label>
+                                                        <Value>Guest chair, perforated wood, no arms</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9AB55249C3179CEA0D09413ADBB8E534379204A5">
+                                                        <Label>Additional Description</Label>
+                                                        <Value></Value>
+                                                        <Type>Multi-Line Text</Type>
+                                                    </Response>
+                                                    <Response Guid="CD09E36A7FAECA0420C840EE1D2C20CAC99B6642">
+                                                        <Label>Manufacturer</Label>
+                                                        <Value>Knoll</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="A48FE454799D81818C4315FD715698720CCBF48B">
+                                                        <Label>Part No. if available</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="283A95247D4474F0A027E379F691BAEAD6966FDF">
+                                                        <Label>Diameter</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="6C37DBB7D0F6600650265B65C4DCAA1836BDF20B">
+                                                        <Label>Height</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7E74905BBA7DE4DDE1A799D8659AA82733F862FE">
+                                                        <Label>Width</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="F2289954F2AD3AC3B42822C777FB31FFDFC05F0A">
+                                                        <Label>Depth</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="8DDE841516257143C58BDA98941E935C1817936E">
+                                                        <Label>Top</Label>
+                                                        <Value></Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="2C7A285D7C2BD255CAEC123F018BAC0D470345C8">
+                                                        <Label>Base</Label>
+                                                        <Value>Chrome (Polished) - Metal</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66">
+                                                        <Label>Frame</Label>
+                                                        <Value>Black</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="358E9E154BFB32A13ECC161E88C792AB3ECC4E4A">
+                                                        <Label>Seat</Label>
+                                                        <Value>Wood</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="7CF28516F9FB4705BA472C827AB8563A062DD898">
+                                                        <Label>Back</Label>
+                                                        <Value>Wood</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="B6DB29F37AC28C9D16E78355F08311916DD02754">
+                                                        <Label>Fabric</Label>
+                                                        <Value>Wood</Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="C280754401874FD711BB99DD97FB9DEE8FEEEB79">
+                                                        <Label>Quantity</Label>
+                                                        <Value>1</Value>
+                                                        <Type>Integer</Type>
+                                                    </Response>
+                                                    <Response Guid="08F9E0664B13BF810A06440CA1BEA5BCA04A9982">
+                                                        <Label>Condition</Label>
+                                                        <Value>Good</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="9D59DAA5EF8FB59B73267335A23D4C358527C312">
+                                                        <Label>Notes</Label>
+                                                        <Value></Value>
+                                                        <Type>Text Box</Type>
+                                                    </Response>
+                                                    <Response Guid="DC0A5BA80515FF163A43DF8BD3041EAA152049DF">
+                                                        <Label>How Many Photos Do You Need?</Label>
+                                                        <Value>2</Value>
+                                                        <Type>Value List</Type>
+                                                    </Response>
+                                                    <Response Guid="536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515523126</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="290B7B172C9F4C0FFFC78B51467D82AAF16AD97A">
+                                                        <Label>Upload Image</Label>
+                                                        <Value>11515523129</Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="A09621CEA07B98DC0E6B4141E1C83F4443864C47">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                    <Response Guid="7105ED1A383A34670FDBD35F8EE4C03789C770F9">
+                                                        <Label>Upload Image</Label>
+                                                        <Value></Value>
+                                                        <Type>Image Capture</Type>
+                                                    </Response>
+                                                </Responses>
+                                            </Screen>
+                                        </Screens>
+                                    </Section>
+                                </ResponseGroup>
+                            </ResponseGroups>
+                        </Screen>
+                    </Screens>
+                </Section>
+            </Sections>
+        </Submission>
+    </Submissions>

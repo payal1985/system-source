@@ -1,0 +1,50 @@
+request_id
+61044
+61618
+61755
+
+61696 --not clear idea.
+Update [dbo].[request_followup]
+	Set note = ''
+WHere [request_followup_id] = 469345 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note = ''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469340 And request_id = 61044
+
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044
+
+Update [dbo].[request_followup]
+	Set note=''
+WHere [request_followup_id] = 469342 And request_id = 61044

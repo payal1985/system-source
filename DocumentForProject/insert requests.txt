@@ -1,0 +1,26 @@
+
+insert into requests
+(client_id = 60, 
+request_status_id = 1, 
+sub_status = 1, 
+assignee = 'REQUEST_DEFAULT_ASSIGNEE' (and client_ID = requests.client_ID),
+subject = api field from Service Now = short_description, 
+description = api field from Service Now = description,  
+request_type = 171, 
+request_date = date(), 
+bid_in_process = 0, 
+location = ?,
+client_branch_id = 171, 
+createprocess = 5
+eu_name = api field from Service Now = caller name, 
+eu_email = api ..., 
+eu_phone = api title,
+has punchlist = 0
+fromStandardssite = 0
+ishotlist = 0
+latecode = 0,
+createid = 0, 
+createdate = date(), 
+updateid = 0, 
+updatedate = date(), 
+updateprocess = 5

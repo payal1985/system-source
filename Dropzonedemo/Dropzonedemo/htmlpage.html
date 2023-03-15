@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<link rel="stylesheet" href="css/basic.css" />-->
+    <!--<link rel="stylesheet" href="css/dropzone.css" />-->
+    <script src="dropzone.min.js"></script>
+    <link href="~/dropzone/css/dropzone.css" rel="stylesheet" />
+    <script src="~/dropzone/dropzone.js"></script>
+
+    <script>
+        //var myDropzone = new Dropzone("div#myId", {
+        //    url: "/home/UploadPost"
+        //});
+        //$("div#myId").dropzone({
+        //    url: "/home/UploadPost"
+        //});
+
+
+       // Dropzone.autoDiscover = false;
+
+        // Dropzone class:
+        var myDropzone1 = new Dropzone("div#mydropzone", { url: "/file/post" });
+
+        // If you use jQuery, you can use the jQuery plugin Dropzone ships with:
+        $("div#mydropzone").dropzone({ url: "/file/post" });
+
+    </script>
+</head>
+
+
+
+
+<body>
+    <!--<div id="myId" class="fallback dropzone">
+        <input name="file" type="file" multiple />
+    </div>-->
+
+    <div >
+        <div class="dropzone" id="mydropzone">
+
+        </div>
+        </div>
+</body>
+
+

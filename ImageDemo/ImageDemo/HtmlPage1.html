@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <img id="photo" />
+    <script>
+        
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://picsum.photos/200/300/?random", true );
+
+        // Ask for the result as an ArrayBuffer.
+        xhr.responseType = "arraybuffer";
+
+        xhr.onload = function( e ) {
+            // Obtain a blob: URL for the image data.
+            var arrayBufferView = new Uint8Array( this.response );
+            var blob = new Blob( [ arrayBufferView ], { type: "image/jpeg" } );
+            var urlCreator = window.URL || window.webkitURL;
+            var imageUrl = urlCreator.createObjectURL( blob );
+            var img = document.querySelector( "#photo" );
+            img.src = imageUrl;
+        };
+
+xhr.send();
+
+    </script>
+</body>
+</html>

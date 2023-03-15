@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<form action="/" enctype="multipart/form-data" method="POST">
+    <input type="text" id="Username" name="Username" />
+    <div class="dropzone" id="my-dropzone" name="mainFileUploader">
+        <div class="fallback">
+            <input name="file" type="file" multiple />
+        </div>
+    </div>
+</form>
+<div>
+    <button type="submit" id="submit-all"> upload </button>
+</div>
+
+<script>
+    $(document).ready(function () {
+        window.onload = function () {
+        //    // dropzoneFormis the configuration for the element that has an id attribute
+        //    // with the value dropzone-form (or dropzoneForm)
+        //    //initialize the dropzone;
+        //    Dropzone.options.dropzoneForm = {
+        //        autoProcessQueue: 'your value',
+        //        acceptedFiles: 'your value',
+        //        maxFilesize: 'your value',
+        //        init: function() {
+        //                myDropzone = this;
+
+        //                this.on('addedfile', function (file) {
+        //                    //todo...something...
+        //                }
+        //       //catch other events here...
+        //    }
+        //    };
+        //};
+
+
+            Dropzone.options.myDropzone = {
+                url: "/Home/Index",
+                autoProcessQueue: false,
+                uploadMultiple: true,
+                parallelUploads: 100,
+                maxFiles: 100,
+                acceptedFiles: "image/*",
+
+                init: function () {
+
+                    var submitButton = document.querySelector("#submit-all");
+                    var wrapperThis = this;
+
+                    submitButton.addEventListener("click", function () {
+                        wrapperThis.processQueue();
+                    });
+
+                    this.on("addedfile", function (file) {
+
+                        // Create the remove button
+                        var removeButton = Dropzone.createElement("<button class='btn btn-lg dark'>Remove File</button>");
+
+                        // Listen to the click event
+                        removeButton.addEventListener("click", function (e) {
+                            // Make sure the button click doesn't submit the form:
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            // Remove the file preview.
+                            wrapperThis.removeFile(file);
+                            // If you want to the delete the file on the server as well,
+                            // you can do the AJAX request here.
+                        });
+
+                        // Add the button to the file preview element.
+                        file.previewElement.appendChild(removeButton);
+                    });
+
+                    this.on('sendingmultiple', function (data, xhr, formData) {
+                        formData.append("Username", $("#Username").val());
+                    });
+                }
+            };
+
+        //    // access Dropzone here
+        };
+
+    });
+</script>

@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewData["Title"] = "JQueryFileUpload";
+}
+
+@*<script src="~/lib/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>*@
+<link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+<link type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<link type="text/css" href="https://cdn.datatables.net/scroller/2.0.1/css/scroller.jqueryui.min.css" rel="stylesheet" />
+<link type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.jqueryui.min.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/scroller/2.0.1/js/dataTables.scroller.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+
+<h1>JQueryFileUpload</h1>
+
+<div class="row">
+    <table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>ZIP / Post code</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.noConflict();
+        $('#example').DataTable({
+            //ajax: "../data/2500.txt",
+            ajax: "../js/data.json",
+            deferRender: true
+            //scrollY: 200,
+            //scrollCollapse: true,
+            //scroller: true
+        });
+    });
+
+    //\$(".xdz").dropzone({
+    //    thumbnailWidth: 50, thumbnailHeight: 50, previewTemplate: pt(),
+    //    renameFile: function (file) {
+    //        console.log("renameFile " + currItemCode + ".jpg");
+    //        return currItemCode + ".jpg";
+    //    },
+    //    complete: function (file) {
+    //        console.log("DZ 1 One complete");
+    //        var elem = "#id" + currItemCode;
+    //        var timestamp = new Date().getTime();
+    //        var img = "/invssi/simg/" + currItemCode + ".jpg?t=" + timestamp;
+    //        console.log("complete elem " + elem + " : " + img);
+    //        \$(elem).html("
+    //            < img width = '80px' height = '80px' src = '"+img+"' > ");
+				//					////console.log("uploaded as " + currItemCode);
+				//				},
+    //    // error: function(){
+    //    //	console.log("test");
+    //    // },
+    //    url: "/invssis/dz.pl"
+    //});
+
+    //\$(".x2dz").dropzone({
+    //    thumbnailWidth: 50, thumbnailHeight: 50, previewTemplate: pt(),
+    //    //		renameFile: function(file) {
+    //    //			console.log("renameFile " +  + ".jpg");
+    //    //			return currItemCode + ".jpg";
+    //    //		},
+    //    init: function () {
+    //        this.on("sending", function (file, xhr, formData) {
+    //            formData.append("itemcode", currItemCode);
+    //            console.log(formData)
+    //        });
+    //    },
+    //    complete: function (file) {
+    //        console.log("DZ 2 Two complete");
+    //        var elem = "#id2" + currItemCode;
+    //        var timestamp = new Date().getTime();
+    //        \$.ajax({
+    //            type: 'POST',
+    //            url: '/invssis/xadmssis.pl',
+    //            data: { "op": "xreload", "ic": currItemCode },
+    //            dataType: 'text',
+    //            global: false,
+    //            success: function (data) {
+    //                if (data.substring(0, 3) == "OK:") {
+    //                    \$(elem).html(data.substring(3));
+    //                    return true;
+    //                }
+    //                return false;
+    //            }
+    //        });
+
+    //    },
+    //    url: "/invssis/dz2.pl"
+    //});
+    //document.addEventListener('mouseover', function (e) {
+    //    var el = e.srcElement;
+    //    if (el.dataset.itemcode && el.dataset.itemcode != "") {
+    //        currItemCode = el.dataset.itemcode;
+    //        console.log("MO: " + currItemCode);
+    //    }
+    //});
+    //document.addEventListener('dragenter', function (e) {
+    //    var el = e.srcElement;
+    //    if (el.dataset.itemcode && el.dataset.itemcode != "") {
+    //        currItemCode = el.dataset.itemcode;
+    //        console.log("DE: " + currItemCode);
+    //    }
+    //});
+</script>
+
+

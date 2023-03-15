@@ -1,0 +1,2063 @@
+{
+    "Submission": {
+        "Form": {
+            "Name": "Inventory Collection - All Barcodes",
+            "Status": "retired",
+            "Version": "5",
+            "_Id": "4279798"
+        },
+        "Date": "2021.07.30 19:40:18",
+        "DeviceDate": "2021.07.30 19:39:52",
+        "UserName": "rpadilla@systemsource.com",
+        "FirstName": "R",
+        "LastName": "Padilla",
+        "ResponseID": "C97F4554-7589-4A42-8BF1-D8738F029214",
+        "No.": "00013",
+        "SubmissionNumber": "00013",
+        "Sections": {
+            "Section": [
+                {
+                    "Name": "Start of Day",
+                    "Screens": {
+                        "Screen": {
+                            "Name": "Start of Day",
+                            "Responses": {
+                                "Response": [
+                                    {
+                                        "Label": "Date of Activity",
+                                        "Value": "07/30/2021",
+                                        "Type": "Date",
+                                        "_Guid": "DC0E088A4C9B05F6E6F7AC816A7A2EE410ACA921"
+                                    },
+                                    {
+                                        "Label": "Time of Activity",
+                                        "Value": "11:22",
+                                        "Type": "Time",
+                                        "_Guid": "C9D1D3DB27473A03FF157DB4D12EE34E6E1D0696"
+                                    },
+                                    {
+                                        "Label": "PM or Installer Name",
+                                        "Value": "Richard Padilla",
+                                        "Type": "Text Box",
+                                        "_Guid": "E0E61D5F8AE329973F091142ABFE6EDA456D50C9"
+                                    },
+                                    {
+                                        "Label": "Client",
+                                        "Value": "SSI Seattle Showroom",
+                                        "Type": "Value List",
+                                        "_Guid": "D21B3DE35791AE268ABBEAB43C80FB42B708A72B"
+                                    },
+                                    {
+                                        "Label": "Address",
+                                        "Value": "1200 5th Street, Suite 2000",
+                                        "Type": "Value List",
+                                        "_Guid": "D5B5482FF2D54423FFBC15A160A967936E0D675F"
+                                    },
+                                    {
+                                        "Label": "GPS",
+                                        "Value": "Location Not Found",
+                                        "Type": "GPS",
+                                        "_Guid": "2208AD73B56F4DACF6B2B9FC2991C13687AC9138"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "Name": "Inventory Collection",
+                    "Screens": {
+                        "Screen": {
+                            "Name": "Inventory Collection",
+                            "ResponseGroups": {
+                                "ResponseGroup": [
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "5145387993851",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Ottoman",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Ottoman - Ottoman",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "Muuto Sq ottomans fix glides",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "KNO",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "KN03",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "16”",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "20”x20”",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Yellow",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "5",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "3",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522729",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522730",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522731",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "3396028558027",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Other",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Rockwell mobile cart with 3 shelf’s fix",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "43” 1/2",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "38”",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "20”",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "Bright White (118) - Laminate",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Bright White (118T)  - Paint",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Bright White",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "1",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522754",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522755",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "3284576518306",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Credenza",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Rockwell, antenna with suspended overhead",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "Overhead with 2 double doors, a frame",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "29” 1/2",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "62” 1/4",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "24” 3/4",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "Bright White (118) - Laminate",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Bright White (118T)  - Paint",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Bright White",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "1",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522779",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522780",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "3410803361647",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Rockwell Conference table",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Rockwell conference table with power module cuts qty. USB, HDM, Phone cat6",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "3 piece top, Base wood frame",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "28”",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "12’",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "60”",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "Birch (037) - Rockwell",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Birtch wood legs, metal base painted folkstone",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "1",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "4",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522819",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522822",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522824",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522826",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "7354424538209",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "K series guess chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Black - Paint",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Black",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Fabric / black",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Wood back",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Black Suede",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "2",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "3",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522891",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522893",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522895",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "5505120095912",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Guess chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "Metal frame",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Black - Paint",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Black",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Mesh fabric",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Mesh fabric",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Mesh fabric",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "2",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "3",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522920",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522921",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522922",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "8684055261405",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Indoor guest chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "Custom metal , one shell frame",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Black - Paint",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Black",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Metal",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Metal",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Painted black",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "2",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "3",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522945",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522946",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522947",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "8523024785316",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "2 piece guest chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "K Series",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Black - Paint",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Wood stain black",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Fabric",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Fabric",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Light gray",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "2",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522970",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522971",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "8652682936102",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Studio guest chair Light maple",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Custom wood shape",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "LT maple",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Wood",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Wood",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "No Fabric, wood",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "2",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522995",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515522996",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "7357878285712",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Guest chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Black stain",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Black",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Cross cross pattern",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Cross cross pattern",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "2” w strap",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "2",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515523032",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515523033",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "3085133764439",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Guest chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "Perforated wood seat and back, arm pad painted metal",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Chrome (Polished) - Metal",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Chrome",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Perforated wood",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Perforated wood",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Wood",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "1",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515523078",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515523079",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    },
+                                    {
+                                        "Response": {
+                                            "Label": "Barcode",
+                                            "Value": "3087602605694",
+                                            "Type": "Text Box",
+                                            "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                        },
+                                        "Section": {
+                                            "Name": "Inventory Collection (Detail)",
+                                            "Screens": {
+                                                "Screen": {
+                                                    "Name": "Inventory Collection Start No Barcode",
+                                                    "Responses": {
+                                                        "Response": [
+                                                            {
+                                                                "Label": "Area or Room Number",
+                                                                "Value": "Large Conference Room",
+                                                                "Type": "Value List",
+                                                                "_Guid": "4B0F2DC504118C6B6E103001FAC01AF222DB5312"
+                                                            },
+                                                            {
+                                                                "Label": "Item Type",
+                                                                "Value": "Chair",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1177C794DFB7AABA22827216B535829A9D5EB564"
+                                                            },
+                                                            {
+                                                                "Label": "Description",
+                                                                "Value": "Guest chair, perforated wood, no arms",
+                                                                "Type": "Value List",
+                                                                "_Guid": "1D273A538E177DA94DD20E89AFF445E027052885"
+                                                            },
+                                                            {
+                                                                "Label": "Additional Description",
+                                                                "Value": "",
+                                                                "Type": "Multi-Line Text",
+                                                                "_Guid": "9AB55249C3179CEA0D09413ADBB8E534379204A5"
+                                                            },
+                                                            {
+                                                                "Label": "Manufacturer",
+                                                                "Value": "Knoll",
+                                                                "Type": "Value List",
+                                                                "_Guid": "CD09E36A7FAECA0420C840EE1D2C20CAC99B6642"
+                                                            },
+                                                            {
+                                                                "Label": "Part No. if available",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "A48FE454799D81818C4315FD715698720CCBF48B"
+                                                            },
+                                                            {
+                                                                "Label": "Diameter",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "283A95247D4474F0A027E379F691BAEAD6966FDF"
+                                                            },
+                                                            {
+                                                                "Label": "Height",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "6C37DBB7D0F6600650265B65C4DCAA1836BDF20B"
+                                                            },
+                                                            {
+                                                                "Label": "Width",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "7E74905BBA7DE4DDE1A799D8659AA82733F862FE"
+                                                            },
+                                                            {
+                                                                "Label": "Depth",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "F2289954F2AD3AC3B42822C777FB31FFDFC05F0A"
+                                                            },
+                                                            {
+                                                                "Label": "Top",
+                                                                "Value": "",
+                                                                "Type": "Value List",
+                                                                "_Guid": "8DDE841516257143C58BDA98941E935C1817936E"
+                                                            },
+                                                            {
+                                                                "Label": "Base",
+                                                                "Value": "Chrome (Polished) - Metal",
+                                                                "Type": "Value List",
+                                                                "_Guid": "2C7A285D7C2BD255CAEC123F018BAC0D470345C8"
+                                                            },
+                                                            {
+                                                                "Label": "Frame",
+                                                                "Value": "Black",
+                                                                "Type": "Value List",
+                                                                "_Guid": "62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66"
+                                                            },
+                                                            {
+                                                                "Label": "Seat",
+                                                                "Value": "Wood",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "358E9E154BFB32A13ECC161E88C792AB3ECC4E4A"
+                                                            },
+                                                            {
+                                                                "Label": "Back",
+                                                                "Value": "Wood",
+                                                                "Type": "Value List",
+                                                                "_Guid": "7CF28516F9FB4705BA472C827AB8563A062DD898"
+                                                            },
+                                                            {
+                                                                "Label": "Fabric",
+                                                                "Value": "Wood",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "B6DB29F37AC28C9D16E78355F08311916DD02754"
+                                                            },
+                                                            {
+                                                                "Label": "Quantity",
+                                                                "Value": "1",
+                                                                "Type": "Integer",
+                                                                "_Guid": "C280754401874FD711BB99DD97FB9DEE8FEEEB79"
+                                                            },
+                                                            {
+                                                                "Label": "Condition",
+                                                                "Value": "Good",
+                                                                "Type": "Value List",
+                                                                "_Guid": "08F9E0664B13BF810A06440CA1BEA5BCA04A9982"
+                                                            },
+                                                            {
+                                                                "Label": "Notes",
+                                                                "Value": "",
+                                                                "Type": "Text Box",
+                                                                "_Guid": "9D59DAA5EF8FB59B73267335A23D4C358527C312"
+                                                            },
+                                                            {
+                                                                "Label": "How Many Photos Do You Need?",
+                                                                "Value": "2",
+                                                                "Type": "Value List",
+                                                                "_Guid": "DC0A5BA80515FF163A43DF8BD3041EAA152049DF"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515523126",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "11515523129",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "290B7B172C9F4C0FFFC78B51467D82AAF16AD97A"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "A09621CEA07B98DC0E6B4141E1C83F4443864C47"
+                                                            },
+                                                            {
+                                                                "Label": "Upload Image",
+                                                                "Value": "",
+                                                                "Type": "Image Capture",
+                                                                "_Guid": "7105ED1A383A34670FDBD35F8EE4C03789C770F9"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "_Guid": "55CAB84FDCCACADA6A70470C371AE0352F7E689E"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "_Id": "132325894"
+    }
+}

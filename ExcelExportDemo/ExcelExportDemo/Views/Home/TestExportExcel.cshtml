@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "TestExportExcel";
+}
+
+<h2>TestExportExcel</h2>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+<table class="table table-striped" id="account_table">
+    <tr>
+        <th>
+            header 1
+        </th>
+        <th>
+            header 2
+        </th>
+        <th>Images</th>
+    </tr>
+    <tr>
+        <td>
+        First Row    
+        </td>
+        <td>
+            Saved to todays date
+        </td>
+        <td><img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=2" height="100" width="100" /></td>
+    </tr>
+    <tr>
+        <td>
+           Second Row
+        </td>
+        <td>
+            Saved to todays date
+        </td>
+        <td><img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=1" height="100" width="100" /></td>
+        <td>icon</td>
+    </tr>
+    <tr>
+        <td>
+           Third Row
+        </td>
+        <td>
+            Saved to todays date
+        </td>
+        <td><img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=3" height="100" width="100" /></td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-success" id="btnExport">Export</a>
+</div>
+
+<script>
+    var tableToExcel = (function () {
+        var uri = 'data:application/vnd.ms-excel;base64,'
+            , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>< !--[if gte mso 9]> <xml><x: <x: <x: <x: {worksheet}</x: Name > <x: WorksheetOptions><x: </x: WorksheetOptions ></x: ExcelWorksheet ></x: ExcelWorksheets ></x: ExcelWorkbook ></xml >< ![endif]-- > <meta http-equiv="content-type" content="text/plain; charset=UTF-8" /></head > <body><table>{table}</table></body></html>'
+            //, template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>< !--[if gte mso 9]> <xml><x: <x: <x: <x: {worksheet}</x: Name > <x: WorksheetOptions><x: </x: WorksheetOptions ></x: ExcelWorksheet ></x: ExcelWorksheets ></x: ExcelWorkbook ></xml >< ![endif]-- > <meta http-equiv="content-type" content="text/plain; charset=UTF-8" /></head > <body><img src="{imgsrc1}" style="float:left;clear:none;margin-right:50px " height=50 width=100/><img src="{imgsrc2}" style="float:right;clear:none;margin-left:50px " height=50 width=100/><h1 style="display:inline-block">{heading}</h1><br><table>{table}</table></body></html>'
+            , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
+            , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+        return function (table, name) {
+            if (!table.nodeType) table = document.getElementById(table)
+            heading = 'THIS IS HEAD';
+            imgsrc1 = 'http://www.w3schools.com/html/pic_mountain.jpg';
+            imgsrc2 = 'http://www.w3schools.com/html/pic_html5.gif';
+
+            //var ctx = { worksheet: name || 'Worksheet', imgsrc1: imgsrc1, imgsrc2: imgsrc2, heading: heading, table: table.innerHTML }
+            var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML }
+            //var blob = new Blob([format(template, ctx)]);
+            var blob = new Blob([format(template, ctx)]);
+            var blobURL = window.URL.createObjectURL(blob);
+            return blobURL;
+        }
+    })()
+
+    $("#btnExport").click(function () {
+        var todaysDate = new Date().getTime();
+        var blobURL = tableToExcel('account_table', 'test_table');
+        $(this).attr('download', todaysDate + '.xls')
+        $(this).attr('href', blobURL);
+    });
+</script>

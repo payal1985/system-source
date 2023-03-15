@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<style>
+    input[type="button"] {
+        margin: 30px 0px 20px 210px;
+        width: 250px;
+        height: 60px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+        background: #13b236;
+        color: #f4ce01;
+        border: 2px solid #f4ce01;
+    }
+
+        input[type="button"]:active {
+            color: #13b236;
+            border-color: #13b236;
+            background: gold;
+        }
+
+        input[type="button"]:hover {
+            border: 3px solid;
+        }
+
+    table tr td {
+        padding: 5px;
+    }
+</style>
+@*<script lang="javascript" src="xlsx.full.min.js"></script>
+    <script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.6/xlsx.core.min.js"></script>
+    <script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.js"></script>*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Export To Excel with pure JavaScript</title>
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/fatcow/32x32/table_excel.png" />
+    @*<link rel="stylesheet" href="style.css" />*@
+</head>
+<body>
+    <div>
+        <table id="exTable" border="2">
+            <thead class="lockedRecordsBg">
+                <tr bgcolor='#87AFC6' style='height: 75px; text-align: center; width: 250px'>
+                    @*<th style="width:40px">S#</th>*@
+                    <th>Product</th>
+                    <th>Standard Lead Time</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @*<th>1</th>*@
+                    <td>A630 - asdfasdfasdfasfConic Tub Chair</td>
+                    <td>4-6 weeks</td>
+                    <td>$1185.60</td>
+                    <td>1</td>
+                    <td style="height:200px; width:200px; padding:15px"><img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=2" height="100" width="100" /></td>
+                </tr>
+                <tr>
+                    @*<th>2</th>*@
+                    <td>A631 - asdfasdfasdfasfConic Tub Chair</td>
+                    <td>4-6 weeks</td>
+                    <td>$1285.60</td>
+                    <td>3</td>
+                    <td style="height:200px; width:200px; padding:15px"><img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=3" height="100" width="100" /></td>
+                </tr>
+                <tr>
+                    @*<th>3</th>*@
+                    <td>A632 - asdfasdfasdfasfConic Tub Chair</td>
+                    <td >4-6 weeks</td>
+                    <td>$1285.60</td>
+                    <td>4</td>
+                    <td style="height:200px; width:200px; padding:15px">
+                        <img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=1" height="100" width="100" />
+                    </td>
+                </tr>
+                <!--<tr>
+                <th>3</th>
+            <td>Test 123</td>
+            <td style="text-decoration: line-through;">line through text</td>
+            <td style="background-color:blue;color:white" colspan="2"> bg =  blue and color = white and merged column</td>
+        </tr>
+                <tr>
+                    <th>4</th>
+                    <td style="font-weight:bold">test@gmail.com</td>
+                    <td></td>
+                    <td>USA</td>
+                    <td style="height:160px; padding:5px">-->
+                        @*<img src="https://avatars0.githubusercontent.com/u/4952560?s=460&v=4" height="100" width="100" />*@
+                        <!--<img src="https://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=3" height="100" width="100" />
+                    </td>
+                </tr>
+        <tr>
+            <th>5</th>
+            <td>sp char - !"#$%&'()*+,-./:;<=>?[\]^_`{|}~</td>
+            <td style="text-decoration: line-through;">like through text</td>
+            <td>+91 29********</td>
+            <td>Switzerland</td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td>
+                Lorem Ipsum只是印刷和排版行业的伪文本<br />
+                Lorem Ipsum - просто фиктивный текст в полиграфии и вёрстке.<br />
+                Lorem Ipsum to po prostu fikcyjny tekst branży drukarskiej i składu.
+                Lorem Ipsumは、印刷および植字業界の単なるダミーテキストです。
+            </td>
+            <td>test@gmail.com</td>
+            <td rowspan="2">Merge row 2 and 3</td>
+            <td>India</td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td>Sudhir K Gupta</td>
+            <td>test@gmail.com</td>
+            <td style="color:red">Canada (color = red)</td>
+        </tr>-->
+            </tbody>
+        </table>
+        <input type="button" value="export" onclick="exportToExcel('exTable')" />
+    </div>
+    @*<script src="exportToExcel.js" defer></script>*@
+</body>
+</html>
+<script>
+    function exportToExcel(tableId) {
+        let tableData = document.getElementById(tableId).outerHTML;
+        ////tableData = tableData.replace(/<img[^>]*>/gi,""); //enable thsi if u dont want images in your table
+        //tableData = tableData.replace(/<A[^>]*>|<\/A>/g, ""); //remove if u want links in your table
+        //tableData = tableData.replace(/<input[^>]*>|<\/input>/gi, ""); //remove input params
+
+        //tableData = tableData + '<br /><br />Code witten By sudhir K gupta. If you found this helpful then please like my FB page -<br/>https://facebook.com/comedymood<br />My Blog - https://comedymood.com'
+
+        //click a hidden link to which will prompt for download.
+        let a = document.createElement('a')
+        let dataType = 'data:application/vnd.ms-excel';
+        a.href = `data:application/vnd.ms-excel, ${encodeURIComponent(tableData)}`
+        //a.download = 'sudhir600_' + rand() + '.xls'
+        a.download = 'payaltest_' + new Date().getTime() + '.xls'
+        a.click()
+    }
+    function rand() {
+        let rand = Math.floor((Math.random().toFixed(2) * 100))
+        let dateObj = new Date()
+        let dateTime = `${dateObj.getHours()}${dateObj.getMinutes()}${dateObj.getSeconds()}`
+
+        return `${dateTime}${rand}`
+    }
+</script>

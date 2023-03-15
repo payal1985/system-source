@@ -1,0 +1,251 @@
+ResGrp_Section_Name,ResGrp_Section_Screen_Name,ResGrp_Section_Screen_Response_Guid,ResGrp_Section_Screen_Response_Label,ResGrp_Section_Screen_Response_Value,ResGrp_Section_Screen_Response_Type,SubmissionId,Section_Screen_ResponseGroup_Response_Value
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)","20",Integer,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Tall Table",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Other - Other",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description","Tall cafe table",Multi-Line Text,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available","YKTR36YHNL",Text Box,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height",,Integer,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter","36",Integer,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Zebra (145) - Laminate",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Folkstone Grey (114T)  - Paint",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat",,Text Box,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","12",Integer,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","2",Value List,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775516",Image Capture,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image","11497775517",Image Capture,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,1
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)","20",Integer,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Pouf",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Pouf - k. lounge Pouf, glides",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height","15",Integer,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter","18",Integer,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Arabescato - Stone",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat","Fabric",Text Box,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775542",Image Capture,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,2
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Coffee Table",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Coffee Table - Eero Saarinen Oval Coffee Table, low level, 41-1/4Wx27-1/2Dx15-1/4H",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height","15",Integer,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width","41",Integer,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth","27",Integer,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter",,Integer,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Dark Mahogany (628)  - Techwood",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Black",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat",,Text Box,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775568",Image Capture,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,3
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)","20",Integer,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Lounge Chair",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Lounge Chair - Womb chair with ottoman",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height",,Integer,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter",,Integer,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Arabescato - Stone",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Chrome",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat","Blue shell, yellow inner",Text Box,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","2",Value List,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775594",Image Capture,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image","11497775595",Image Capture,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,4
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Pouf",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Pouf - k. lounge Pouf, glides",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height","18",Integer,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter","42",Integer,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Arabescato - Stone",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat","Black",Text Box,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775620",Image Capture,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,5
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Side Table",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Side Table",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height","20",Integer,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter","12",Integer,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Bright White (118) - Laminate",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Jet Black (111T)  - Paint",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat",,Text Box,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775646",Image Capture,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,6
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Sofa",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Sofa - Charles Pfister Sofa, Center Module",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height",,Integer,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter",,Integer,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Arabescato - Stone",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat","Fabric - black and white",Text Box,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","9",Integer,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","2",Value List,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775672",Image Capture,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image","11497775673",Image Capture,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,7
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Sofa",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Sofa - Charles Pfister Sofa, Corner Module",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height",,Integer,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter",,Integer,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Arabescato - Stone",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat","Fabric - black & white",Text Box,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775698",Image Capture,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,8
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Side Table",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Small Round Side Table",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Knoll",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height","20",Integer,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width",,Integer,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth",,Integer,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter","12",Integer,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Black Laminate",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Yellow",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","None",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat",,Text Box,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","1",Integer,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775724",Image Capture,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,9
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8487E7E75AC3B2F0D7443569D6C2EC7F660223B7,"Barcode (If available)",,Text Box,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1A7D49A87D7EF037353EE018846FF0AA6C519F16,"Floor (Ground=0, Mezzanine=100, Roof=101)",,Integer,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,4B0F2DC504118C6B6E103001FAC01AF222DB5312,"Area or Room Number","Living Room",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1177C794DFB7AABA22827216B535829A9D5EB564,"Item Type","Pillow",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,1D273A538E177DA94DD20E89AFF445E027052885,"Description","Pillow",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9AB55249C3179CEA0D09413ADBB8E534379204A5,"Additional Description",,Multi-Line Text,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,CD09E36A7FAECA0420C840EE1D2C20CAC99B6642,"Manufacturer","Unknown",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A48FE454799D81818C4315FD715698720CCBF48B,"Part No. if available",,Text Box,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,6C37DBB7D0F6600650265B65C4DCAA1836BDF20B,"Height",,Integer,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7E74905BBA7DE4DDE1A799D8659AA82733F862FE,"Width","27",Integer,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,F2289954F2AD3AC3B42822C777FB31FFDFC05F0A,"Depth","24",Integer,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,283A95247D4474F0A027E379F691BAEAD6966FDF,"Diameter",,Integer,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,8DDE841516257143C58BDA98941E935C1817936E,"Top","Arabescato - Stone",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,2C7A285D7C2BD255CAEC123F018BAC0D470345C8,"Base","Anodized Aluminum - Metal",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,62D88015A5E8D398264D2DA82BB6B7C7EA6B5B66,"Frame","Dark",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,358E9E154BFB32A13ECC161E88C792AB3ECC4E4A,"Seat","Black",Text Box,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7CF28516F9FB4705BA472C827AB8563A062DD898,"Back",,Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,C280754401874FD711BB99DD97FB9DEE8FEEEB79,"Quantity","4",Integer,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,08F9E0664B13BF810A06440CA1BEA5BCA04A9982,"Condition","Good",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,9D59DAA5EF8FB59B73267335A23D4C358527C312,"Notes",,Text Box,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,DC0A5BA80515FF163A43DF8BD3041EAA152049DF,"How Many Photos Do You Need?","1",Value List,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,536F5F0E19B6C1FAA3699BE74DE6AD1C71A5C873,"Upload Image","11497775750",Image Capture,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,290B7B172C9F4C0FFFC78B51467D82AAF16AD97A,"Upload Image",,Image Capture,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,A09621CEA07B98DC0E6B4141E1C83F4443864C47,"Upload Image",,Image Capture,132155877,10
+Inventory Collection (Detail),Inventory Collection Start No Barcode,7105ED1A383A34670FDBD35F8EE4C03789C770F9,"Upload Image",,Image Capture,132155877,10

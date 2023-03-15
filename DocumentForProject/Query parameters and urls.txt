@@ -1,0 +1,79 @@
+#urls
+
+
+user = 'svcSystemSource'
+pwd = 'nm26+7Rx7A&Jn*"qNfW:;[/J_dy[\P'
+
+headers = {"Content-Type":"application/xml","Accept":"application/json"}
+response = requests.get(url, auth=(user, pwd), headers=headers)
+
+https://accruentseattleoemdev.service-now.com/api/now/table/x_ctv_fac_work_order?svcSystemSource&nm26+7Rx7A&Jn*"qNfW:;[/J_dy[\P --testing purpose i put it here
+
+URL to get all requests assigned to Systems Source that are Closed
+url = 'https://accruentseattleoemdev.service-now.com/api/now/table/x_ctv_fac_work_order?&assignment_group=4d93ef121bcbe810594e0f6cdc4bcbf7&state!=3'
+
+
+api/Accruent/4d93ef121bcbe810594e0f6cdc4bcbf7
+api/Accruent?assignment_group=4d93ef121bcbe810594e0f6cdc4bcbf7
+--api/files?table_sys_id=57276b161bcbe810594e0f6cdc4bcbd7&request_id=5
+--api/files?table_sys_id=bbb6d9631bbfec50594e0f6cdc4bcbb6&request_id=6
+
+Note: you don't see any comments returning in this primary request. 
+To access Request comments, here is the url param /table/sys_journal_field/sysparm_query=element_id=sys_id
+
+url = 'https://accruentseattleoemdev.service-now.com/api/now/table/sys_journal_field?sysparm_query=element_id=4657eb161bcbe810594e0f6cdc4bcbf1&element=comments'
+
+
+To send comments back to ServiceNow/Accruent:
+call patch -  /table/ctv_fac_work_order/sys_id
+url = 'https://accruentseattleoemdev.service-now.com/api/now/table/x_ctv_fac_work_order/4657eb161bcbe810594e0f6cdc4bcbf1'
+response = requests.patch(url, auth=(user, pwd), headers=headers, data="<request><entry><comments>Some other new comment here from Systems Source</comments></entry></request>")
+
+https://accruentseattleoemdev.service-now.com/api/now/table/x_ctv_fac_work_order/sys_id=4657eb161bcbe810594e0f6cdc4bcbf1
+
+<InComingStudent>
+<StudentID>10</StudentID>
+<Batch>56</Batch>
+</InComingStudent>
+
+{
+  "StudentID": "10",
+  "Batch": "56"
+}
+
+{
+"request":[
+{
+    "entry":[
+    {
+        "comments":"Some other new comment here from Systems Source"
+    }
+    ]
+}
+]
+}
+
+
+{
+  "entry": {
+    "comments": "Some other new comment here from Systems Source"
+  }
+}
+
+
+To Close a request in ServiceNow/Accruent:
+call is patch - /table/ctv_fac_work_order/sys_id
+ to close a request - you must change state=3, send x_ctv_sc_close_code=SWAG+F Request Complete, and close_notes=Systems Source has closed this request.
+
+url = 'https://accruentseattleoemdev.service-now.com/api/now/table/x_ctv_fac_work_order/4657eb161bcbe810594e0f6cdc4bcbf1'
+response = requests.patch(url, auth=(user, pwd), headers=headers, data="<request><entry><state>3</state><x_ctv_sc_close_code>SWAG+F Request Complete</x_ctv_sc_close_code><close_notes>Systems Source has closed this request.</close_notes></entry></request>")
+
+
+
+follup comment
+clientid = 60
+clientvisible=1
+frequest10=wo-00008168
+
+
+

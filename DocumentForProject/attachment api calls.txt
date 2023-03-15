@@ -1,0 +1,48 @@
+
+# to get attachments
+url = 'https://accruentseattleoemdev.service-now.com/api/now/attachment?sysparm_query=table_name=x_ctv_fac_work_order&table_sys_id=bbb6d9631bbfec50594e0f6cdc4bcbb6'
+
+user = 'svcSystemSource'
+pwd = 'nm26+7Rx7A&Jn*"qNfW:;[/J_dy[\P'
+
+headers = {"Content-Type":"application/xml","Accept":"application/json"}
+
+response = requests.get(url, auth=(user, pwd), headers=headers)
+
+if response.status_code != 200: 
+    print('Status:', response.status_code, 'Headers:', response.headers, 'Error Response:', response.json())
+    exit()
+
+# Decode the JSON response into a dictionary and use the data
+data = response.json()
+# print(json.dumps(data, indent=4, sort_keys=True))
+pprint(data)
+
+
+---------------------------------------------------------------------------
+
+# to post attachments
+
+I'm getting errors but I'm seeing messages that doing this through postman is taking care of the 'Content-Type:multipart-form/data' issue
+
+
+url = 'https://accruentseattleoemdev.servicenow.com/api/now/attachment/upload'
+
+payload = {'table_name':'x_ctv_fac_work_order', 'table_sys_id':'bbb6d9631bbfec50594e0f6cdc4bcbb6'}
+
+# it is important to specify the correct file type
+files = {'file': ('stool.jpg', open('stool.jpg', 'rb'), 'image/jpg', {'Expires': '0'})}
+
+user = 'svcSystemSource'
+pwd = 'nm26+7Rx7A&Jn*"qNfW:;[/J_dy[\P'
+
+headers = {"Accept":"*/*"}
+
+response = requests.post(url, auth=(user, pwd), headers=headers, files=files, data=payload)
+
+if response.status_code != 200: 
+    print('Status:', response.status_code, 'Headers:', response.headers, 'Error Response:', response.json())
+    exit()
+	
+data2 = response.json()
+pprint(data2)

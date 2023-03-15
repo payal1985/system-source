@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.1/xlsx.full.min.js"></script>
+
+<div class="row">
+    @*<div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>*@
+
+    <table id="customers" border="1" width="100%">
+        <thead>
+            <tr class='warning'>
+                <th>Country</th>
+                <th>Population</th>
+                <th>Date</th>
+                <th>%ge</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chinna</td>
+                <td>1,363,480,000</td>
+                <td>March 24, 2014</td>
+                <td>19.1</td>
+                <td><img src="http://i.stack.imgur.com/CekuQ.jpg" width='60' height='60' /></td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>1,241,900,000</td>
+                <td>March 24, 2014</td>
+                <td>17.4</td>
+                <td><img src="http://i.stack.imgur.com/CekuQ.jpg" width='60' height='60' /></td>
+            </tr>
+            <tr>
+                <td>United States</td>
+                <td>317,746,000</td>
+                <td>March 24, 2014</td>
+                <td>4.44</td>
+                <td><img src="http://i.stack.imgur.com/CekuQ.jpg" width='60' height='60' /></td>
+            </tr>
+            <tr>
+                <td>Indonesia</td>
+                <td>249,866,000</td>
+                <td>July 1, 2013</td>
+                <td>3.49</td>
+                <td><img src="http://i.stack.imgur.com/CekuQ.jpg" width='60' height='60' /></td>
+            </tr>
+            <tr>
+                <td>Brazil</td>
+                <td>201,032,714</td>
+                <td>July 1, 2013</td>
+                <td>2.81</td>
+                <td><img src="http://i.stack.imgur.com/CekuQ.jpg" width='60' height='60' /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+    <br />
+    @*<a href="#" onClick="$('#customers').tableExport({type:'excel',escape:'false'});">export</a>*@
+    <button id="myButtonControlID">Export Table data into Excel</button>
+    <button id="exportData" onclick="ExportData();">Export Data</button>
+</div>
+
+<script>
+    $("[id$=myButtonControlID]").click(function (e) {
+        window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('div[id$=divTableDataHolder]').html()));
+        e.preventDefault();
+    });
+
+ function ExportData()
+{
+            filename = 'reports.xlsx';
+   //data=[{Market: "IN", NewArrivals: "6", UpcomingAppointments: "2", Pending1stAttempt: "4"},
+   //     {Market: "KS/MO", NewArrivals: "4", UpcomingAppointments: "4", Pending1stAttempt: "2"},
+   //     {Market: "KS/MO", NewArrivals: "4", UpcomingAppointments: "4", Pending1stAttempt: "2"},
+   //             { Market: "KS/MO", NewArrivals: "4", UpcomingAppointments: "4", Pending1stAttempt: "2" }]
+
+            data =[
+       { "pdesc": "this is a description 1", "leadtime": "lead time val 1", "price": 5000.00, "qty": 5, "img": "http://clients.systemsource.com/clients/msft/images/product/2SCSXGL_thumb.jpg" },
+       { "pdesc": "this is a description 2", "leadtime": "lead time val 2", "price": 3000.00, "qty": 3, "img": "http://clients.systemsource.com/clients/msft/images/product/TDSO_thumb.jpg" }
+   ]
+    var ws = XLSX.utils.json_to_sheet(data);
+    var wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "People");
+    XLSX.writeFile(wb,filename);
+ }
+</script>

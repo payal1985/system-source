@@ -1,0 +1,68 @@
+Ucx Phone device login
+9499100527@systemsource.
+1mink-zLNzm#
+
+System Source Credential
+
+PPatel.IC@SystemSource.com
+PP@CodeWorld21
+
+I have to put the link into email notification for the follow up request
+https://dev.systemsource.com/blom/r/rq/61539
+
+ https://dev.systemsource.com/invssi/admin/xadm.pl
+admin    
+mahalo2020$$i
+$$mainline!
+
+http://dev.systemsource.com/invssi/admin/xadm.pl
+admin / mahalo2020$$i
+    
+
+61253
+
+60=client_id
+DB Credential
+helpdesk
+CommercialGradeSoftware
+
+
+Need to ask Details in Meeting
+-Is there any source control mechenism to check in checkout code like TFS/Git?
+-Is there any branch like Developer , staging and Production?
+-Need to get access for Database Developer access
+-Do we need to host on IIS Server or clould server?
+-Need to fix Database structure.
+
+- How can i test Patch / post api from code?
+
+Cannot insert the value NULL into column 'request_followup_id', table 'ssi_product_master_test.dbo.request_followup'; column does not allow nulls. INSERT fails.
+
+
+if state = 3 or state=7
+i have to check in request if WO exist , it does ,generate the follow up 
+
+
+i created a account called  ovm-charon\serviceacct2 
+the password is InaPerfectWorld1!
+
+
+
+net use k: \\ovm-charon\attachments /user:ovm-charon\serviceacct2 InaPerfectWorld1!
+
+Need one help how we use to drop the photos and documents files on the one server to another server.
+
+
+Batch file command for delete specific files on specific folder location.
+REM Remove files older than 12 days
+forfiles /p "F:\temp" /s /m *.BAK /c "cmd /c Del @path" /d -12
+
+
+Attachment related question
+Suppose, 
+today came one attachment abc.txt for requestid=1, we processed with new follow up, new attachment and email notification.
+
+tomorrow came same attachment abc.txt for requestid=1.
+
+So, what is the step need to take care?
+

@@ -1,0 +1,275 @@
+﻿
+@{
+    ViewData["Title"] = "FileUpload";
+}
+@*<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link href="~/dropzone/css/dropzone.css" rel="stylesheet" />
+    <script src="~/dropzone/dropzone.js"></script>*@
+
+@*<link type="text/css" href="/static/ssi.css" rel="stylesheet" />*@
+
+@*<link type="text/css" href="xadm.css" rel="stylesheet" />*@
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>*@
+
+<link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+<link type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<link type="text/css" href="https://cdn.datatables.net/scroller/2.0.1/css/scroller.jqueryui.min.css" rel="stylesheet" />
+<link type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.jqueryui.min.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.jqueryui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/scroller/2.0.1/js/dataTables.scroller.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+
+@*<script type="text/javascript" src="/static/js/emmsmain.js"></script>*@
+<script src="~/dropzone/dropzone.js"></script>
+
+<h1>FileUpload</h1>
+
+@*<table id="outside">
+        <tr><td id="t1">one</td></tr>
+        <tr><td id="t2">two</td></tr>
+    </table>*@
+
+<div class="row">
+    @*<table id="gridT" class="table table-striped table-hover">*@
+    <table id="gridT">
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr style="height:2px;">
+                <td style="text-align: left; padding: 10px;">Item Code</td>
+                <td style="text-align: left; padding: 10px;">Image</td>
+                <td style="text-align: left; padding: 10px;">Text</td>
+            </tr>
+            @for (int i = 0; i <= 100; i++)
+            {
+                <tr>
+                    <td id="t">@i</td>
+                    <td data-itemcode=@i><div class='xdz' id='id%s' style='background:yellow; width:80px; height:80px'></div></td>
+                    <td data-itemcode=@i width="250px"><div class='x2dz' id='id2%s' style='background:yellow; height:80px'></div></td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+                    <td>Test+@i</td>
+
+                    @*<td id="text2">Text 1</td>*@
+                </tr>
+                @*<tr>
+                        <td id="t2">two</td>
+                        <td id="data-itemcode"><div class='xdz' id='id%s' style='background:yellow; width:80px; height:80px'></div></td>
+                        <td id="text2">Text 2</td>
+                    </tr>*@
+            }
+        </tbody>
+    </table>
+
+</div>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $('#gridT').DataTable({
+            fixedHeader: true,
+            fixedColumns: {
+                heightMatch: 'auto'
+            },
+            "pageLength": 100,
+            deferRender: true,
+            stateSave: true,
+            initComplete: function (settings, json) {
+                $('#overlay').fadeOut();
+            },
+            "aoColumnDefs": [{ "bSortable": false, "aTargets": [21] }]});
+    });
+
+</script>
+
+<script type="text/javascript">
+    var currItemCode = "";
+
+    function pt() {
+        //alert('test')
+        return `
+    <div class="dz-preview dz-file-preview">
+      <div class="dz-details">
+        <img data-dz-thumbnail />
+      </div>
+    </div>`;
+    }
+
+    //$("td").click(function () {
+    //    alert($(this).text());
+    //});
+
+    function getItemCode(e) {
+        var el = e.target;
+        if (el.dataset.itemcode && el.dataset.itemcode != "") {
+            currItemCode = el.dataset.itemcode;
+            console.log("DE: " + currItemCode);
+        }
+    }
+    //function modifyText(new_text) {
+    //       const t2 = document.getElementById("t2");
+    //       t2.firstChild.nodeValue = new_text;
+    //   }
+
+    //function modifyText(new_text, e) {
+    //    console.log(new_text);
+    //}
+
+    //document.addEventListener('dragenter', function (e) {
+    //   // e.preventDefault();
+    //    //this.style.backgroundColor = "#000000";
+    //    //e.stopPropagation();
+    //    console.log("drag enter");
+
+    //});
+
+    //document.addEventListener('dragenter', function (e) {
+    //    var el = e.target;
+    //   // var id = e.getElementById('t').innerText;
+    //    if (el.dataset.itemcode && el.dataset.itemcode != "") {
+    //        currItemCode = el.dataset.itemcode;
+    //        console.log("DE: " + currItemCode);
+    //    }
+    //});
+
+    $('.xdz').dropzone({
+        thumbnailWidth: 50,
+        thumbnailHeight: 50,
+        previewTemplate: pt(),
+        //init: function () {
+        //    this.on('dragenter', function (e) {
+        //        var el = e.target;
+        //        // var id = e.getElementById('t').innerText;
+        //        if (el.dataset.itemcode && el.dataset.itemcode != "") {
+        //            currItemCode = el.dataset.itemcode;
+        //            console.log("DE: " + currItemCode);
+        //        }
+
+        //    }, true);
+        //    this.on("sending", function (file, xhr, formData) {
+        //        //formData.append("itemcode", currItemCode);
+        //        console.log("sending");
+        //    });
+        //},
+        renameFile: function (file) {
+            // getItemCode(event);
+            // setTimeout(function () { "", 2000 });
+            console.log("rename file");
+            console.log("renameFile " + file.name + ".jpg");
+            return currItemCode + ".jpg";
+
+        },
+        complete: function (file) {
+            console.log("DZ 1 One complete");
+        },
+        //error: function(){
+        //console.log("test");
+        //},
+        url: "/home/fileupload"
+    });
+
+    $(".x2dz").dropzone({
+        thumbnailWidth: 50, thumbnailHeight: 50, previewTemplate: pt(),
+
+        init: function () {
+            this.on("sending", function (file, xhr, formData) {
+                formData.append("itemcode", currItemCode);
+                console.log(formData)
+            });
+        },
+        complete: function (file) {
+            console.log("DZ 2 Two complete");
+            var elem = "#id2" + currItemCode;
+            var timestamp = new Date().getTime();
+            console.log(elem, '-', timestamp);
+            //$.ajax({
+            //    type: 'POST',
+            //    url: '/invssis/xadmssis.pl',
+            //    data: { "op": "xreload", "ic": currItemCode },
+            //    dataType: 'text',
+            //    global: false,
+            //    success: function (data) {
+            //        if (data.substring(0, 3) == "OK:") {
+            //            \$(elem).html(data.substring(3));
+            //            return true;
+            //        }
+            //        return false;
+            //    }
+            //});
+
+        },
+        url: "/home/fileupload"
+    });
+
+        //const el1 = document.getElementById("gridT");
+    // el1.addEventListener("dragenter", () => { modifyText("four"); }, false);
+
+    //el1.addEventListener('dragenter', (event) => {
+    //    modifyText("four", event);
+    //    console.log("drag enter")
+    //}, false);
+
+    ////// Function to change the content of t2
+    ////function modifyText(new_text) {
+    ////    const t2 = document.getElementById("t2");
+    ////    t2.firstChild.nodeValue = new_text;
+    ////}
+
+    ////// Add event listener to table with an arrow function
+    ////const el = document.getElementById("outside");
+    ////el.addEventListener("click", () => { modifyText("four"); }, false);
+
+    ////document.addEventListener('dragstart', function (e) {
+    ////    console.log("drag start");
+    ////    el = this;
+    ////    setTimeou(function () { this.style.display = 'none'; }, 0);
+    ////});
+
+    ////document.addEventListener('dragend', function (e) {
+    ////    console.log("drag end");
+
+    ////    setTimeou(function () {
+    ////        this.style.display = 'block';
+    ////        el = null;
+
+    ////    }, 0);
+    ////});
+        //document.addEventListener('dragleave', function (e) {
+    //    // e.preventDefault();
+    //    //this.style.backgroundColor = "#000000";
+    //    //e.stopPropagation();
+    //    console.log("drag leave");
+    //    //setTimeout(function () {})
+
+    //}, false);
+
+            //init: function () {
+        //    this.on("addfile", function () { });
+        //    this.on("dragenter", (event) => {
+        //            modifyText("four", event);
+        //        console.log("drag enter")
+        //    }, true);
+        //    this.on("error", function () {
+        //        //$scope.$apply(function () {
+        //        console.log("Error : Something Wrong");
+        //        // });
+        //    });
+        //    this.on("success", function (data) {
+        //        //var result = eval('(' + data.xhr.responseText + ')');
+        //        console.log("success");
+        //    });
+        //},
+</script>

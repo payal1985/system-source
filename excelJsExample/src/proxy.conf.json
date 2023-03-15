@@ -1,0 +1,7 @@
+{
+    "/invssi/*": {
+        "target": "http://dev.systemsource.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

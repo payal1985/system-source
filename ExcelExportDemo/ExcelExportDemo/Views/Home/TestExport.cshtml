@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "TestExport";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>var __basePath = './';</script>
+    @*<script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>*@
+
+    @*<script src="~/Scripts/ag-grid-script/enterprise-module-script/ag-grid-enterprise.min.js"></script>*@
+    <script src="~/Scripts/ag-grid-script/enterprise-module-script/ag-grid-enterprise.js"></script>
+    @*<link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+        <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">*@
+    <script src="~/Scripts/imageUtils.js"></script>
+    <script src="~/Scripts/main.js"></script>
+</head>
+<body>
+    <h1>Hello from ag-grid!</h1>
+    <div>
+        <button class="export" onclick="onBtExport()">Export to Excel</button>
+    </div>
+
+    <div id="myGrid" class="ag-theme-alpine" style="height: 600px; width:500px;"></div>
+
+    @*<script type="text/javascript" charset="utf-8">
+        var countryCodes = {};
+        var base64flags = {};
+        // specify the columns
+        const columnDefs = [
+            {
+                field: 'country',
+                headerName: ' ',
+                minWidth: 70,
+                width: 70,
+                maxWidth: 70,
+                cellRenderer: countryCellRenderer,
+            },
+            { field: "make" },
+            { field: "model" },
+            { field: "price" }
+        ];
+
+        // specify the data
+        const rowData = [
+            { make: "Toyota", model: "Celica", price: 35000 },
+            { make: "Ford", model: "Mondeo", price: 32000 },
+            { make: "Porsche", model: "Boxter", price: 72000 }
+        ];
+
+        // let the grid know which columns and what data to use
+        const gridOptions = {
+            columnDefs: columnDefs,
+            rowData: rowData
+        };
+
+        // lookup the container we want the Grid to use
+        const eGridDiv = document.querySelector('#myGrid');
+
+        // create the grid passing in the div to use together with the columns & data we want to use
+        new agGrid.Grid(eGridDiv, gridOptions);
+
+        function countryCellRenderer(params) {
+            return `<img alt="${params.data.country}" src="${base64flags[countryCodes[params.data.country]]
+                }">`;
+        }
+
+    </script>*@
+</body>
+</html>

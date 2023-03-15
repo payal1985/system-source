@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ppatel.ic\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ppatel.ic\\.nuget\\packages"
+    ]
+  }
+}

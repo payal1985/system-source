@@ -1,0 +1,100 @@
+﻿
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<link href="~/dropzone/css/dropzone.css" rel="stylesheet" />
+<script src="~/dropzone/dropzone.js"></script>
+
+<style>
+    .dropzone {
+        border: 1px solid rgba(0,0,0,0.03);
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background: rgba(0,0,0,0.03);
+    }
+        /* padding: 23px; */
+        .dropzone .dz-default.dz-message {
+            border-radius: 3px;
+            background: rgba(0,0,0,0.03) !important;
+            opacity: 1;
+            filter: none;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+</style>
+
+<script type="text/javascript">
+    Dropzone.options.dropzoneForm =
+    {
+        init: function () {
+            this.on("complete", function (data) {
+                //var res = eval('(' + data.xhr.responseText + ')');
+                var res = JSON.parse(data.xhr.responseText);
+            });
+        },
+        renameFile: function (file) {
+                console.log("renameFile " + file + ".jpg");
+                return file + ".jpg";
+            }
+    };
+ //   function pt() {
+ //       alert('test')
+ //       return `
+    //<div class="dz-preview dz-file-preview">
+    //  <div class="dz-details">
+    //    <img data-dz-thumbnail />
+    //  </div>
+    //</div>`;
+ //   }
+
+ //   $(document).ready(function () {
+ //       $(".xdz").dropzone({
+ //           thumbnailWidth: 50, thumbnailHeight: 50, previewTemplate: pt(),
+ //           renameFile: function (file) {
+ //               console.log("renameFile " + file + ".jpg");
+ //               return file + ".jpg";
+ //           },
+ //           complete: function (file) {
+ //               console.log("DZ 1 One complete");
+ //               var elem = "#id" + currItemCode;
+ //               var timestamp = new Date().getTime();
+ //               var img = "/invssi/simg/" + currItemCode + ".jpg?t=" + timestamp;
+ //               console.log("complete elem " + elem + " : " + img);
+ //               $("#idimg").html("<img width='80px' height='80px' src='" + img + "'>");
+ //               //console.log("uploaded as " + currItemCode);
+ //           },
+ //           // error: function(){
+ //           //	console.log("test");
+ //           // },
+ //           // url: "/invssis/dz.pl"
+ //       });
+ //   });
+</script>
+
+@*<div class="dz-message" data-dz-message><span>Drag or Drop File To Upload. Please Note that sheet name should match</span></div>
+    <div class="fallback" style="position: relative">
+
+        <input name="file" type="file" multiple />
+        <input type="submit" value="Upload" data-ng-click="handleFile()" />
+    </div>*@
+
+
+<div class= "jumbotron">
+    <form action = "~/Home/Upload" class = "dropzone" id = "dropzoneJsForm" style = "background-color:#00BFFF"></form>
+    <button id = "submit-all">Submit All Files</button>
+</div>
+
+@*<form style="margin-top: 10px;" action="/Home/UploadPost" method="post" enctype="multipart/form-data" class="dropzone" id="newdropzoneForm">
+        <div class="dz-message" data-dz-message><span>Drag or Drop File To Upload. Please Note that sheet name should match</span></div>
+        <div class="fallback" style="position: relative">
+
+            <input name="file" type="file" multiple />
+            <input type="submit" value="Upload" data-ng-click="handleFile()" />
+        </div>
+
+        <div class='xdz' id='id%s' style='background:yellow; width:80px; height:80px'>Image Preview</div>
+
+    </form>*@

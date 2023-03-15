@@ -1,0 +1,310 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-xlsx/xlsx.core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+    @*<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+
+    <button id="btnExcel" onclick="exportToExcel('exTable')">Excel</button>
+    <button id="btnExcel" onclick="tableToExcel('exTable','Excel Export Data','myfile.xls')">Excel Export</button>
+    <button id="button-excel">Create Excel</button>
+
+    <button id="btnPrint" onclick="printData('exTable')">Print</button>
+    @*<button id="btnPrint1" onclick="makePDF()">New PDF</button>*@
+    <button id="btnPDF1">New PDF</button>
+    @*<button id="btnPDF">PDF</button>*@
+    <button id="btnPDF" onclick="showPdf()">PDF</button>
+    
+    <table id="exTable" class="table table-striped table-bordered table-hover zaawansowana_edycja " style="font-size:12px;">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Image</th>
+                <th>Item Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item 1</td>
+                <td><img class="img-responsive" src="https://maps.google.com/mapfiles/ms/icons/blue.png" Height="40"></td>
+                @*<td><img class="img-responsive" src="data:image/jpg;base64,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BBBAAAEEEEAAAQQQmCQBAp1JgmezCCCAAAIIIIAAAggggAACCCCAwKYKEOhsqhzfQwABBBBAAAEEEEAAAQQQQAABBCZJgEBnkuDZLAIIIIAAAggggAACCCCAAAIIILCpAvrss88eZ2aLNnUFfA8BBBBAYOwCqrqPiJiZrfL/jn0NfAMBBBBAYJwEhkIIkiTJlHFaP6tFAAEEEEDgPQuY2X06NDT0dTP7ynteGytAAAEEEKhbwMwKvrCZxSEEAp265VgQAQQQQAABBBBAAAEEkiS5xAOdC0Tk6yISIEEAAQQQQAABBBBAAAEEEEAAAQQQaHiB8/JA5xsiwng6DX+8KCACCCCAAAIIIIAAAggggAACCCAgBDqcBAgggAACCCCAAAIIIIAAAggggECTCRDoNNkBo7gIIIAAAggggAACCCCAAAIIIIAAgQ7nAAIIIIAAAggggAACCCCAAAIIINBkAgQ6TXbAKC4CCCCAAAIIIIAAAggggAACCCBAoMM5gAACCCCAAAIIIIAAAggggAACCDSZAIFOkx0wiosAAggggAACCCCAAAIIIIAAAggQ6HAOIIAAAggggAACCCCAAAIIIIAAAk0mQKDTZAeM4iKAAAIIIIAAAggggAACCCCAAAIEOpwDCCCAAAIIIIAAAggggAACCCCAQJMJjB7ovPXWW3L99dfLrbfeKtOnT5czzzxTTjzxRJk6deq47evLL78sDz74oOyyyy5y1FFHSaFQGLdtsWIEEEAAAQQQQAABBMYi4HXVK664Qu699971X9tvv/3krLPOSuuvP/nJT2TJkiV/sMp58+bJOeecI3PnzpXbbrstrV/vvvvu6bz29nb59a9/na4z/16+/DbbbFNzvn/Hp7wszz77bLr9ww47TB5++GG55pprJISQzsvr0729vXLllVdKFEXrt7uh/R4cHFxfzve///3S1dUle++9txx88MHp74B8XcuWLZOTTz5ZPvOZz6T7zoQAAgggMGECowc6XpR33nlHHnjggfTif8wxx8jw8LA8//zzsv3226cX9s055QHS0qVL5bTTTpOjjz6aQGdzArMuBBBAAAEEEEAAgfckYGby4osvyuLFi9MQIw9RPNxYtGiRTJs2Tfr6+uSggw5KwxoPR371q1/JzJkzJUkSGRoakr322kt+8YtfpP/+0Ic+lNavva7t9WuvD7/wwguy3XbbyYwZM/5o/k477ST77LNPGgL97Gc/S8vwiU98Iv2ub/fVV1+VtrY2WbVqlTz33HMyf/78dD0ewuy6667iIdHrr7+elm9DIUxPT4+sWLEiLb/v7x133CH77rtvGt745OueMmVKGkp5cOR/VPU9ufJlBBBAAIExCdQX6PhN6P7770+DFQ9Y/AbjF/gDDzxQDjjggDFtsZ6F33jjDXn00UfTm9LChQsJdOpBYxkEEEAAAQQQQACBCRPwljH+wNMDEq8fe4jiLW9mz54t+++/vzz11FNpa5aOjo60TB6KVE9xHMvjjz+ezu/s7EzDkTwQ8XX/7ne/k9122y0NXGrN91Yy99xzTxoeHXfccWlLeq+z5w9hvUzr1q2TRx55JA2SfHseJHn45Nv0urYHRgsWLKhZ1/ay+T55yxwvw5NPPimVSiVtYeRhzuWXX54+9D333HPT0IcJAQQQQGDCBcYe6PhN69prr01vAoceemh6EfcbhDff9Iu+d8nyJqfXXXddeoPZYYcdZPny5XLsscemN5obbrghvRFsrFnmm2++ma5/2223JdCZ8HOCDSKAAAIIIIAAAgiMJlAd6Bx++OHy0EMPpfXXI488Mg15nnjiiTTQaW1tTevCXg/2f+eTt5Dxljg77rhj+hCzevKWPt5ix7s6VQ9zUD3fW7N79yxvgfPSSy/JCSeckLaeKZVK6x/C+jr9oazX1f2Pl8GDnnx+/rC21lAKvk4PbTwEOvvss9P6vU8eLq1duzYtn7f48TJ5CyNCndHOGD5HAAEENrvA2AMd74PrN47f/OY3629K/nd/EuFNRgcGBtL5fpG/884709DHb1TeTDO/qXkfX79B5U8sRu4Wgc5mP9CsEAEEEEAAAQQQQGAzCnig8+Mf/zgdR8dDDm+Zc8YZZ6ShSt6CxQMX/ywfDyev++bjz7zyyivpw9CTTjppfXDjrWw8JPHwxevL+VQ937s+3X333Wm3L+/i5WGNb2vOnDlpK5p8vnfN8uU8uPHuXN7tqt5AJ+9W5uP6PPbYY3L66aenwyH4A9d88vq+twDKW/5Uf7YZqVkVAggggEBtgbEHOnmXKw9xvN+thy9+ofcnDz75jeTTn/50elPyJw/eTHP16tVpH18PdLzPrt/E9thjDwIdTksEEEAAAQQQQACBphTwQMdbv+y8887rBx3Ox5J55plnxMeg8eEJvGV6Pn5OHtB4WOLdlbyL1rvvviunnHLK+rFsqrtbeUuffKqe712lfNse0njd3MMeD268a5WHRrfccku6bt/GBz7wgTRoWrNmzR+13NlYCx3frpfTH9g+/fTTctNNN8n73ve+NNipDm78M2+l7/taXd6mPKgUGgEEEGgugfce6Pz+978Xf7rgzSzzPr5+M/PQJu9364FOHgDlgY7fEGih01xnC6VFAAEEEEAAAQQQ+A+BkWPoVL+V1QMdH5w4H0MnHz9n5KDBHoZ4PdofkuZhyMqVK9PwxQc99uAmn6rne33a32TlY+R4dy8ff6d6vMtisZgGMd7ty7tHHXLIIWmrn3x5L4+3rJk1a1Y6pk6tN8r68uVyOd0HX7+PqeOt7H3MHW+ZX10ur+t7q6Hq8nKeIIAAAgiMu8B7D3S8iaeP0O+DI/sNwW9gfpPwm5zfjPytWAQ6434g2QACCCCAAAIIIIDABAqMJdDxYuXhine/8hYu3jXKW/F48OKDInvrdp/nQYo/HPXWPHnQUmu+h0E+Xo4HLv6mKX+Y6v/1dfny/gYufyut18W9nu5j4njI5A9Vvf7uQZIv6wMv15ryt1z5G7I8XPLAyFvm+/ry8MlbBvlyHvj4g9pawdAEHhI2hQACCGxtAqMHOvlrxG+++ea036338/XXIF5zzTXpjeCcc85J0/urr746vQF5v2F/M5WPn+ODtXkzUw92/KbjTxB8oGTvh+sXff9udcLv+tXb85uFD57s4/Zwg9jazk32FwEEEEAAAQQQaEwBD3N8yAHv5uSDBVfXV32YAR9M2FvAeIscD2d88mEJuru70wedN954Y9pN6tRTT03HpckHRfZ6sI9V6f/2ECWfas33+re/0cpfVuLbOOuss9KHq75dr6d70OPDIHhg4+XwB64evlx11VVpVy0f6Njr4xt61bi3xvGuYr4ND4KOOOKI9Dt77rmn3H777XL99den3/XuXD4GkNfxmRBAAAEEJlRg9EDHi+NPDvyPT37D8Iu3/9tvDH5D8MmTfv933nc4/zy/geSf+bL+9/wGV+smMnJ7+Y1wQmnYGAIIIIAAAggggAACNQTysWW8zprXafP6avVn1V+tDneq69Uj67kb6p5Va36tOnM+r1Zd29fhdXafvA6/oTAnr6/78vn+5HX8/HfAxvaBkwYBBBBAYEIE6gt0JqQobAQBBBBAAAEEEEAAAQQQQAABBBBAoB4BAp16lFgGAQQQQAABBBBAAIEtTSB/fboPm1A95a9Z95eeMCGAAAIINKwAgU7DHhoKhgACCCCAAAIIIIDAOArkXbDy7lz5prxb1WhdssaxWKwaAQQQQKA+AQKd+pxYCgEEEEAAAQQQQAABBBBAAAEEEGgYAQKdhjkUFAQBBBBAAAEEEEAAAQQQQAABBBCoT4BApz4nlkIAAQQQQAABBBBAAAEEEEAAAQQaRoBAp2EOBQVBAAEEEEAAAQQQQAABBBBAAAEE6hMg0KnPiaUQQAABBBBAAAEEEEAAAQQQQACBhhEg0GmYQ0FBEEAAAQQQQAABBBBAAAEEEEAAgfoECHTqc2IpBBBAAAEEEEAAAQQQQAABBBBAoGEECHQa5lBQEAQQQAABBBBAAAEEEEAAAQQQQKA+AQKd+pxYCgEEEEAAAQQQQAABBBBAAAEEEGgYAQKdhjkUFAQBBBBAAAEEEEAAAQQQQAABBBCoT4BApz4nlkIAAQQQQAABBBBAAAEEEEAAAQQaRoBAp2EOBQVBAAEEEEAAAQQQQAABBBBAAAEE6hMg0KnPiaUQQAABBBBAAAEEEEAAAQQQQACBhhEg0GmYQ0FBEEAAAQQQQAABBBBAAAEEEEAAgfoECHTqc2IpBBBAAAEEEEAAAQQQQAABBBBAoGEECHQa5lBQEAQQQAABBBBAAAEEEEAAAQQQQKA+AQKd+pxYCgEEEEAAAQQQQAABBBBAAAEEEGgYAQKdhjkUFAQBBBBAAAEEEEAAAQQQQAABBBCoT4BApz4nlkIAAQQQQAABBBBAAAEEEEAAAQQaRoBAp2EOBQVBAAEEEEAAAQQQQAABBBBAAAEE6hMg0KnPiaUQQAABBBBAAAEEEEAAAQQQQACBhhEg0GmYQ0FBEEAAAQQQQAABBBBAAAEEEEAAgfoECHTqc2IpBBBAAAEEEEAAAQQQQAABBBBAoGEECHQa5lBQEAQQQAABBBBAAAEEEEAAAQQQQKA+AQKd+pxYCgEEEEAAAQQQQAABBBBAAAEEEGgYgfP0zTff3G7KlCmzGqZIFAQBBBBAAAEEEEAAAQQQQAABBBBAYIMC06ZNW6P+qZml/2VCAAEEEEAAAQQQQAABBBBAAAEEEGhsAVUlyGnsQ0TpEEAAAQQQQAABBBBAAAEEEEAAgT8WoGUOZwUCCCCAAAIIIIAAAggggAACCCDQZAIEOk12wCguAggggAACCCCAAAIIIIAAAgggQKDDOYAAAggggAACCCCAAAIIIIAAAgg0mQCBTpMdMIqLAAIIIIAAAggggAACCCCAAAIIEOhwDiCAAAIIIIAAAggggAACCCCAAAJNJkCg02QHjOIigAACCCCAAAIIIIAAAggggAACBDqcAwgggAACCCCAAAIIIIAAAggggECTCRDoNNkBo7gIIIAAAggggAACCCCAAAIIIIDAqIFOW1vbbFX9kqp+TkTWisg/FIvFq5YsWbJuPPg6OzvbzOw8ETlJVa80s++USqVV47Et1okAAggggAACCCCAwFgFFi5cuE+lUjnPzM6s+u6TqnqJiPy7mf0Pr8uOWO/DqnqhmfWIyJ+LyF+JyEqf19fXt7i6Dpx9L11eRFbndePq+f4d/3dVWeb59s3sLlX9EzP7qogk2bzbSqVSuaur67g4jr+pqpV8uxva946OjulV5ewNIfxbpVJ5ZurUqb3574CqMs8abX1jNWZ5BBBAAIHRBUYNdHwVRxxxxMyhoaFuESmvW7fu5mKxOE1E3h9CeLVUKj09+mbqW8LDo0KhMNfM3gghDCdJ8oUkSd4oFAo/6OnpeaO+tbAUAggggAACCCCAAALjKqDt7e37qeppqrqqUqncVSgUTjGzhWZ2UwjhbTP7sIiUBgcHF7e0tEwvFApdqvpWkiRBVaeZ2TMi8nEzi6IourFcLk9taWmJ33333VcKhcLsEMLBIvK6ma2uMf/lgYGB5Vmg8iURWRVCuKy3t/fVzs5O3+6eZvagqh5oZq1mdm+xWFxTLpePU9UXspBodxHp39CD087OzuPN7NAoihabmSZJcraILBORq0ql0rseDiVJcq6ILCkUClc//vjjb3uANK7qrBwBBBBA4A8E6gp0soQ+DXRE5BYROTiEcKiq9vf09PxyM5umZWptbW2ZMmVKdwhhZ78x0kpnMyuzOgQQQAABBBBAAIFNFvCWMeVy+XQR8YDklhDCnkmSeMub34rIUlU9PEmSvv7+/vuzjQQRsXyDWV33IyKiqvrzUqmUt343X3ccx3tXKpXnBwYG8pbqfzBfRN5V1TNV9e3BwcH/u2zZsre9zq6qp5tZxctULpe3iaLoYx4kiUghhDA1juO74jjWQqFwsgdGqnq3t94ZCdHR0fERVd0zjuP7vAxdXV2HmVnRWxi1tLTsXC6XTzOz365Zs+aWFStWDG0yJF9EAAEEENhkgTEHOp7qm9nfiojfBB5S1QtUtZA139zDu2Sp6lIz+4rfYMzsVRGZLyI3mNlaVf2iqvbU05Wqvb39oyGEPbIbid8smRBAAAEEEEAAAQQQmHSBEYHOHar6p2Z2spnd5vVlVT3GAx1VfUwLcrEFAAAJNklEQVRV58dx/PbAwEBfXvC2tjZvITNbRF4aGBh4rXqH2tvbF0ZRNCVJkl5vDZN/Vj1fVY9IksSHKGgVkX3N7BofrkBEPpQ/hC2Xy9rS0nK619U90PG6eBb0pPPz5aq3kW9r/vz5+8ZxfL6ITDezC/v7+5/0zzo6OgpZaHSkiMwTEd+PcR2SYdIPNgVAAAEEGlRgzIFOuVy+tVgstqrqB+M4Lvl+RVE0L45jfxLhF/ijkyQpmdmUEMLZqvpQHMcvhxDO8Wanqvq4iBxiZn6DemBDLh0dHS1JkhwWRVHsTwJqPTloUFOKhQACCCCAAAIIILCFC2SBzrdF5JNZV6OXROQfy+XyFYVCwVuzf8vMTsw+ezQLRdLWOt5dycy+aWZ7isjfV49P6a1svOtWFEVre3t7e3PG6vlJkiwzs0+JyP6qelMW2Pi2fH5RRPaLouimcrn8kqp+yocyEJFKHuhk61zf+r5WoOMth7xbWQjBxwo60cx+4MMglMtl7zLm295RVa/3VjxmdpSI3Luxuv0WfjqwewgggMCkCIw50PFU38x8/JxDQwilOI53EZFvisiCbA+eEhEfEM6fJuzW0tJy3/DwsF/w21S1FEJ4q1KpHCciz1Y1Qf2jnd/YU4tJkWKjCCCAAAIIIIAAAghkAtlgxB6K/HZ4ePi2lpaW4Tlz5iQ33HBD3N7e3qGqXt8diOO4Jx8/pyqgCR0dHTOzQYdnicjl+fACI7pbrW+hXj0/hOAterq9a1WlUvHhEGa0tLR8KkmSt8zs/iiK/iJb97Zm9qiIfFdVd6gaPsH3YrRAx5fRRYsWRWvXrvX9+XySJM+KyM/MzB+6vrFu3bq7ZsyY8b44jk/Lu57xEJb/RRBAAIGJE9gsgY6Z7S0iDwwNDa2aOnWqlUqluKOjwwdd8+5SP1fVnfIAKISwenh4+PiNBTrZm7WO9EGX+/r6Hpk4DraEAAIIIIAAAggggMDoAiPH0KkOMjzQCSF8uGoMnXz8nPVj6PgW5s+f3+kDGJfL5f6BgYE0vOns7DwkjuMdQgjLS6XS63lJqudngxqfEkLYxszuLJfL66q7UM2ZM2do+fLlUbFY9JYz2/nAxaq6MF8+SfzlV/qxEMIb/lasDYyhsyBJkinZW60GfSgEEflAoVB4OI7jA/NwKEmSGSJyShRFPoBzzXWNrskSCCCAAAKbIvCeA51KpeIDrJ0qIk/4DUVE2n30/iiK9hGRHeI4vnksgY6HOSEE7w/85rp16+6ePn36Ab4+EXmaxH9TDjHfQQABBBBAAAEEENjcAmMMdKS9vf0oM9u+paXlEX97qw8voKrHZ2+9ut+7Pfk8724VQkiqhxyoNd9DIxE5VlX7Wlpanqt+YJqt2wct9lb1N/f29v6yq6tr3yRJjvWHqlkXrT0LhcL9jz322PO1bHxQZA9woii6L47j5T5ujojsktXtD1ZV/+zf4jiOfCgGf1lKb2/vE5vbmfUhgAACCGxYYNRAJ2st8yVV/a8iskZE/q5QKDxYqVS+KiJ7mdlFIlJU1a9ngx9fHUXRXf5qQzM7IhsAeUcPejzwUdV3ROSjqvpAkiQX9Pf3L82Ll90YvyUi3i/XJ3/14W1RFF00Dm/T4rxAAAEEEEAAAQQQQGDMAlV11rOyN1pd7IMh+8PH7FXiXp/9WPZWq/xV3j4swfdEZCcR+YJ3k1LVy+I4/ud8UGSvd0dR1BrH8av+WvK8YLXmt7a2Fv2NsKrqLyvxt1pdWi6X7ywWi/769K+JSG8URZf09PR4YOMtg3xMHH9zldfZ4yRJLhoYGPAxff6g1VC+TW8R5HX7JEl8UOUPq+rtInJxX1/fE62trTOmTZv2WTPzV6avTJLk4o2ta8zAfAEBBBBAoC6BUQMdX0t3d3fkzTa9O1XWNzjJ+tOqd6/yZTo6OqLBwUGdPXt2snjxYv88vPbaa8H/vXbtWs0/82Xz+YsXL/bvVt9E0n66/nle+mx9I5era+dYCAEEEEAAAQQQQACBcRBYX2fNhxvIHkT6pv6oPusz8+W6u7t15cqVwevGc+fOjX3MnRHly+vnI4OWWvN9LJ7Iv5/VyT08SufNnDnTatS1ay2/IR7fnu/L+jp99fr894Hvx4htjwM1q0QAAQQQ2NiFGh0EEEAAAQQQQAABBBBAAAEEEEAAgSYSqKuFThPtD0VFAAEEEEAAAQQQQACBOgT89elxHH/TB0wesfjDqnphX1/f4jpWwyIIIIAAApMkQKAzSfBsFgEEEEAAAQQQQACBSRZIu2B596/qctToRjbJxWTzCCCAAAK1BAh0OC8QQAABBBBAAAEEEEAAAQQQQACBJhMg0GmyA0ZxEUAAAQQQQAABBBBAAAEEEEAAAQIdzgEEEEAAAQQQQAABBBBAAAEEEECgyQQIdJrsgFFcBBBAAAEEEEAAAQQQQAABBBBAgECHcwABBBBAAAEEEEAAAQQQQAABBBBoMgECnSY7YBQXAQQQQAABBBBAAAEEEEAAAQQQINDhHEAAAQQQQAABBBBAAAEEEEAAAQSaTIBAp8kOGMVFAAEEEEAAAQQQQAABBBBAAAEECHQ4BxBAAAEEEEAAAQQQQAABBBBAAIEmEyDQabIDRnERQAABBBBAAAEEEEAAAQQQQAABAh3OAQQQQAABBBBAAAEEEEAAAQQQQKDJBAh0muyAUVwEEEAAAQQQQAABBBBAAAEEEECAQIdzAAEEEEAAAQQQQAABBBBAAAEEEGgyAQKdJjtgFBcBBBBAAAEEEEAAAQQQQAABBBAg0OEcQAABBBBAAAEEEEAAAQQQQAABBJpMgECnyQ4YxUUAAQQQQAABBBBAAAEEEEAAAQQIdDgHEEAAAQQQQAABBBBAAAEEEEAAgSYTINBpsgNGcRFAAAEEEEAAAQQQQAABBBBAAAECHc4BBBBAAAEEEEAAAQQQQAABBBBAoMkECHSa7IBRXAQQQAABBBBAAAEEEEAAAQQQQIBAh3MAAQQQQAABBBBAAAEEEEAAAQQQaDIBAp0mO2AUFwEEEEAAAQQQQAABBBBAAAEEECDQ4RxAAAEEEEAAAQQQQAABBBBAAAEEmkyAQKfJDhjFRQABBBBAAAEEEEAAAQQQQAABBAh0OAcQQAABBBBAAAEEEEAAAQQQQACBJhP4/wrI4rMgMT4zAAAAAElFTkSuQmCC" Height="40"></td>*@
+                <td>PE377690_S5</td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+                <td><img class="img-responsive" src="https://maps.google.com/mapfiles/ms/icons/red.png" Height="40"></td>
+                <td>PE377690_S6</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+        //let button = document.querySelector("#button-excel");
+
+        //button.addEventListener("click", e => {
+        //    let table = document.querySelector("#exTable");
+        //    TableToExcel.convert(table);
+        //});
+
+        const export_button = document.getElementById('button-excel');
+
+        export_button.addEventListener('click', () => {
+            html_table_to_excel('xlsx');
+        });
+
+        function html_table_to_excel(type) {
+            var data = document.getElementById('exTable');
+
+            var file = XLSX.utils.table_to_book(data, { sheet: "sheet1" });
+
+            XLSX.write(file, { bookType: type, bookSST: true, type: 'base64' });
+
+            XLSX.writeFile(file, 'file.' + type);
+        }
+
+        function tableToExcel(table, name, filename) {
+            let uri = 'data:application/vnd.ms-excel;base64,',
+                template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><title></title><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--><meta http-equiv="content-type" content="text/plain; charset=UTF-8"/></head><body><table>{table}</table></body></html>',
+                base64 = function (s) { return window.btoa(decodeURIComponent(encodeURIComponent(s))) }, format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+
+            if (!table.nodeType) table = document.getElementById(table)
+            var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML }
+
+            var link = document.createElement('a');
+            link.download = filename;
+            link.href = uri + base64(format(template, ctx));
+            link.click();
+        }
+
+        function exportToExcel(tableId) {
+            let tableData = document.getElementById(tableId).outerHTML;
+
+            let a = document.createElement('a')
+            //let dataType = 'data:application/vnd.ms-excel';
+            a.href = `data:application/vnd.ms-excel, ${encodeURIComponent(tableData)}`
+            //a.href = `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8;base64, ${encodeURIComponent(tableData)}`
+            //a.download = 'sudhir600_' + rand() + '.xls'
+            a.download = 'payaltest_' + new Date().getTime() + '.xlsx'
+            a.click()
+
+        }
+
+        function printData(tableId) {
+            var divToPrint = document.getElementById(tableId);
+            newWin = window.open("", "newWin");
+            newWin.document.write(divToPrint.outerHTML);
+            setTimeout(function () {
+                newWin.print();
+            }, 1000)
+            // newWin.close();
+        }
+
+        // function exportToPdf(tableId) {
+        //$("body").on("click", "#btnPDF", function () {
+        //    html2canvas($('#exTable')[0], {
+        //        onrendered: function (canvas) {
+        //            debugger;
+
+        //            var pdf = new jsPDF('l', 'mm', 'a4');
+        //            var data = canvas.toDataURL();
+
+        //            pdf.addImage(data, 'PNG', 20, 40, 180, 160);
+        //            //var docDefinition = {
+        //            //    content: [{
+        //            //        image: data,
+        //            //        width: 500
+        //            //    }]
+        //            //};
+        //            //pdfMake.createPdf(docDefinition).download("Table.pdf");
+        //            pdf.save('test.pdf');
+        //        }
+        //    });
+        //});
+
+        //function makePDF() {
+        //    debugger;
+        //    var quotes = document.getElementById('exTable');
+
+        //    html2canvas(quotes, {
+        //        onrendered: function (canvas) {
+
+        //            //! MAKE YOUR PDF
+        //            var pdf = new jsPDF('p', 'pt', 'letter');
+
+        //            for (var i = 0; i <= quotes.clientHeight / 980; i++) {
+        //                debugger;
+        //                //! This is all just html2canvas stuff
+        //                var srcImg = canvas.toDataURL();
+        //                var sX = 0;
+        //                var sY = 980 * i; // start 980 pixels down for every new page
+        //                var sWidth = 900;
+        //                var sHeight = 980;
+        //                var dX = 0;
+        //                var dY = 0;
+        //                var dWidth = 900;
+        //                var dHeight = 980;
+
+        //                window.onePageCanvas = document.createElement("canvas");
+        //                onePageCanvas.setAttribute('width', 900);
+        //                onePageCanvas.setAttribute('height', 980);
+        //                const newImage = new Image();
+        //                newImage.src = srcImg;
+        //                var ctx = onePageCanvas.getContext('2d');
+        //                // details on this usage of this function:
+        //                // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#Slicing
+        //                ctx.drawImage(newImage, sX, sY, sWidth, sHeight, dX, dY, dWidth, dHeight);
+
+        //                // document.body.appendChild(canvas);
+        //                var canvasDataURL = onePageCanvas.toDataURL("image/png", 1.0);
+
+        //                var width = onePageCanvas.width;
+        //                var height = onePageCanvas.clientHeight;
+
+        //                //! If we're on anything other than the first page,
+        //                // add another page
+        //                if (i > 0) {
+        //                    pdf.addPage(612, 791); //8.5" x 11" in pts (in*72)
+        //                }
+        //                //! now we declare that we're working on that page
+        //                pdf.setPage(i + 1);
+        //                //! now we add content to that page!
+        //                pdf.addImage(canvasDataURL, 'PNG', 20, 40, (width * .62), (height * .62));
+
+        //            }
+        //            //! after the for loop is finished running, we save the pdf.
+        //            pdf.save('test.pdf');
+        //        }
+        //    });
+        //}
+
+        async function showPdf() {
+            debugger;
+            let docDefinition = {
+                content: [
+                    {
+                        text: 'PDF Generated with Image from external URL',
+                        fontSize: 20
+                    },
+                    {
+                        image: await this.getBase64ImageFromURL(
+                            "https://images.pexels.com/photos/209640/pexels-photo-209640.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300"
+                        )
+                    }
+                ]
+            };
+
+            pdfMake.createPdf(docDefinition).open();
+        };
+
+        function getBase64ImageFromURL(url) {
+            debugger;
+            return new Promise((resolve, reject) => {
+                var img = new Image();
+                img.setAttribute("crossOrigin", "anonymous");
+
+                img.onload = () => {
+                    var canvas = document.createElement("canvas");
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    var ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0);
+
+                    var dataURL = canvas.toDataURL("image/png");
+
+                    resolve(dataURL);
+                };
+
+                img.onerror = error => {
+                    reject(error);
+                };
+
+                img.src = url;
+            });
+        }
+
+        //let btn = $('#btnPDF1');
+        //btn.text('download');
+        //btn.on('click', () => {
+
+        //   // $('#c-invoice').modal('show');
+        //    setTimeout(function () {
+        //        html2canvas(document.getElementById("exTable")).then(canvas => {
+        //            //$("#previewBeforeDownload").html(canvas);
+        //            var imgData = canvas.toDataURL("image/png", 1);
+        //            var pdf = new jsPDF("l", "mm", "a4");
+        //            var pageWidth = pdf.internal.pageSize.width;
+        //            var pageHeight = pdf.internal.pageSize.height;
+        //            var imageWidth = canvas.width;
+        //            var imageHeight = canvas.height;
+
+        //            var ratio = imageWidth / imageHeight >= pageWidth / pageHeight ? pageWidth / imageWidth : pageHeight / imageHeight;
+        //            //pdf = new jsPDF(this.state.orientation, undefined, format);
+        //            pdf.addImage(imgData, 'PNG', 25, 50, imageWidth * ratio, imageHeight * ratio);
+        //            pdf.save("invoice.pdf");
+        //            //$("#previewBeforeDownload").hide();
+        //           // $('#c-invoice').modal('hide');
+        //        });
+        //    }, 500);
+
+        //});
+
+        //$("#btnPDF1").on('click', () => {
+        //    debugger;
+        //    var doc = new jsPDF("l", "mm", "a4");
+        //    var myimages = 'https://maps.google.com/mapfiles/ms/icons/blue.png';
+        //    var myimgarray = myimages.split('|');
+
+        //    var canvas = document.createElement("canvas");
+        //    var ctx = canvas.getContext("2d");
+
+        //    function convertImgToBase64(img, outputFormat) {
+        //        debugger;
+        //        // clear canvas
+        //        canvas.width = img.width;
+        //        canvas.height = img.height;
+
+        //        // draw image
+        //        ctx.drawImage(img, 0, 0);
+
+        //        // get data url of output format or defaults to jpeg if not set
+        //        return canvas.toDataURL();
+        //    }
+
+        //    var images = [];
+
+        //    for (var i = 0; i < myimgarray.length; i++) {
+        //        var img = new Image();
+        //        img.onload = function () {
+        //            debugger;
+        //            images.push({
+        //                base64: convertImgToBase64(this),
+        //                width: this.width,
+        //                height: this.height
+        //            });
+
+        //            // all images loaded
+        //            if (images.length === myimgarray.length) {
+        //                for (var j = 0; j < images.length; j++) {
+        //                    doc.addImage(images[j].base64, 'PNG', (j * 100), 10, 70, 15);
+        //                }
+        //                doc.setFontSize(20);
+        //                doc.text(100, 20, "This is a test to see if images will show");
+        //                doc.save('My_file.pdf');
+        //            }
+        //        };
+        //        img.src = myimgarray[i];
+        //    }
+
+        //});
+
+    </script>
+
+</body>
+</html>

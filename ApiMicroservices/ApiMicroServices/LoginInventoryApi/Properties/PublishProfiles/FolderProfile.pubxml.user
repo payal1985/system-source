@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Payal\OneDrive - System Source\Documents\_VM Transfer\PublishProject\InventoryLoginApi</_PublishTargetUrl>
+    <History>True|2022-03-02T01:09:16.6285733Z;True|2022-03-01T16:36:58.9773150-08:00;True|2022-02-14T15:41:34.3598952-08:00;True|2022-02-10T12:15:35.1695195-08:00;</History>
+  </PropertyGroup>
+</Project>

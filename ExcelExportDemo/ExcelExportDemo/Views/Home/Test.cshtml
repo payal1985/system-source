@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+    <!--<link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+    <link type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet" />
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+    @*<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>*@
+    <!--<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.jqueryui.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>-->
+
+    <link type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link type="text/css" href="https://cdn.datatables.net/buttons/2.1.0/css/buttons.dataTables.min.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.noConflict();
+            oTable = $('#exTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'excel',
+                        title: 'Data export',
+                        customize: function (xlsx) {
+                            var sheet = xlsx.xl.worksheets['sheet1.xml'];
+
+                            // Loop over the cells in column `C`
+                            $('row c[r^="A"]', sheet).each(function () {
+                                // Get the value
+                                //if ($('is t', this).text() == 'New York') {
+                                    $(this).attr('s', '20');
+                                //}
+                            });
+                        },
+                        exportOptions: { stripHtml: false }
+                    },
+                    //{
+                    //    extend: 'printHtml5',
+                    //    title: 'Data export',
+                    //    exportOptions: { stripHtml: false }
+                    //},
+                    {
+                        extend: 'pdfHtml5',
+                        title: function () {
+                            return "SSI Inventory Orders as of $currDateTime";
+                        },
+                        orientation: 'landscape',
+                        pageSize: 'A2',
+                        exportOptions: {
+                            stripHtml: true
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <table id="exTable" class="table table-striped table-bordered table-hover" style="font-size:12px;">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Item Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAANbY1E9YMgAABNRJREFUWMO1lwtMm1UUgG8frEKBBdqZFcf7scmjpVAoZRRGH1BglLYIlFcdbxGWieAY6ICVjT19z20OJtM4jY+pmC26LKIZU9To1GQmksxkbibbfCwmRgkbcDy3xDJs6+BOm3z50/b/7/3+c889914CAMQdlq5fSHH3dWLsuESyN5wmacUvEZl+gBcutyn9RJHdHA5niBBylF79RBFbQxNK0+WGvfw0yzBZZ3ufGNt/cDxP2/HUB4XcTqCo4zLRNXxMEjS9cqF/0Ck+32taFCSHyORaWLO2DSIVdSBapQD8fUboLxmNy+pSauvOOMT/EwELEpe55X5826mQOAsYWr4Ba/8sVO0CJ+XbZyF/47cQJrVii2R6TfpDzc7n70SgtHeKJOU9XsPhEFBahqFqN0DFAIDVPgtl26bnsc84fqf/p5e+ClwuF6Ta/hb6PLOAqfMKyao+ocDOb6iKj0L1XsDOZhZ27MIM2PC+DOsbNBKzGdY31abOq2wCuc3nSIBEdioYw169ezGdz1O9BwCTFfzFMWM5TZ/zmQRkObvUXC4P8lq/hoodsOjOKeV4f2HbBPB4XhCfvTWXSSBQIn8sQCJ1NLaUt/97KGhOrAhR0ijYmQTwMxgmLXNk+dI6n4MmZJSiljY0xCowHJVS72iIVeBerBO0HSYBzP5DIfGWO4pAhLwaOIQcZhK4OyyzY7k4GovOjGOeLzUHaO4ESmQguif5USYBxfrnkrDOT+kbzkDlwNKiQBPQ0PIFcDjc2STDvgwmAV3DWYyC+hUEKne6qX6ewGjRYQuKMeDbK0Z0uC4wCZixgukbP4nkeQmuS7X2RRcjeh+WbyzH/N+1dR/Gmjuvsa4Fv5IyrOWq4hd1mMmTyQVP33ZG0P+VliM082+mGA8WlvbdcLTDLOCQwEaUpsFibBTW2U54nBV0mPSNYzjuHBqBmtK+uYWIfTHafMVJSe8kiUlr7RMIxWDpuorL70IJK9a6sr4/wS8wEsJlVfuptLnrZ2Le8pMDJoHChy86MbZfIkWP/MjzF68eD0+sdIkC/R6v6QGBd8D3+RvPLy9sv0jWt11wwiRgePCrBRRsmiCppkENHYq8lnPOBcraDxiVa8Bf5gMJmr5a2mEu3n8rTAKa2lEX9E2f4hKdeDI0YX6NoNfEnJ0g8Amc0NWfFegbxx1buFthrgP/JLf5S5Kc/5SexxdA0ebLc7lgnwbfwHCISmlqp5HS1Y+5wCSQWTHiSuW7eH3Ha5nA70Kq6TDY9mHmN43jus+fVFeOhOqbPnN5e+YIrC173S1ZVSfJygjNs7TSbXgS6IYDfAPCxjQ1o7gdf88tTAJK8wtuUd13jKxWbcrz9l2BOXATNx0qWBVr6lZXvE3SS465hUkAM94tSvMRkpT/hMRLIPxDW/cR+PithLis7oz0kpcJPZS4g0kgQbvNA3Yi1fUTb6H4u9jMTrhLKPpNUfCMKI1GyDTkFjYBTa9HZPodxF8U8YE4OBXHP+R8atHzJMV4CDnoFiaBqJRGj2BZJv7i6NeWCYS46Yw+LdVtJ/HZPR75XwTwzHCAVkW/wPDjuPUieCzzCJNAivGAR2hiBccW9VABSZR+Px7HPM4aCpOApylFUZe/RaJTH7BRATwBtWZUHCcqnAWe+DeBvwCBxinM8zq2PAAAAABJRU5ErkJggg==" Height="40"></td>
+                <td>PE377690_S5</td>
+            </tr>
+            <tr>
+                <td><img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAANbY1E9YMgAABNRJREFUWMO1lwtMm1UUgG8frEKBBdqZFcf7scmjpVAoZRRGH1BglLYIlFcdbxGWieAY6ICVjT19z20OJtM4jY+pmC26LKIZU9To1GQmksxkbibbfCwmRgkbcDy3xDJs6+BOm3z50/b/7/3+c889914CAMQdlq5fSHH3dWLsuESyN5wmacUvEZl+gBcutyn9RJHdHA5niBBylF79RBFbQxNK0+WGvfw0yzBZZ3ufGNt/cDxP2/HUB4XcTqCo4zLRNXxMEjS9cqF/0Ck+32taFCSHyORaWLO2DSIVdSBapQD8fUboLxmNy+pSauvOOMT/EwELEpe55X5826mQOAsYWr4Ba/8sVO0CJ+XbZyF/47cQJrVii2R6TfpDzc7n70SgtHeKJOU9XsPhEFBahqFqN0DFAIDVPgtl26bnsc84fqf/p5e+ClwuF6Ta/hb6PLOAqfMKyao+ocDOb6iKj0L1XsDOZhZ27MIM2PC+DOsbNBKzGdY31abOq2wCuc3nSIBEdioYw169ezGdz1O9BwCTFfzFMWM5TZ/zmQRkObvUXC4P8lq/hoodsOjOKeV4f2HbBPB4XhCfvTWXSSBQIn8sQCJ1NLaUt/97KGhOrAhR0ijYmQTwMxgmLXNk+dI6n4MmZJSiljY0xCowHJVS72iIVeBerBO0HSYBzP5DIfGWO4pAhLwaOIQcZhK4OyyzY7k4GovOjGOeLzUHaO4ESmQguif5USYBxfrnkrDOT+kbzkDlwNKiQBPQ0PIFcDjc2STDvgwmAV3DWYyC+hUEKne6qX6ewGjRYQuKMeDbK0Z0uC4wCZixgukbP4nkeQmuS7X2RRcjeh+WbyzH/N+1dR/Gmjuvsa4Fv5IyrOWq4hd1mMmTyQVP33ZG0P+VliM082+mGA8WlvbdcLTDLOCQwEaUpsFibBTW2U54nBV0mPSNYzjuHBqBmtK+uYWIfTHafMVJSe8kiUlr7RMIxWDpuorL70IJK9a6sr4/wS8wEsJlVfuptLnrZ2Le8pMDJoHChy86MbZfIkWP/MjzF68eD0+sdIkC/R6v6QGBd8D3+RvPLy9sv0jWt11wwiRgePCrBRRsmiCppkENHYq8lnPOBcraDxiVa8Bf5gMJmr5a2mEu3n8rTAKa2lEX9E2f4hKdeDI0YX6NoNfEnJ0g8Amc0NWfFegbxx1buFthrgP/JLf5S5Kc/5SexxdA0ebLc7lgnwbfwHCISmlqp5HS1Y+5wCSQWTHiSuW7eH3Ha5nA70Kq6TDY9mHmN43jus+fVFeOhOqbPnN5e+YIrC173S1ZVSfJygjNs7TSbXgS6IYDfAPCxjQ1o7gdf88tTAJK8wtuUd13jKxWbcrz9l2BOXATNx0qWBVr6lZXvE3SS465hUkAM94tSvMRkpT/hMRLIPxDW/cR+PithLis7oz0kpcJPZS4g0kgQbvNA3Yi1fUTb6H4u9jMTrhLKPpNUfCMKI1GyDTkFjYBTa9HZPodxF8U8YE4OBXHP+R8atHzJMV4CDnoFiaBqJRGj2BZJv7i6NeWCYS46Yw+LdVtJ/HZPR75XwTwzHCAVkW/wPDjuPUieCzzCJNAivGAR2hiBccW9VABSZR+Px7HPM4aCpOApylFUZe/RaJTH7BRATwBtWZUHCcqnAWe+DeBvwCBxinM8zq2PAAAAABJRU5ErkJggg==" Height="40"></td>
+                <td>PE377690_S6</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>

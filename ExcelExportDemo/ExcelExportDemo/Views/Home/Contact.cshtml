@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="~/Scripts/filesaver.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <pre id="json"></pre>
+        <button class="btn btn-primary" onclick="downloadAsExcel()">download excel</button>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    var data = [{
+            "Segment": "Government",
+            "Country": "Canada",
+            "Product": "Carretera",
+        "Discount": "None",
+        "Image":"http://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=2"
+        },
+        {
+            "Segment": "Government",
+            "Country": "Germany",
+            "Product": "Carretera",
+            "Discount": "None",
+            "Image":"http://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=1"
+        },
+        {
+            "Segment": "Midmarket",
+            "Country": "France",
+            "Product": "Carretera",
+            "Discount": "None",
+            "Image":"http://dev.systemsource.com/static/RL/MicrosoftImageTest.pl?p_image_ID=3"
+        }];
+
+    document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 4);
+
+    const EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8;base64';
+    const EXCEL_EXTENSION = '.xlsx';
+
+    function downloadAsExcel() {
+        const worksheet = XLSX.utils.json_to_sheet(data);
+        //worksheet.c
+        // worksheet.mergeCells('A1:E1');
+        
+        const workbook = {
+            Sheets: {
+                'data': worksheet
+            },
+            SheetNames: ['data']
+        };
+        const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+        console.log(excelBuffer);
+        saveAsExcel(excelBuffer,'myFile');
+
+    }
+
+    function saveAsExcel(buffer, filename) {
+        const data = new Blob([buffer], { type: EXCEL_TYPE });
+        saveAs(data, filename + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
+
+   }
+
+
+</script>
+
+@*<script>
+    var tableToExcel = (function () {
+        var uri = 'data:application/vnd.ms-excel;base64,'
+            , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>< !--[if gte mso 9]> <xml><x: <x: <x: <x: {worksheet}</x: Name > <x: WorksheetOptions><x: </x: WorksheetOptions ></x: ExcelWorksheet ></x: ExcelWorksheets ></x: ExcelWorkbook ></xml >< ![endif]-- > <meta http-equiv="content-type" content="text/plain; charset=UTF-8" /></head > <body><table>{table}</table></body></html>'
+            //, template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head>< !--[if gte mso 9]> <xml><x: <x: <x: <x: {worksheet}</x: Name > <x: WorksheetOptions><x: </x: WorksheetOptions ></x: ExcelWorksheet ></x: ExcelWorksheets ></x: ExcelWorkbook ></xml >< ![endif]-- > <meta http-equiv="content-type" content="text/plain; charset=UTF-8" /></head > <body><img src="{imgsrc1}" style="float:left;clear:none;margin-right:50px " height=50 width=100/><img src="{imgsrc2}" style="float:right;clear:none;margin-left:50px " height=50 width=100/><h1 style="display:inline-block">{heading}</h1><br><table>{table}</table></body></html>'
+            , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
+            , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+        return function (table, name) {
+            if (!table.nodeType) table = document.getElementById(table)
+            heading = 'THIS IS HEAD';
+            imgsrc1 = 'http://www.w3schools.com/html/pic_mountain.jpg';
+            imgsrc2 = 'http://www.w3schools.com/html/pic_html5.gif';
+
+            //var ctx = { worksheet: name || 'Worksheet', imgsrc1: imgsrc1, imgsrc2: imgsrc2, heading: heading, table: table.innerHTML }
+            var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML }
+            //var blob = new Blob([format(template, ctx)]);
+            var blob = new Blob([format(template, ctx)]);
+            var blobURL = window.URL.createObjectURL(blob);
+            return blobURL;
+        }
+    })()
+
+    $("#btnExport").click(function () {
+        var todaysDate = new Date().getTime();
+        var blobURL = tableToExcel('account_table', 'test_table');
+        $(this).attr('download', todaysDate + '.xls')
+        $(this).attr('href', blobURL);
+    });
+</script>*@
