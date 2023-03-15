@@ -1,0 +1,29 @@
+﻿@page "s3/index"
+@{
+    Layout = "_Layout";
+}
+@model IEnumerable<CDN_test.Models.Aws_Models.S3File>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@item.SignedUrl" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
