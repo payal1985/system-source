@@ -1,0 +1,615 @@
+[
+  {
+    "date": "01/07/2022",
+    "time": "22:49",
+    "client": "Bank Of America",
+    "clientId": 10,
+    "status": "InProgress",
+    "dataItemType": [
+      {
+        "itemTypeID": 3,
+        "clientID": 10,
+        "itemCode": "Base",
+        "itemName": "Base",
+        "itemDesc": null,
+        "orderSequence": null,
+        "itemTypeOptions": [
+          {
+            "itemTypeOptionID": 76,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Building",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBox",
+            "orderSequence": 20,
+            "hasOptionLineID": null,
+            "valType": 1,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": true,
+            "isRequired": true,
+            "itemTypeOptionReturnValue": null,
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 77,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Floor",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "Dropdown",
+            "orderSequence": 40,
+            "hasOptionLineID": null,
+            "valType": 3,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": true,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": null,
+            "itemTypeOptionLines": [
+              {
+                "itemTypeOptionLineID": 56,
+                "clientID": null,
+                "itemTypeOptionID": 77,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Floor1",
+                "itemTypeOptionLineName": "Floor1",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 57,
+                "clientID": null,
+                "itemTypeOptionID": 77,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Floor2",
+                "itemTypeOptionLineName": "Floor2",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 58,
+                "clientID": null,
+                "itemTypeOptionID": 77,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Floor3",
+                "itemTypeOptionLineName": "Floor3",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 78,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "GPS",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "GPS",
+            "orderSequence": 50,
+            "hasOptionLineID": null,
+            "valType": 30,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": true,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": null,
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 75,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Area or Room Number",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBox",
+            "orderSequence": 60,
+            "hasOptionLineID": null,
+            "valType": 1,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": true,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": null,
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 74,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Additional Description",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextParagraph",
+            "orderSequence": 70,
+            "hasOptionLineID": null,
+            "valType": 2,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [ { "returnValue": "Additional 1" } ],
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 73,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Manufactory",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "DropdownPlus",
+            "orderSequence": 100,
+            "hasOptionLineID": null,
+            "valType": 90,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": {
+                  "itemTypeOptionLineID": 9,
+                  "clientID": null,
+                  "itemTypeOptionID": 73,
+                  "itemTypeOption": null,
+                  "itemTypeOptionLineCode": "Knoll",
+                  "itemTypeOptionLineName": "Knoll",
+                  "itemTypeOptionLineDesc": null,
+                  "orderSequence": null
+                }
+              }
+            ],
+            "itemTypeOptionLines": [
+              {
+                "itemTypeOptionLineID": 9,
+                "clientID": null,
+                "itemTypeOptionID": 73,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Knoll",
+                "itemTypeOptionLineName": "Knoll",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 10,
+                "clientID": null,
+                "itemTypeOptionID": 73,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Willson",
+                "itemTypeOptionLineName": "Willson",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 11,
+                "clientID": null,
+                "itemTypeOptionID": 73,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Gomen",
+                "itemTypeOptionLineName": "Gomen",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 12,
+                "clientID": null,
+                "itemTypeOptionID": 73,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Elite",
+                "itemTypeOptionLineName": "Elite",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 79,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Custome/Modular/AV - Select all that Apply",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "RadioPlus",
+            "orderSequence": 110,
+            "hasOptionLineID": null,
+            "valType": 80,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": {
+                  "itemTypeOptionLineID": 36,
+                  "clientID": null,
+                  "itemTypeOptionID": 79,
+                  "itemTypeOption": null,
+                  "itemTypeOptionLineCode": "Modular",
+                  "itemTypeOptionLineName": "Modular",
+                  "itemTypeOptionLineDesc": null,
+                  "orderSequence": null
+                }
+              },
+              {
+                "returnValue": {
+                  "itemTypeOptionLineID": 37,
+                  "clientID": null,
+                  "itemTypeOptionID": 79,
+                  "itemTypeOption": null,
+                  "itemTypeOptionLineCode": "AV-Power",
+                  "itemTypeOptionLineName": "AV-Power",
+                  "itemTypeOptionLineDesc": null,
+                  "orderSequence": null
+                }
+              }
+            ],
+            "itemTypeOptionLines": [
+              {
+                "itemTypeOptionLineID": 35,
+                "clientID": null,
+                "itemTypeOptionID": 79,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Custom",
+                "itemTypeOptionLineName": "Custome",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 36,
+                "clientID": null,
+                "itemTypeOptionID": 79,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Modular",
+                "itemTypeOptionLineName": "Modular",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 37,
+                "clientID": null,
+                "itemTypeOptionID": 79,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "AV-Power",
+                "itemTypeOptionLineName": "AV-Power",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 80,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Part Number",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBox",
+            "orderSequence": 115,
+            "hasOptionLineID": null,
+            "valType": 1,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [ { "returnValue": "Part number 1" } ],
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 61,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Finish",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBoxPlus",
+            "orderSequence": 119,
+            "hasOptionLineID": null,
+            "valType": 50,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 2,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [ { "returnValue": "Finish 2" } ],
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 84,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Finish",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBoxPlus",
+            "orderSequence": 119,
+            "hasOptionLineID": null,
+            "valType": 50,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 2,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": null,
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 83,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Fabric",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBoxPlus",
+            "orderSequence": 130,
+            "hasOptionLineID": null,
+            "valType": 50,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 2,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [
+              { "returnValue": "Fabric" },
+              { "returnValue": "Fabric 2" }
+            ],
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 70,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Total Count",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "CheckAllApply",
+            "orderSequence": 180,
+            "hasOptionLineID": null,
+            "valType": 40,
+            "status": null,
+            "limitMin": 1,
+            "limitMax": 0,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [
+              {
+                "nameCondition": "Good",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/F1A590D0-956F-4B27-A8C3-73F669C6EE30.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "3F669C6EE30.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Good",
+                "txtQuality": "3"
+              },
+              {
+                "nameCondition": "Fair",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Fair",
+                "txtQuality": "1"
+              },
+              {
+                "nameCondition": "MissingParts",
+                "dataCondition": [
+                  {
+                    "itemName": "Item 1",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "itemName": "Item 2",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "itemName": "Item 3",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "MissingParts",
+                "txtQuality": "3"
+              },
+              {
+                "nameCondition": "Damaged",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Damaged",
+                "txtQuality": "5"
+              }
+            ],
+            "itemTypeOptionLines": [
+              {
+                "itemTypeOptionLineID": 81,
+                "clientID": null,
+                "itemTypeOptionID": 70,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Good",
+                "itemTypeOptionLineName": "Quantity Good",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 82,
+                "clientID": null,
+                "itemTypeOptionID": 70,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Fair",
+                "itemTypeOptionLineName": "Quantity Fair",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 83,
+                "clientID": null,
+                "itemTypeOptionID": 70,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Poor",
+                "itemTypeOptionLineName": "Quantity Poor",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 84,
+                "clientID": null,
+                "itemTypeOptionID": 70,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "Damaged",
+                "itemTypeOptionLineName": "Quantity Damaged",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              },
+              {
+                "itemTypeOptionLineID": 85,
+                "clientID": null,
+                "itemTypeOptionID": 70,
+                "itemTypeOption": null,
+                "itemTypeOptionLineCode": "MissingParts",
+                "itemTypeOptionLineName": "Quantity Missing Parts",
+                "itemTypeOptionLineDesc": null,
+                "orderSequence": null
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 68,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Note",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "TextBox",
+            "orderSequence": 190,
+            "hasOptionLineID": null,
+            "valType": 1,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 0,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": [ { "returnValue": "It’s 1" } ],
+            "itemTypeOptionLines": []
+          },
+          {
+            "itemTypeOptionID": 71,
+            "clientID": null,
+            "itemTypeID": 3,
+            "itemTypeOptionCode": null,
+            "itemTypeOptionName": "Photo",
+            "valTypeDesc": null,
+            "itemTypeOptionDesc": "PhotoPlus",
+            "orderSequence": 200,
+            "hasOptionLineID": null,
+            "valType": 70,
+            "status": null,
+            "limitMin": 0,
+            "limitMax": 4,
+            "isHide": false,
+            "isRequired": false,
+            "itemTypeOptionReturnValue": null,
+            "itemTypeOptionLines": []
+          }
+        ],
+        "itemRowID": 1
+      }
+    ],
+    "isBarScan": false
+  }
+]

@@ -1,0 +1,61 @@
+<!-- <form #ScheduleAheadForm="ngForm" 
+      name="ScheduleAheadForm" 
+      (ngSubmit)="onSubmit()"
+      class="relationship-dialog"> -->
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Input">
+        </mat-form-field>
+    
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea"></textarea>
+        </mat-form-field>
+    
+        <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <!-- <mat-form-field>
+          <input 
+          matInput 
+          [matDatepicker]="picker" 
+          [matDatepickerFilter]="dateFilter"
+          [disabled]="false"
+          [max]="dateMe"
+          placeholder="Input & change events"
+          (dateInput)="addEvent('input', $event)" 
+          (dateChange)="addEvent('change', $event)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+    
+        <mat-form-field class="example-full-width">
+      <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="testdate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+
+    </mat-form-field>
+    
+        <div class="example-events">
+          <div *ngFor="let e of events">{{e}}</div>
+        </div>
+    
+        <footer dialog-parent-footer>
+          <div dialog-footer>
+            <!-- <button color="secondary" (cuClick)="onCancel()">{{'common.action.cancel' | translate}}</cu-button>
+            <button matType="raised" color="primary" [type]="'submit'">{{'common.action.save' | translate}}</cu-button> -->
+          </div>
+        </footer>
+      </div>
+    <!-- </form> -->

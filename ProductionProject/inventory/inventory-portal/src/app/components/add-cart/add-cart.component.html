@@ -1,0 +1,15 @@
+<mat-form-field>
+    
+    <mat-select value="{{selected}}" placeholder="">
+
+      <mat-option *ngFor="let currency of currencies" [value]="currency.value">
+        {{currency.text}}
+      </mat-option>
+
+    </mat-select>
+</mat-form-field>
+<mat-icon aria-hidden="false" color="accent" (click)="addDialog('Building')" matTooltip="Add New Destination Building">add</mat-icon>
+
+<p>
+  Selected Value: {{selected}}
+</p>

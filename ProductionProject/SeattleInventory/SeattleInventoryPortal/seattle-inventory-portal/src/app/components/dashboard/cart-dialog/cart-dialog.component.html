@@ -1,0 +1,91 @@
+<!-- <div *ngIf="cartDataSource.data.length === 0">
+  <p>No Items</p>
+ </div> -->
+ <div *ngIf="!cartDataSource?.length; else cartcontent">
+    <span class="empty-cart-span"> No Items Available in the cart</span>   
+    <!-- <button mat-stroked-button mat-dialog-close style="justify-content: end;">OK</button>       -->
+    <div mat-dialog-actions>
+      <button mat-stroked-button mat-dialog-close>OK</button>      
+    </div>
+</div>
+<ng-template #cartcontent>
+
+    <!-- <div class="table-container mat-elevation-z8"> -->
+  
+      <mat-table [dataSource]="cartDataSource"> 
+          <ng-container matColumnDef="inv_image_name">
+            <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Image:</span>
+
+              <!-- <img src="./assets/images/inventoryimg/{{element.inv_image_name}}" height="100px" width="100px" />  -->
+              <!-- <img src="assets/images/inventoryimg/{{element.inv_image_name}}" height="80px" width="80px" />  -->
+              <!-- <img src="https://ssidb-test.systemsource.com/Project/GoCanvasImages/images/{{element.inv_image_name}}" height="100px" width="100px" />  -->
+              <img src="{{element.inv_image_url}}" height="80px" width="80px" /> 
+             
+            </mat-cell>
+          </ng-container>      
+     
+          <ng-container matColumnDef="item_code">
+            <mat-header-cell *matHeaderCellDef> Item Code </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+              <span class="mobile-label">Item Code:</span>
+              {{element.item_code}} </mat-cell>
+          </ng-container>
+        
+       
+          <ng-container matColumnDef="description">
+            <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+              <span class="mobile-label">Description:</span>
+              {{element.description}} </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="Pull Info">
+              <mat-header-cell *matHeaderCellDef> Pull Info </mat-header-cell>
+              <mat-cell *matCellDef="let element"> 
+                <span class="mobile-label">Pull Info:</span>
+                {{element.building + ';' + element.floor + ';' + element.mploc}} </mat-cell>
+            </ng-container>  
+
+            <ng-container matColumnDef="cond">
+              <mat-header-cell *matHeaderCellDef> Condition </mat-header-cell>
+              <mat-cell *matCellDef="let element"> 
+                <span class="mobile-label">COndition:</span>
+                {{element.cond}} </mat-cell>
+            </ng-container>  
+  
+          <ng-container matColumnDef="pullqty" stickyEnd>
+              <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+              <mat-cell *matCellDef="let element; let i = index">
+          <span class="mobile-label">Quantity:</span>
+
+                <!-- {{element.pullqty}} -->
+                  <input matInput type="text" [(ngModel)]="element.pullqty" (change)="pullqtychange(element)"/>  
+              </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="remove" stickyEnd>
+            <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+            <mat-cell *matCellDef="let element;let i = index">
+          <span class="mobile-label"></span>
+
+              <mat-icon (click)=removeFromCart(element,i)>remove_shopping_cart</mat-icon>                 
+            </mat-cell>
+        </ng-container>
+          
+        
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <!-- </div> -->
+<br/>
+  <!-- </mat-dialog-content> -->
+  <div mat-dialog-actions>
+    <button mat-stroked-button mat-dialog-close >CLOSE</button>
+    <!-- <button mat-stroked-button (click)=openSendOrderDialog()>CREATE ORDER</button> -->
+    <button mat-stroked-button (click)=SendOrder()>SEND ORDER</button>
+  </div>
+ </ng-template>
+
+
+

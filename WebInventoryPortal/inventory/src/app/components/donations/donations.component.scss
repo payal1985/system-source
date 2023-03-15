@@ -1,0 +1,142 @@
+.example-container {
+    height: 100%;
+    /* position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0; */
+  }
+  
+  /* side-nav css start*/
+  
+  .example-sidenav {
+      width: 250px;
+      box-shadow: 3px 0 6px rgba(0,0,0,.24);
+      background: #37474f;
+      align-items: center;
+      justify-content: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: rgba(255, 0, 0, 0.5); */
+  }
+  
+  /* @media(min-width:768px){
+      .example-sidenav{
+          display: none;
+      }
+  } */
+  
+  .mat-toolbar-row, .mat-toolbar-single-row {    
+    padding: 0 0px;  
+  }
+  
+  .mat-list-item {
+  color: white;
+  }
+  
+  .mat-list-base .mat-list-item {
+  font-size: 14px;
+  background: #37474f;
+  color: white;    
+  align-items: center;
+  }
+  
+  .mat-list-base {
+  padding-top: 0px;
+  /* display: block;
+  -webkit-tap-highlight-color: transparent; */
+  }  
+
+  /* side-nav css end*/
+  
+  /* mat-card css start*/
+  .mat-card img{
+  object-fit: cover; /*this makes the image in src fit to the size specified below*/
+  width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 80%;
+  }
+  .example-card {
+  max-width: 330px;
+  max-height: 450px;
+  margin: 5px 5px 5px 5px; 
+  width: 350px;
+  height: 350px;
+  margin: 15px;
+  
+  }
+  
+  .mat-card-content{
+  height: 250px;
+  width: 300px; 
+  background-size: cover;
+  margin: 0px; 
+  display: flex;
+  padding:215px 5px 5px 5px;
+  }
+  
+  .mat-card-content span{
+  padding: 8px; 
+  color:white;
+  }
+  
+  .mat-card-content-title-spacer {  
+  flex-grow: 1;
+  /* flex: 1 1 auto; */
+  }
+  .mat-card-content-title {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  }
+  
+  .mat-card-span-action{
+    font-weight: 300; 
+    font-size: 11px;
+  }
+  
+  /* mat-card css end*/
+  
+  /*mat-toolbar for header css start*/
+  .logo {
+  padding: 0px 5px;
+  font-size: 15px;
+  /* white-space: nowrap; */
+  /* display: inline-block; */
+  align-items: center;
+  }
+  
+  .mat-select-panel {
+  height: 10px;
+  }
+  mat-toolbar {
+  background: #eceef0;
+  color: #807979; 
+  font-weight: 100;
+  font-stretch: normal;
+  font-size: 10px;
+  line-height: 20px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: inline-block;
+  /* justify-content: center; */
+  /* padding: 30px; */
+  }
+  
+  .example-spacer {
+  flex: 1 1 auto;
+  }
+  /*mat-toolbar for header css end*/
+  
+  
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0px 0px;}
+  
+  mat-chip-list-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin: -4px; */
+  }

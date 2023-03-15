@@ -1,0 +1,47 @@
+/* mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #37474f;
+    color: white;
+    border-radius: 0px;
+    padding: 16px;
+    text-align: center;
+}
+
+mat-sidenav .nav-caption{
+    text-align: left;
+} */
+
+/* mat-sidenav-container {
+    height: calc(100vh - 65px);
+} */
+
+.list-width {
+    width: 200px;
+  
+  }
+.mat-list-base .mat-list-item {
+    font-size: 14px;
+    background: #37474f;
+    color: white;    
+}
+
+.demo-avatar {
+    width: 100%;
+    height: 30%;
+}
+
+/* .demo-drawer-header {
+box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2px;
+    height: 51px; 
+   
+        margin-top: 5px;
+        font-weight: bolder;
+        
+} */
+

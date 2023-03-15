@@ -1,0 +1,41 @@
+<p>dashboard works!</p>
+
+<!-- <div fxLayout="row" style="background:lightblue; height: 100vh;"> -->
+    <!-- <button mat-raised-button color="primary" (click)="openDialog()">Click Me</button> 
+ <button mat-raised-button color="primary" (click)="myFunction()">Date Convert</button> -->
+ <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start start">
+
+ <mat-card class="example-card" *ngFor="let inv of inventoryList">   
+     <mat-card-content>
+     <!-- <mat-card-content [ngStyle]="{'background': 'url(data:image/jpeg;base64,'+inv.imageBase64+') center / cover'}" (click)="openDialog(inv.inventoryID)"> -->
+
+        <img src="{{inv.imageUrl+inv.imageName}}">
+             
+      </mat-card-content>
+    <mat-card-actions>
+    <span class="mat-card-span-action">    
+      {{inv.description | slice:0:150 }}	
+      <!-- <span  class="mat-card-span-action-desc">
+        {{inv.description | slice:0:100 }}
+      </span>               -->
+      <br/>
+      {{'MFG:'+inv.manufacturerName}} 
+      <br/>
+      <!-- {{inv.hwdStr.length > 0 ? inv.hwdStr : inv.fabric.length > 0 ? inv.hwdStr.length > 0 ? ','+inv.fabric : inv.fabric  : inv.finish.length > 0 ?  ','+inv.finish : ''}}   -->
+      {{inv.hwdStr.length > 0 ? inv.hwdStr : ''}}
+      {{inv.hwdStr.length > 0 && (inv.fabric.length > 0 ||  inv.finish.length > 0) ? ',':''}}
+      {{inv.fabric.length > 0 ? inv.fabric : ''}}  
+      
+      {{inv.finish.length > 0 ? inv.finish : ''}}
+      <br/>
+      
+    <span *ngIf="inv.missingParts" style="color: red;">
+      Missing Parts
+    </span>
+    </span> 
+    </mat-card-actions>
+  
+</mat-card>
+ </div>
+ 
+ 

@@ -1,0 +1,223 @@
+﻿@model SupportUI.Models.ImageModel
+
+@{
+    ViewData["Title"] = "ImageUpload";
+    Layout = null;
+    var message = TempData["ImageModelMessage"] ?? string.Empty;
+}
+
+@*<h1>ImageUpload</h1>
+
+<h4>ImageModel</h4>*@
+@*<hr />*@
+@*<style>
+    .dropzone {
+        min-height: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        background: white;
+        padding: 3px 8px;
+    }
+
+</style>*@
+
+<div class="row">
+    <div class="col-md-12">
+        @*<form asp-action="ImageUpload" class="dropzone dz-clickable" enctype="multipart/form-data">*@
+        <form asp-action="ImageUpload" enctype="multipart/form-data" method="post" id="imageuploadform">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-12 form-group form-inline">
+                <label class="col-sm-4 control-label">Part Number</label>
+                <input type="text" class="col-sm-6 form-control" name="partnumber" id="partnumber" required autocomplete="on" />
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                @*<div class="fallback">*@
+                <label class="col-sm-4 control-label">Image File</label>
+                <input name="imagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="imagefile" onchange="handleFiles(this,event);" multiple />
+                @*</div>*@
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label class="col-sm-4 control-label">2D Image File</label>
+                <input name="2dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="2dimagefile" onchange="handleFiles(this,event);" multiple />
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label class="col-sm-4 control-label">3D Image File</label>
+                <input name="3dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="3dimagefile" onchange="handleFiles(this,event);" multiple />
+            </div>
+            @*<div class="col-md-12 form-group form-inline">
+            <div id="dZUpload" class="dropzone">
+                <div class="dz-default dz-message"></div>
+            </div>
+        </div>*@
+            <div class="form-group" style="text-align:end;">
+                @*<input type="submit" value="Done" class="btn btn-primary align-content-end" onclick="location.href ='@Url.Action("Index","Home")'" />*@
+                <input type="submit" value="Upload" class="btn btn-primary" onclick=""/>
+            </div>
+            @*<div class="col-md-12 form-group form-inline">
+                @if (ViewBag.Message != null)
+                {
+                    @if (ViewBag.Message.Contains("Images are saved successfully"))
+                    {
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong><span class="glyphicon glyphicon-ok"></span>@ViewBag.Message</strong>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong><span class="glyphicon glyphicon-remove"></span>@ViewBag.Message</strong>
+                        </div>
+                    }
+                }
+            </div>*@
+            <!--<div class="col-md-12 form-group">
+        <label asp-for="ImageFileRegular" class="col-sm-4 control-label"></label>
+        <div class="fallback">
+            <input name="file" type="file" multiple />
+        </div>
+        <span asp-validation-for="ImageFileRegular" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 form-group">
+        <label asp-for="ImageFile2D" class="col-sm-4 control-label"></label>-->
+            @*<input asp-for="ImageFile2D" class="col-sm-6 form-control" name="files" type="file" />*@
+            <!--<div class="ImageFile2D" id="ImageFile2D" width:80px; height:80px'></div>
+        <span asp-validation-for="ImageFile2D" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 form-group">
+        <label asp-for="ImageFile3D" class="col-sm-4 control-label"></label>
+        <input asp-for="ImageFile3D" class="col-sm-6 form-control" name="files" type="file" />
+        <span asp-validation-for="ImageFile3D" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 form-group">
+        <label asp-for="ImageFileRevit" class="col-sm-4 control-label"></label>
+        <input asp-for="ImageFileRevit" class="col-sm-6 form-control" name="files" type="file" />
+        <span asp-validation-for="ImageFileRevit" class="text-danger"></span>
+    </div>
+    <div class="col-md-12 form-group">
+        <label asp-for="ImageFileSketchup" class="col-sm-4 control-label"></label>
+        <input asp-for="ImageFileSketchup" class="col-sm-6 form-control" name="files" type="file" />
+        <span asp-validation-for="ImageFileSketchup" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>-->
+
+        </form>
+    </div>
+</div>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+var message = '@message';
+    if (message) {
+        alert(message);
+        ShowInPopup('/Home/ImageUpload', 'New ImageUpload');
+    }
+
+
+    $(function () {
+        $("#imageuploadform").submit(function (e) {
+            e.preventDefault();
+
+            //console.log('Doing ajax submit');
+
+            //        var formAction = $(this).attr("action");
+            var fdata = new FormData();
+
+            var itemcode = $("#partnumber").val();
+
+            var fileInput = $('#imagefile')[0];
+            var file = fileInput.files[0];
+            var fileInput2d = $('#2dimagefile')[0];
+            var file2d = fileInput2d.files[0];
+            var fileInput3d = $('#3dimagefile')[0];
+            var file3d = fileInput3d.files[0];
+
+            fdata.append("file", file);
+            fdata.append("file", file2d);
+            fdata.append("file", file3d);
+            fdata.append("partnumber", itemcode);
+            
+            $.ajax({
+                type: 'post',
+                url: 'home/ImageUpload',
+                data: fdata,
+                processData: false,
+                contentType: false
+            }).done(function (result) {
+                // do something with the result now
+                console.log(result);
+                if (result.status === "success") {
+                    alert(result.message);
+                } else {
+                    alert(result.message);
+                }
+            });
+        });
+    })
+
+
+    //$(document).ready(function () {
+    //    var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];
+    //    function ValidateSingleInput(oInput) {
+    //        if ($("#partnumber").val() == '') {
+    //            alert("Sorry, Please enter the Part Number");
+    //        }
+    //        else if (oInput.type == "file") {
+    //            var sFileName = oInput.value;
+    //            if (sFileName.length > 0) {
+    //                var blnValid = false;
+    //                for (var j = 0; j < _validFileExtensions.length; j++) {
+    //                    var sCurExtension = _validFileExtensions[j];
+    //                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+    //                        blnValid = true;
+    //                        break;
+    //                    }
+    //                }
+
+    //                if (!blnValid) {
+    //                    alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+    //                    oInput.value = "";
+    //                    return false;
+    //                }
+    //            }
+    //        }
+    //        return true;
+    //    }
+
+
+
+    //    Dropzone.autoDiscover = false;
+    //    $("#imagefile").dropzone({
+    //        renameFile: function (file) {
+    //            // getItemCode(event);
+    //            // setTimeout(function () { "", 2000 });
+    //            var id = $("#partnumber").val();
+    //            console.log(id);console.log("rename file");
+    //            console.log("renameFile " + file.name + ".jpg");
+    //            return id + ".jpg";
+
+    //        },
+    //        complete: function (file) {
+    //            console.log("DZ 1 One complete");
+    //        },
+    //        url: "/home/imageupload",
+    //        addRemoveLinks: true,
+    //        success: function (file, response) {
+    //            var imgName = response;
+    //            file.previewElement.classList.add("dz-success");
+    //            console.log("Successfully uploaded :" + imgName);
+    //        },
+    //        error: function (file, response) {
+    //            file.previewElement.classList.add("dz-error");
+    //        }
+    //    });
+    //});
+</script>

@@ -1,0 +1,108 @@
+<!-- <button mat-button class="close-icon" [mat-dialog-close]="true">
+  <mat-icon>close</mat-icon>
+</button> -->
+
+<mat-dialog-content>
+  <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon">close</mat-icon>
+  </button>
+  <h2 mat-dialog-title> 
+     Select pull location
+  </h2>
+  <!-- <div class="table-container mat-elevation-z8"> -->
+    <mat-table [dataSource]="dataSource" >
+
+       
+        <ng-container matColumnDef="building">
+          <mat-header-cell *matHeaderCellDef> Building </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Building:</span>
+            {{element.building | titlecase}} 
+          </mat-cell>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="floor">
+          <mat-header-cell *matHeaderCellDef> Floor </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Floor:</span>
+            {{element.floor}} 
+          </mat-cell>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="mploc">
+          <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Location:</span>
+            {{element.mploc}} 
+          </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="qty">
+            <mat-header-cell *matHeaderCellDef> Qty On Hand </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Qty On Hand:</span>
+            {{element.qty}} </mat-cell>
+          </ng-container>
+    
+        <!-- <ng-container matColumnDef="">
+            <th mat-header-cell *matHeaderCellDef> Pull Qty </th>
+            <td mat-cell *matCellDef="let element"> <input [(ngModel)]="element.qty" matInput type="text" /> </td>
+            <td mat-cell *matCellDef=""> Add to cart </td>
+        </ng-container> -->
+
+        <!-- <ng-container matColumnDef="star" stickyEnd> -->
+          <ng-container matColumnDef="star">
+            <mat-header-cell *matHeaderCellDef>  
+              <mat-checkbox (change)="$event ? masterToggle() : null"
+              [checked]="selection.hasValue() && isAllSelected()"
+              [indeterminate]="selection.hasValue() && !isAllSelected()">
+          </mat-checkbox>
+              Pull Qty </mat-header-cell>
+            <mat-cell *matCellDef="let element;let i = index">
+            <span class="mobile-label">Pull Qty:</span>
+            <mat-checkbox (click)="$event.stopPropagation()"
+            (change)="$event ? selection.toggle(element) : null"
+            [checked]="selection.isSelected(element)">
+            </mat-checkbox>
+                <input matInput type="text" [formControl]="numberFormControl"  #pullqty/>
+                <!-- <input matInput type="text" [formControl]="numberFormControl"  #pullqty max="{{element.qty}}"/> -->
+                <!-- <mat-error *ngIf="numberFormControl?.invalid">  
+                  <div *ngIf="numberFormControl.errors.required">Qty is required</div>  
+              </mat-error>   -->
+              <button mat-stroked-button [disabled]="numberFormControl.invalid" (click)=addtocart(element,pullqty.value,i)>Add to cart</button>
+              <!-- <mat-error *ngIf="numberFormControl.hasError('required') && !selection.isSelected(element)"  >
+                Qty is required!
+              </mat-error> -->
+              <mat-error *ngIf="numberFormControl.hasError('pattern')"  >
+                Qty is only accept digit!
+              </mat-error>
+              <!-- <mat-error *ngIf="numberFormControl.hasError('max')"  >
+                only {{element.qty}} is available!
+              </mat-error> -->
+                <!-- <mat-error *ngIf="numberFormControl.hasError('required') && firstError === 'numberFormControl'">
+                  Qty is Required!
+                </mat-error>
+                <mat-error *ngIf="numberFormControl.hasError('number')">
+                  Please enter valid number!!!!
+                </mat-error> -->
+                <!-- <mat-error *ngIf="numberFormControl.hasError('required')">
+                  Qty is <strong>required</strong>
+                </mat-error> -->
+                <!-- <button type="button" [disabled]="numberFormControl.invalid" (click)=addtocart(element,pullqty.value,i)>Add to cart</button> -->
+                
+    </mat-cell>
+          </ng-container> 
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
+  <!-- </div> -->
+  <br/>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial>Close</button>
+  </div>
+</mat-dialog-content>
+
+

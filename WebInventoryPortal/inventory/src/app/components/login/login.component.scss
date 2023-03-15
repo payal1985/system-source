@@ -1,0 +1,63 @@
+form{
+  max-width: 250px;
+  margin: auto;
+}
+mat-form-field{
+  display: block;
+}
+.text-center{
+  text-align: center;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.remember-me{
+  flex-direction: row-reverse;
+}
+.logo{
+  max-width: 250px;
+  margin: auto;
+  width: 100%;
+  display: block;
+} 
+.page-wrap{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c3c6c8 0%,#c3c6c8 100%);
+  /* background: url(https://svgshare.com/i/8PV.svg), linear-gradient(135deg, #c3c6c8 0%,#c3c6c8 100%); */
+  padding: 10px 0;
+}
+.container{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.badge-logo{
+  width: 60px;
+  margin: 0 auto 10px;
+  display: block;
+}
+@media (max-width:600px){
+  .flex-center{
+    display: right;
+    text-align: center;
+  }
+  .login{
+        /* width: 100%; */
+        margin-bottom: 15px;
+  }
+}
+.links{
+  color:#4da3d4; 
+}
+.links:visited {
+  color: #4da3d4;
+}

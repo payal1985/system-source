@@ -1,0 +1,55 @@
+<!-- <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+  <mat-icon class="close-icon">close</mat-icon>
+</button> -->
+<!-- <mat-dialog-content>
+<div class="container-fluid"> 
+   <ngb-carousel *ngIf="inventoryItemImagesList">
+    <ng-template ngbSlide *ngFor="let imgitem of inventoryItemImagesList">
+      <div class="wrapper">
+        <img src="assets/images/{{imgitem.image_name}}"/>
+        <img src="{{imgitem.image_url}}"/>
+      </div>      
+    </ng-template>      
+  </ngb-carousel>
+</div>
+</mat-dialog-content> -->
+<!-- <div class="container-fluid"> -->
+  
+<!-- <div [ngClass]="{
+        'first': mycarousel?.activeId == '0',
+        'last': mycarousel?.activeId == 'inventoryItemImagesList.length - 1'
+      }">               -->
+      <!-- {{ mycarousel?.activeId }} -->
+      <!-- <mat-dialog-content> -->
+
+<!-- <ngb-carousel *ngIf="inventoryItemImagesList?.length" style="text-align: center; background-color: black;" [wrap]=true > -->
+  <ngb-carousel *ngIf="inventoryItemImagesList?.length" style="text-align: center; background-color: black;" 
+  [showNavigationArrows]="inventoryItemImagesList.length > 1" 
+  [wrap]=true 
+  >
+  <ng-template ngbSlide *ngFor="let imgitem of inventoryItemImagesList;index as i;">
+    <div class="picsum-img-wrapper">
+      <img [src]="imgitem.image_url" alt="Random first slide" Height="720px" (click)="closeDialog()">
+      <!-- <img [src]="'/assets/images/inventoryimg/'+imgitem.image_name" alt="Random first slide" Height="750px" (click)="closeDialog()"> -->
+      <!-- <img [ngStyle]="{'background-image': 'url(./assets/images/inventoryimg/'+ imgitem.image_name +')'}" 
+      alt="Random first slide" Height="720px" (click)="closeDialog()"
+      > -->
+      <!-- <secured-image [src]="'/assets/images/inventoryimg/'+imgitem.image_name"  (click)="closeDialog()"></secured-image> -->
+    </div>
+    <div class="carousel-caption">
+      <h3> Slide {{i + 1}} of {{inventoryItemImagesList.length}}</h3>
+      <h3>{{imgitem.location}}</h3>
+      <!-- <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+    </div>
+  </ng-template>
+
+  <!-- <div class="row justify-content-center">
+    <button type="button" class="btn btn-sm btn-primary m-r" >Skip</button>
+    <button type="button" class="btn btn-sm btn-info m-r" *ngIf="isNext" (click)="previousStep()">Previous</button>
+    <button type="button" class="btn btn-sm btn-success" (click)="nextStep()">Next</button>
+</div> -->
+</ngb-carousel>
+      <!-- </mat-dialog-content> -->
+<!-- </div> -->
+<!-- </div> -->

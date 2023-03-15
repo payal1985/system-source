@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Payal\OneDrive - System Source\Documents\_VM Transfer\PublishProject\GoCanvasApi</_PublishTargetUrl>
+    <History>True|2021-09-23T03:46:28.6931743Z;True|2021-09-22T20:45:05.3146477-07:00;True|2021-09-15T16:36:12.3167801-07:00;True|2021-09-15T16:08:48.3874585-07:00;True|2021-09-13T17:18:05.3954187-07:00;</History>
+  </PropertyGroup>
+</Project>

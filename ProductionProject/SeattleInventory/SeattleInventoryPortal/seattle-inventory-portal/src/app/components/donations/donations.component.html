@@ -1,0 +1,98 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav class="example-sidenav"
+                 [fixedInViewport]="true"
+                 [attr.role]="isHandset ? 'dialog' : 'navigation'"
+                 [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+                 [opened]="!(isHandset | async)!.matches">
+       <!-- <mat-toolbar><img src="./assets/images/silogo.jpg" style="width: 235px; "></mat-toolbar> -->
+       <mat-toolbar><img src="assets/images/silogo.jpg" style="width: 249px; "></mat-toolbar>
+       <mat-nav-list>
+            <mat-list-item [routerLink]="['/donations']" (click)="onClick('home')">
+            <mat-icon>home</mat-icon><span class="nav-caption">Home</span>
+            </mat-list-item>
+            <mat-list-item  class="mat-list-item-word-wrap" [routerLink]="['../']" [queryParams]="{id: category}" (click)="onClick(category)" *ngFor="let category of inventoryCategorylist">
+                <mat-icon>apps</mat-icon>
+                <span class="nav-caption">{{ category }}</span>
+                
+              </mat-list-item>
+    
+       </mat-nav-list> 
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+        <!-- <mat-toolbar color="primary"> -->
+        <mat-toolbar>
+          <mat-toolbar-row *ngIf="(isHandset | async)!.matches">
+            <button mat-icon-button class="example-icon" 
+            aria-label="Toggle sidenav"
+            (click)="sidenav.toggle()"
+            *ngIf="(isHandset | async)!.matches">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>   
+            <span class="logo" style="word-break: normal;">{{showCategory}}</span>
+            <span class="example-spacer"></span>
+            <span class="logo" fxLayoutAlign="end"><img src="assets/images/Systems Source Script_Small.png" height="40"></span>
+
+          </mat-toolbar-row>
+          <mat-toolbar-row *ngIf="(isHandset | async)!.matches">
+            <span class="logo" style="font-weight: 400;font-size: x-large;">Seattle Donation Inventory</span>
+          </mat-toolbar-row>
+        
+    
+  <!-- <below div for full dispaly mode ></below> -->
+            <div fxLayout="row" *ngIf="!(isHandset | async)!.matches" style="align-items: center;">
+                <span class="logo" style="word-break: normal;">{{showCategory}}</span>
+                <span class="example-spacer"></span>
+                <span class="logo" style="font-weight: 400;font-size: x-large;">Seattle Donation Inventory</span>
+                <span class="example-spacer"></span>
+               
+                  <!-- <span class="logo"><img src="./assets/images/logo-footer.png" height="30"></span> -->
+                  <span class="logo" fxLayoutAlign="end"><img src="assets/images/Systems Source Script_Small.png" height="50"></span>
+                  
+              </div>
+        </mat-toolbar>
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start start">
+            <div *ngIf="!inventoryList?.length; else maincardcontent">               
+                  <mat-nav-list style="margin: left 1px;">              
+                    <mat-list-item  class="mat-list-item-word-wrap" [routerLink]="['../']" [queryParams]="{id: category}" (click)="onClick(category)" 
+                    *ngFor="let category of inventoryCategorylist" style="background:white;color: rgb(31, 29, 29);">   
+                      <span>{{ category }}</span>                  
+                    </mat-list-item>
+                  </mat-nav-list>                      
+            </div>
+            <ng-template #maincardcontent>
+                <mat-card class="example-card" *ngFor="let inv of inventoryList">   
+                  <mat-card-content [ngStyle]="{'background-image': 'url(./assets/images/inventoryimg/'+ inv.image_name +')'}" (click)="openDialog(inv.inventoryItemModelsDisplay[0].inventory_id)">
+  
+                      <!-- <mat-card-content [ngStyle]="{'background-image': 'url(https://ssidb-test.systemsource.com/Project/GoCanvasImages/images/'+ inv.image_name +')'}"> -->
+                    <!-- <mat-card-content [ngStyle]="{'background-image': 'url('+inv.image_url+')'}" (click)="openDialog(inv.inventoryItemModelsDisplay[0].inventory_id)"> -->
+                      
+                      <span class="mat-card-content-title">{{inv.item_code}}</span>
+                      
+                      <span class="mat-card-content-title-spacer"></span>
+                      <span class="mat-card-content-title" title="{{inv.tootip_inv_item}}">Qty:{{inv.qty}}
+                      </span>
+                  </mat-card-content>
+                  <mat-card-actions>
+                  <span class="mat-card-span-action">    
+                    <!-- {{inv.description}}	 -->
+                    <span  [matTooltip]="inv.additional_description">
+                      {{inv.description }}
+                    </span>
+ 
+                    <br/>
+                    {{inv.manuf}} 
+                </span> 
+                  </mat-card-actions>
+                
+              </mat-card>
+              <!-- <mat-card style="background-color: rgba(51, 170, 51, .1)">
+                <mat-card-title>Iris</mat-card-title>
+                <mat-card-content>Lencwadi futhi ibonisa ukuhlelwa kwenhlangano yoFakazi ngaphansi kweNdikimba Ebusayo, kuhlanganise namabandla anezindikimba zabadala, iKomiti Eyengamele [yeGatsha] yamalungu ayisikhombisa yakulelozwe, kanye nababonisi besifunda nabesigodi.</mat-card-content>
+            </mat-card> -->
+            </ng-template>
+      </div>
+  
+     </mat-sidenav-content>
+  </mat-sidenav-container>
+  

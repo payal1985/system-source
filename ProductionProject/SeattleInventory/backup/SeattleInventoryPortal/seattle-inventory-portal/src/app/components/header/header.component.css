@@ -1,0 +1,100 @@
+mat-toolbar {
+  background: #eceef0;
+  color: #807979; 
+  font-weight: 100;
+  font-stretch: normal;
+  font-size: 10px;
+  line-height: 20px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: inline-block;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #37474f;
+  color: white;
+  border-radius: 0px;
+  padding: 16px;
+  text-align: center;
+}
+
+mat-sidenav .nav-caption{
+  text-align: left;
+
+}
+
+/* .content {
+  height: calc(100vh - 98px);
+  border-radius: 0px;
+  margin: 16px;
+  margin-left: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: lightgray;
+} */
+
+/* mat-sidenav-container {
+  height: calc(100vh - 65px);
+} */
+
+/* .menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;    
+} */
+.menu-button mat-icon {
+  margin-right: 8px;
+}
+/* .avatar {
+  margin-top: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+} */
+
+.name {
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.mat-list-item {
+  color: white;
+}
+
+/* main content layout style */
+
+
+
+.logo {
+  /* padding: 0px 3px; */
+  font-size: 15px;
+  display: inline-block;
+}
+
+.mat-select-panel {
+  height: 10px;
+}
+
+.example-spacer {
+  flex: 1 2 1;
+}

@@ -1,0 +1,41 @@
+* {
+    font-family: Lato;
+  }
+  
+  ngx-dropzone,
+  .custom-dropzone {
+    margin: 20px;
+  }
+  
+  .custom-dropzone {
+      height: 80px;
+      // width: 80px;
+      background: #333;
+      color: #fff;
+      border: 5px dashed rgb(235, 79, 79);
+      border-radius: 5px;
+      font-size: 20px;
+  }
+  
+  .custom-dropzone.ngx-dz-hovered {
+    border: 5px solid rgb(235, 79, 79);
+  }
+
+  ngx-dropzone-image-preview{
+    height: 80px;
+  }
+
+  .custom-dropzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 8px double #518;
+    border-radius: 10px;
+   
+    &.hovered {
+      border: 8px double #954;
+      background: #FF4;
+      font-size: 20px;
+    }
+  }

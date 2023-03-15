@@ -1,0 +1,45 @@
+<!-- <div style="margin-top: 40px" class="row">
+    <cdk-virtual-scroll-viewport itemSize="300" class="viewport">
+        <mat-card *cdkVirtualFor="let team of teams"> 
+            <mat-card-title>{{team.name}}</mat-card-title>
+            <img mat-card-image [src]="team.image" [alt]="team.name">
+            <mat-card-content>League {{team.league}}</mat-card-content>
+        </mat-card>
+    </cdk-virtual-scroll-viewport>
+  </div> -->
+
+  <!-- <div class="cdk-virtual-scroll-data-source-example">
+    <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="259" class="viewport">
+        <mat-card *cdkVirtualFor="let team of teams"> 
+            <mat-card-title>{{team.name}}</mat-card-title>
+            <img mat-card-image [src]="team.image" [alt]="team.name">
+            <mat-card-content>League {{team.league}}</mat-card-content>
+        </mat-card>
+    </cdk-virtual-scroll-viewport>
+  </div>
+   -->
+   <div>
+    <img src="getImage()" width="50px" height="50px"/>
+   </div>
+   <!-- <div class="search-results"    
+      infinite-scroll    
+      [infiniteScrollDistance]="scrollDistance"    
+      [infiniteScrollUpDistance]="scrollUpDistance"    
+      [infiniteScrollThrottle]="throttle"    
+      (scrolled)="onScrollDown($event)">   -->
+   <div class="search-results" 
+      (scrolled)="onScrollDown($event)">    
+      <div class="container">    
+        <div class="row">    
+          <div *ngFor="let pic of array;let i=index" class="col-sm-4">    
+            <div style="margin-top: 10px;" class="card">    
+              <img class="card-img-top" [src]="pic.src.landscape" alt="Card image cap">    
+              <div class="card-body">    
+                <h5 class="card-title">{{i+1}}</h5>    
+                <a href="#" class="btn btn-primary">Know more</a>    
+              </div>    
+            </div>    
+          </div>    
+        </div>    
+      </div>    
+</div> 

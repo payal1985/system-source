@@ -1,0 +1,20 @@
+<!-- dialog-box.component.html -->
+<h1 mat-dialog-title><strong>New Client</strong></h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input placeholder="Client Name" matInput [(ngModel)]="local_data.name">
+  </mat-form-field>
+  <!-- <mat-checkbox (change)="onChange($event); false">Has Inventory</mat-checkbox> -->
+  <mat-checkbox [(ngModel)]="local_data.has_inventory">Has Inventory</mat-checkbox>
+  <mat-form-field><input placeholder="Address" matInput [(ngModel)]="local_data.Address1"></mat-form-field>
+  <mat-form-field><input placeholder="Street" matInput [(ngModel)]="local_data.Street"></mat-form-field>
+  <mat-form-field><input placeholder="State" matInput [(ngModel)]="local_data.State"></mat-form-field>
+  <mat-form-field><input placeholder="Zipcode" matInput [(ngModel)]="local_data.Zipcode"></mat-form-field>
+  <!-- <ng-template #elseTemplate>
+    Sure to delete <b>{{local_data.name}}</b>?
+  </ng-template> -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()" mat-flat-button color="primary">Add</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>

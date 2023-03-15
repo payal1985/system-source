@@ -1,0 +1,95 @@
+/* table {
+    width: 100%;
+   
+  
+  } */
+
+  .example-container {
+    height: 400px;
+    width: 550px;
+    max-width: 100%;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    border: 1px solid #313030;
+    border-collapse: collapse;
+  }
+  
+  td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+    size: 3px;
+    /* display: inline-block; */
+  }
+  
+  th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+  }
+  
+  /* .mat-table-sticky-border-elem-right {
+    border-left: 1px solid #313030;
+  }
+   */
+  .mat-table-sticky-border-elem-left {
+    border-right: 1px solid #333232;
+  }
+
+  td.matInput{
+    border: 1px solid #313030;
+  }
+
+  .mat-input-element {
+    border: 1px solid #313030;
+}
+
+th {
+    /* row border */
+    border-bottom: 1px solid #313030;
+  }
+  tr.mat-row {
+    /* row border */
+    border: 1px solid #313030;
+  }  
+td.mat-cell{
+    border: 1px solid #313030;
+}
+
+th.mat-header-cell{
+    border: 1px solid #313030;
+}
+
+mat-cell{
+    display:flex !important;
+    justify-content:flex-end!important;
+    
+  }
+
+  mat-cell{
+    display:flex !important;
+    justify-content:flex-end!important;
+  
+  }
+  
+  /* ::ng-deep .mat-cell{
+    display:flex !important;
+    justify-content:flex-end!important;
+  } */
+
+  .close-button{
+    float: right;
+    top:-24px;
+    right:-20px;
+  }
+  
+  .close-icon {
+    transition: 1s ease-in-out;
+  }
+
+  .mat-dialog-actions {
+    justify-content:flex-end;
+    position: relative; 
+    top: 8rem;
+    }
+  

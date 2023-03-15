@@ -1,0 +1,17 @@
+<h3 mat-dialog-title>
+    Add {{type}}
+  </h3>
+  
+  <div mat-dialog-content>
+      <mat-form-field>      
+        <input matInput type="text" [formControl]="typeFormControl" placeholder="{{type}}"/>
+      </mat-form-field> 
+      <!-- <mat-error *ngIf="typeFormControl.hasError('required')">
+                  Entert the {{type}} !
+      </mat-error> -->
+  </div>
+  
+  <div mat-dialog-actions>
+    <button mat-button (click)="onDismiss()">Cancel</button>
+    <button mat-raised-button color="warn" [mat-dialog-close]="typeFormControl.value" (click)="onAddType()">Add {{type}}</button>
+  </div>

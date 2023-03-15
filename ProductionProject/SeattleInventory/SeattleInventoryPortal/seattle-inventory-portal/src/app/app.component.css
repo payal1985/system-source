@@ -1,0 +1,145 @@
+mat-toolbar {
+    background: #eceef0;
+    color: #807979;;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #37474f;
+    color: white;
+    border-radius: 0px;
+    padding: 16px;
+    text-align: center;
+}
+
+mat-sidenav .nav-caption{
+    text-align: left;
+
+}
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 0px;
+    margin: 16px;
+    margin-left: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+/* .menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;    
+} */
+.menu-button mat-icon {
+    margin-right: 8px;
+}
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+
+mat-divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.mat-list-item {
+    color: white;
+}
+
+/* main content layout style */
+
+.example-card {
+    max-width: 320px;
+    margin: 5px 5px 5px 5px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    /* background-size: cover; */
+  }
+  
+  .example-sidenav-content:first-child {
+    margin: 10px 5px 5px 5px;
+  }
+  .list-width {
+    width: 200px;
+  
+  }
+
+  .logo {
+    padding: 0px 5px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+/*   
+  .content-mob {
+    position: absolute;
+    top: 113px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: scroll;
+  
+  }
+  
+  .example-card {
+    max-width: 320px;
+    margin: 0px 5px 5px 0px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .example-sidenav-content:first-child {
+    margin: 10px 5px 5px 5px;
+  }
+  
+  .list-width {
+    width: 200px;
+  
+  } */
+  
+  /* mat-drawer {
+  
+    position: fixed;
+    background-color: rgb(236, 236, 236);
+  } */
+  
+  
+  
+  /* .list-item:hover {
+    background-color: rgba(83, 83, 83, 0.178);
+    cursor: pointer;
+  } */
+  

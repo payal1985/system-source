@@ -1,0 +1,227 @@
+<!-- <div *ngIf="cartDataSource.data.length === 0">
+  <p>No Items</p>
+ </div> -->
+ <div *ngIf="!cartDataSource?.length; else cartcontent">
+  <span class="empty-cart-span"> No Items Available in the cart</span>   
+  <!-- <button mat-stroked-button mat-dialog-close style="justify-content: end;">OK</button>       -->
+  <div mat-dialog-actions>
+    <button mat-stroked-button mat-dialog-close>OK</button>      
+  </div>
+</div>
+<ng-template #cartcontent>
+  <!-- <div class="table-container mat-elevation-z8"> -->
+    <span class="mobile-label">
+      <mat-form-field class="input-full-width">      
+        <input matInput type="text" [formControl]="emailFormControl" placeholder="Email"/>
+      </mat-form-field> 
+      <mat-form-field class="input-full-width">      
+        <input matInput type="text" [formControl]="requestorFormControl" placeholder="Requestor/Project Name"/>
+      </mat-form-field>
+    </span>
+    <mat-table [dataSource]="cartDataSource"> 
+        <ng-container matColumnDef="inv_image_name">
+          <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+          <span class="mobile-label">Image:</span>
+
+            <!-- <img src="./assets/images/inventoryimg/{{element.inv_image_name}}" height="100px" width="100px" />  -->
+            <!-- <img src="assets/images/inventoryimg/{{element.inv_image_name}}" height="80px" width="80px" />  -->
+            <!-- <img src="https://ssidb-test.systemsource.com/Project/GoCanvasImages/images/{{element.inv_image_name}}" height="100px" width="100px" />  -->
+            <img src="{{element.inventoryImageUrl+element.inventoryImageName}}" height="60px" width="60px" (click)="openDialog(element.inventoryItemID,element.condition)"/> 
+           
+          </mat-cell>
+        </ng-container>      
+   
+        <ng-container matColumnDef="item_code">
+          <mat-header-cell *matHeaderCellDef> Item Code </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Item Code:</span>
+            {{element.itemCode}} </mat-cell>
+        </ng-container>
+      
+     
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+            <span class="mobile-label">Description:</span>
+            {{element.description}} 
+          </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="pullinfo">
+            <mat-header-cell *matHeaderCellDef> Pull Info </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+              <span class="mobile-label">Pull Info:</span>
+              {{element.building + '; ' + element.floor + '; ' + element.room}} 
+            </mat-cell>
+          </ng-container>  
+
+          <ng-container matColumnDef="cond">
+            <mat-header-cell *matHeaderCellDef> Condition </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+              <span class="mobile-label">Condition:</span>
+              {{element.condition}} </mat-cell>
+          </ng-container>  
+
+        <ng-container matColumnDef="pullqty" stickyEnd>
+            <mat-header-cell *matHeaderCellDef> Qty </mat-header-cell>
+            <mat-cell *matCellDef="let element; let i = index">
+                <span class="mobile-label">Quantity:</span>             
+                <input matInput type="text" [(ngModel)]="element.pullQty == 0 ?'' : element.pullQty" (change)="pullqtychange($event,i)" />  
+                <!-- <input matInput type="text" value="{{element.pullqty == 0 ? '' : element.pullqty}}" (change)="pullqtychange($event,i)" />   -->
+                <!-- <input matInput type="text" [(ngModel)]="element.pullqty" (change)="pullqtychange(element)" id="{{'numberFormControl'+i}}"/>   -->
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="remove" stickyEnd>
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element;let i = index">
+            <span class="mobile-label"></span>
+            <mat-icon (click)=removeFromCart(element,i)>remove_shopping_cart</mat-icon>                 
+          </mat-cell>
+      </ng-container>
+     
+      <ng-container matColumnDef="select">
+        <mat-header-cell *matHeaderCellDef>
+ 
+          <mat-checkbox (change)="checkUncheckAll()" [(ngModel)]="masterSelected">
+          </mat-checkbox>
+      
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <span class="mobile-label"></span>         
+          <mat-checkbox   [(ngModel)]="element.isSelected" 
+                    (change)="isAllSelected()">
+          </mat-checkbox>               
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="dest_bldg">
+        <mat-header-cell *matHeaderCellDef>
+          <mat-icon aria-hidden="false" color="accent" (click)="addDialog('Building')">add</mat-icon>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element;let i = index">  
+        <!-- <mat-select [formControl]="dest_buildingFormControl" placeholder="{{element.arrayBuildings}}" id="{{'dest_buildingFormControl'+i}}">       -->
+          <span class="mobile-label"></span> 
+          <mat-select [formControl]="dest_buildingFormControl" placeholder="Dest Bldg" value="{{element.destBuilding}}"
+           (selectionChange)="selectionChangedBldg($event,i)"> 
+            <mat-option *ngFor="let dest_buld of inventoryBuldinglist"
+               [value]="dest_buld.inventoryBuildingName">
+               {{dest_buld.inventoryBuildingName}}
+           </mat-option>
+           <!-- <mat-option [value]="-1">Dispose/Donate</mat-option>
+           <mat-option [value]="-2">Dispose/Recycle</mat-option>  -->
+           <mat-option [value]="'Donate'">Dispose/Donate</mat-option>
+           <mat-option [value]="'Recycle'">Dispose/Recycle</mat-option>   
+            
+       </mat-select>    
+       <!-- <mat-error *ngIf="dest_buildingFormControl.hasError('required') || masterSelected || element.isSelected">
+        required
+      </mat-error>       -->
+ 
+        </mat-cell>      
+      
+      </ng-container>
+      <ng-container matColumnDef="dest_flr">
+        <mat-header-cell *matHeaderCellDef>
+          <mat-icon aria-hidden="false" color="accent" (click)="addDialog('Floor')">add</mat-icon>
+        </mat-header-cell>  
+        <mat-cell *matCellDef="let element;let i = index">
+          <!-- <mat-select placeholder="Dest Floor" [formControl]="dest_floorFormControl" id="{{'dest_floorFormControl'+i}}"  -->
+            <span class="mobile-label"></span> 
+            <mat-select placeholder="Dest Floor" [formControl]="dest_floorFormControl"  
+          (selectionChange)="selectionChangedFlr($event,i)"
+          value="{{element.destFloor}}">
+            <mat-option *ngFor="let dest_floor of inventoryFloorlist"
+                [value]="dest_floor.inventoryFloorName">
+                {{dest_floor.inventoryFloorName}}
+            </mat-option>
+            <!-- <mat-option [value]="-1">Not applicable</mat-option>                    -->
+            <mat-option [value]="'NA'">Not applicable</mat-option>                   
+        </mat-select>  
+        </mat-cell>      
+
+      </ng-container>
+
+      <ng-container matColumnDef="dest_loc">
+        <mat-header-cell *matHeaderCellDef>   
+          <mat-form-field class="input-full-width">      
+            <input matInput type="text" [formControl]="emailFormControl" placeholder="Email"/>
+          </mat-form-field> 
+        </mat-header-cell>  
+        <mat-cell *matCellDef="let element;let i = index">
+          <span class="mobile-label"></span> 
+          <mat-form-field class="input-full-width">      
+            <!-- <input matInput type="text" [formControl]="dest_locFormControl" placeholder="Dest Rm/Flr/Area" id="{{'dest_locFormControl'+i}}" > -->
+            <!-- <input matInput type="text" [formControl]="dest_locFormControl" placeholder="Dest Rm/Flr/Area" [errorStateMatcher]="matcher" -->
+            <input matInput type="text" [formControl]="dest_locFormControl" placeholder="Dest Rm/Flr/Area" 
+            (blur)="changedRoom($event,i)" value="{{element.destRoom}}"/>
+            <!-- <mat-error *ngIf="dest_locFormControl.hasError('required')">
+              <strong>!</strong>
+            </mat-error> -->
+          </mat-form-field> 
+        </mat-cell>      
+      </ng-container> 
+
+      <ng-container matColumnDef="depcost_cener">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>  
+        <mat-cell *matCellDef="let element;let i = index">
+          <span class="mobile-label"></span> 
+          <mat-form-field class="input-full-width">
+          <!-- <input type="text" placeholder="Dep/Cost Center"  matInput [formControl]="dest_depcostFormControl" id="{{'dest_depcostFormControl'+i}}"> -->
+            <input type="text" placeholder="Dep/Cost Center"  matInput 
+            [formControl]="dest_depcostFormControl" 
+            value="{{element.destDepCostCenter}}"
+            [matAutocomplete]="auto" (blur)="changedDeptCost($event,i)">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of selectedDepCostCenter | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+       </mat-cell>
+      </ng-container> 
+
+      <ng-container matColumnDef="req_inst_date">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element;let i = index">
+          <span class="mobile-label"></span> 
+          <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" [formControl]="req_inst_dateFormControl" id="{{'req_inst_date'+i}}" (dateChange)="changedInstDate($event,i)">
+          <!-- <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" [formControl]="req_inst_dateFormControl" value="{{element.inst_date}}" (dateChange)="changedInstDate($event,i)"> -->
+          <!-- <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" [value]="{{element.inst_date.value}}" (dateChange)="changedInstDate($event,i)"> -->
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-cell>      
+
+      </ng-container>
+      <ng-container matColumnDef="comment">
+        <mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="input-full-width">      
+            <input matInput type="text" [formControl]="requestorFormControl" placeholder="Requestor/Project Name"/>
+          </mat-form-field>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element;let i = index">
+          <span class="mobile-label"></span> 
+          <!-- <textarea matInput placeholder="Comments..." [formControl]="commentFormControl" id="{{'commentFormControl'+i}}" (change)="changedComment($event,i)"></textarea> -->
+          <textarea matInput placeholder="Comments..." [formControl]="commentFormControl" value="{{element.comment}}" (change)="changedComment($event,i)"></textarea>
+        </mat-cell>      
+       
+      </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+     
+    </mat-table>
+    
+    
+      <!-- </div> -->
+<br/>
+<!-- </mat-dialog-content> -->
+<div mat-dialog-actions>
+  <button mat-stroked-button mat-dialog-close >CLOSE</button>
+  <!-- <button mat-stroked-button (click)=openSendOrderDialog()>CREATE ORDER</button> -->
+  <button mat-stroked-button (click)=SendOrder()>SEND ORDER</button>
+</div>
+</ng-template>
+
+
+

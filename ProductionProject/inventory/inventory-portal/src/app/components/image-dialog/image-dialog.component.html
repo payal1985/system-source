@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <h1>Angular 10 Carousel Example</h1>
+    <h2>Full tutorial in Techiediaries</h2>
+    <ngb-carousel *ngIf="imagedatasource">
+      <ng-template ngbSlide *ngFor="let imglist of imagedatasource">
+        <div class="wrapper">
+          <img [src]="imglist.image" alt="Random first slide" (click)="openImgInNewWindow(imglist.image)" (contextmenu)="onRightClick($event)"/>
+        </div>
+        <!-- <div class="carousel-caption">
+          <h3>First Slide</h3>
+          <p>Angular 10 Carousel Example</p>
+        </div> -->
+      </ng-template>      
+    </ngb-carousel>
+  </div>
+  

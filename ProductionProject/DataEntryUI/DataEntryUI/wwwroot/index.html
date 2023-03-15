@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>-->
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>-->
+    <script src="js/site.js" asp-append-version="true"></script>
+
+    <style>
+        .form-error {
+            color: red;
+            /*background-color: #acf;*/
+        }
+
+       /* .error {
+            color: red;
+        }*/
+    </style>
+</head>
+<body>
+    <h4>System Source</h4>
+    <hr />
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-sm-10">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h5>Create Product</h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <!--<div class="col-sm-4"></div>-->
+                            <div class="col-sm-12" style="text-align:end;">
+                                <a data-toggle="modal" href="#imageModal" title="click to upload the images"><strong>Images Upload</strong></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form id="productform" action="">
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Manufacturer" class="col-sm-4 col-form-label control-label">Manufacturer</label>
+                                    <!--<input type="text" autocomplete="on" id="Manufacturer" class="col-sm-6 form-control" autofocus data-validation="required" data-validation-error-msg="This field is required" />-->
+                                    <input type="text" autocomplete="on" id="Manufacturer" class="col-sm-6 form-control" autofocus data-validation="required" data-validation-error-msg="This field is required"  />                                    
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Rep" class="col-sm-4 control-label">Rep</label>
+                                    <input type="text" autocomplete="on" id="Rep" class="col-sm-6 form-control"/>
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Mfg" class="col-sm-4 control-label">Mfg</label>
+                                    <input type="text" autocomplete="on" id="Mfg" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required"  />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Cat" class="col-sm-4 control-label">Cat</label>
+                                    <input type="text" autocomplete="on" id="Cat" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required"  />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Manufactured" class="col-sm-4 control-label">Manufactured Location</label>
+                                    <input type="text" autocomplete="on" id="Manufactured" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="PartNumber" class="col-sm-4 control-label">Part Number</label>
+                                    <input type="text" autocomplete="on" id="PartNumber" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Components" class="col-sm-4 control-label">Components</label>
+                                    <input type="text" autocomplete="on" id="Components" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="PartDescription" class="col-sm-4 control-label">Part Description</label>
+                                    <textarea id="PartDescription" autocomplete="on" class="col-sm-6 form-control" text-wrap:normal" type="text" data-validation="required" data-validation-error-msg="This field is required"></textarea>
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Series" class="col-sm-4 control-label">Series</label>
+                                    <input type="text" autocomplete="on" id="Series" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Category" class="col-sm-4 control-label">Category</label>
+                                    <select id="Category" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required"></select>
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="SubCategory" class="col-sm-4 control-label">Sub Category</label>
+                                    <select id="SubCategory" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required">
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="HeightDD" class="col-sm-4 control-label">Height</label>
+                                    <select id="HeightDD" class="col-sm-6 form-control">
+                                        <option value="">Select Height</option>
+                                        <option value="Bar Height">Bar Height</option>
+                                        <option value="Counter Height">Counter Height</option>
+                                        <option value="Highback">Highback</option>
+                                        <option value="Low">Low</option>
+                                        <option value="Midback">Midback</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Misc" class="col-sm-4 control-label">Misc</label>
+                                    <input type="text" autocomplete="on" id="Misc" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="SeatActions" class="col-sm-4 control-label">Seat Actions</label>
+                                    <input type="text" autocomplete="on" id="SeatActions" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="FabricDetail" class="col-sm-4 control-label">Fabric Detail</label>
+                                    <input type="text" autocomplete="on" id="FabricDetail" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Modular" class="col-sm-4 control-label">Modular</label>
+                                    <input type="text" autocomplete="on" id="Modular" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Shape" class="col-sm-4 control-label">Shape</label>
+                                    <input type="text" autocomplete="on" id="Shape" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Seats" class="col-sm-4 control-label">Seats</label>
+                                    <input type="text" autocomplete="on" id="Seats" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="BaseAttribute" class="col-sm-4 control-label">Base Attribute</label>
+                                    <select id="BaseAttribute" class="col-sm-6 form-control">
+                                        <option value="">Select Base Attribute</option>
+                                        <option value="4-Star">4-Star</option>
+                                        <option value="5-Star">5-Star</option>
+                                        <option value="Cantilever">Cantilever</option>
+                                        <option value="Disc Base">Disc Base</option>
+                                        <option value="Metal Legs">Metal Legs</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Plinth">Plinth</option>
+                                        <option value="Rocker">Rocker</option>
+                                        <option value="Sled Base">Sled Base</option>
+                                        <option value="Upholstered">Upholstered</option>
+                                        <option value="Wire">Wire</option>
+                                        <option value="Wood">Wood</option>
+                                        <option value="Wood Legs">Wood Legs</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label"></label>
+                                    <input type="text" autocomplete="on" id="BaseAttributeOther" class="col-sm-6 form-control" style="display:none" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="COM" class="col-sm-4 control-label">COM</label>
+                                    <input type="text" autocomplete="on" id="COM" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="GRADE3_C_List" class="col-sm-4 control-label">GRADE 3/C/List</label>
+                                    <input type="text" autocomplete="on" id="GRADE3_C_List" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="LeadTime" class="col-sm-4 control-label">Lead Time</label>
+                                    <input type="text" autocomplete="on" id="LeadTime" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <span class="col-sm-1"></span>
+                                    <label for="Height" class="col-sm-1 control-label">H</label>
+                                    <input type="text" autocomplete="on" id="Height" class="col-sm-2 form-control" />
+
+                                    <label for="Depth" class="col-sm-1 control-label">D</label>
+                                    <input type="text" autocomplete="on" id="Depth" class="col-sm-2 form-control" />
+
+                                    <label for="Width" class="col-sm-1 control-label">W</label>
+                                    <input type="text" autocomplete="on" id="Width" class="col-sm-2 form-control" />
+                                </div>
+
+
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="SeatHeight" class="col-sm-4 control-label">SH (Seat Height)</label>
+                                    <input type="text" autocomplete="on" id="SeatHeight" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="ArmHeight" class="col-sm-4 control-label">AH (Arm Height)</label>
+                                    <input type="text" autocomplete="on" id="ArmHeight" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="DIA" class="col-sm-4 control-label">DIA</label>
+                                    <input type="text" autocomplete="on" id="DIA" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Designer" class="col-sm-4 control-label">Designer</label>
+                                    <input type="text" autocomplete="on" id="Designer" class="col-sm-6 form-control" data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Yardage" class="col-sm-4 control-label">Yardage</label>
+                                    <input type="text" autocomplete="on" id="Yardage" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="LeatherSqFeet" class="col-sm-4 control-label">Leather SqFeet</label>
+                                    <input type="text" autocomplete="on" id="LeatherSqFeet" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="leatherSqMeters" class="col-sm-4 control-label">Leather SqMeters</label>
+                                    <input type="text" autocomplete="on" id="leatherSqMeters" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="cf" class="col-sm-4 control-label">cf</label>
+                                    <input type="text" autocomplete="on" id="cf" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Environmental_1" class="col-sm-4 control-label">Environmental 1</label>
+                                    <input type="text" autocomplete="on" id="Environmental_1" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Environmental_2" class="col-sm-4 control-label">Environmental 2</label>
+                                    <input type="text" autocomplete="on" id="Environmental_2" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Environmental_3" class="col-sm-4 control-label">Environmental 3</label>
+                                    <input type="text" autocomplete="on" id="Environmental_3" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label for="Environmental_4" class="col-sm-4 control-label">Environmental 4</label>
+                                    <input type="text" autocomplete="on" id="Environmental_4" class="col-sm-6 form-control" />
+                                </div>
+                                <div class="col-md-12" style="text-align:center">
+                                    <button type="submit" id="addButton" class="btn btn-primary" onclick="addProduct();">Add</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Modal -->
+            <div class="modal fade" id="imageModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="title">Image Upload</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" enctype="multipart/form-data" id="imageform">
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Part Number</label>
+                                    <input type="text" autocomplete="on" class="col-sm-6 form-control" id="imagepartnumber" autofocus data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Primary Images</label>
+                                    <input name="imagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="primaryimagefile" onchange="handleFiles(this,event);" data-validation="required" data-validation-error-msg="This field is required" />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Detail Views</label>
+                                    <input name="2dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="detailviewsfile" onchange="handleFiles(this,event);" multiple />
+                                </div>                                
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Scene Images</label>
+                                    <input name="2dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="sceneimagesfile" onchange="handleFiles(this,event);" multiple />
+                                </div>                                
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Additional Views</label>
+                                    <input name="2dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="additionalviewsfile" onchange="handleFiles(this,event);" multiple />
+                                </div>                               
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">2D Image File</label>
+                                    <input name="2dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="2dimagefile" onchange="handleFiles(this,event);" multiple />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">3D Image File</label>
+                                    <input name="3dimagefile" type="file" class="col-sm-6 form-control" accept="image/*" id="3dimagefile" onchange="handleFiles(this,event);" multiple />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">3dStudioMax</label>
+                                    <input name="3dstudiomax" type="file" class="col-sm-6 form-control" accept="image/*" id="3dstudiomax" onchange="handleFiles(this,event);" multiple />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Revit</label>
+                                    <input name="revit" type="file" class="col-sm-6 form-control" accept="image/*" id="revit" onchange="handleFiles(this,event);" multiple />
+                                </div>
+                                <div class="col-md-12 form-group form-inline">
+                                    <label class="col-sm-4 control-label">Sketchup</label>
+                                    <input name="sketchup" type="file" class="col-sm-6 form-control" accept="image/*" id="sketchup" onchange="handleFiles(this,event);" multiple />
+                                </div>
+                                <div class="form-group" style="text-align:end;">
+                                    <input type="button" class="btn btn-primary" value="Upload" id="btnUpload" onclick="imageUpload();" />
+                                </div>
+                            </form>
+                        </div>
+                        <!--<div class="modal-footer">
+                            <button type="submit" id="btnUpload" class="btn btn-primary">Upload</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>-->
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function imageUpload() {
+            // alert("test");
+            if (!$("#imageform").isValid()) {
+            //if (!$("#imageform").valid()) {
+                event.preventDefault();
+                $("#imageModal").show();
+                return false;
+            }
+
+            var files = $("#primaryimagefile").get(0).files;
+            var filesdetailviews = $("#detailviewsfile").get(0).files;
+            var filessceneimages = $("#sceneimagesfile").get(0).files;
+            var filesadditionalviews = $("#additionalviewsfile").get(0).files;
+            var files2d = $("#2dimagefile").get(0).files;
+            var files3d = $("#3dimagefile").get(0).files;
+            var files3dstudiomax = $("#3dstudiomax").get(0).files;
+            var filesrevit = $("#revit").get(0).files;
+            var filessketchup = $("#sketchup").get(0).files;
+
+            var partnumber = $("#imagepartnumber").val();
+            var fileData = new FormData();
+            fileData.append("partnumber", partnumber);
+            fileData.append("primaryimagefile", files[0]);
+
+            //for (var i = 0; i < files.length; i++) {
+            //    fileData.append("imagefile", files[i]);
+            //}
+
+
+            for (var i = 0; i < filesdetailviews.length; i++) {
+                fileData.append("detailviewsfile", filesdetailviews[i]);
+            }
+            for (var i = 0; i < filessceneimages.length; i++) {
+                fileData.append("sceneimagesfile", filessceneimages[i]);
+            }
+            for (var i = 0; i < filesadditionalviews.length; i++) {
+                fileData.append("additionalviewsfile", filesadditionalviews[i]);
+            }
+
+            for (var i = 0; i < files2d.length; i++) {
+                fileData.append("imagefile2d", files2d[i]);
+            }
+
+            for (var i = 0; i < files3d.length; i++) {
+                fileData.append("imagefile3d", files3d[i]);
+            }
+
+            for (var i = 0; i < files3dstudiomax.length; i++) {
+                fileData.append("studiomax3d", files3dstudiomax[i]);
+            }
+
+            for (var i = 0; i < filesrevit.length; i++) {
+                fileData.append("revit", filesrevit[i]);
+            }
+
+            for (var i = 0; i < filessketchup.length; i++) {
+                fileData.append("sketchup", filessketchup[i]);
+            }
+            $.ajax({
+                type: "POST",
+                url: '/api/Images',    // CALL WEB API TO SAVE THE FILES.
+                contentType: false,
+                async: false,
+                processData: false,         // PREVENT AUTOMATIC DATA PROCESSING.
+                data: fileData, 		        // DATA OR FILES IN THIS CONTEXT.
+                success: function (data) {
+                    alert(data);
+                    imageUploadFormClear();
+                    $("#imageModal").show();
+                    return true;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(textStatus + ': ' + errorThrown + ':' + XMLHttpRequest.responseText);
+                    $("#imageModal").show();
+                    return true;
+                }
+            });
+
+        }
+
+        function imageUploadFormClear() {
+            $("#imagepartnumber").val("");
+            $("#primaryimagefile").val("");
+            $("#detailviewsfile").val("");
+            $("#sceneimagesfile").val("");
+            $("#additionalviewsfile").val("");
+            $("#2dimagefile").val("");
+            $("#3dimagefile").val("");
+            $("#3dstudiomax").val("");
+            $("#revit").val("");
+            $("#sketchup").val("");
+        }
+
+          //$(document).ready(function () {
+
+          //  });
+    </script>
+</body>
+
+
+</html>

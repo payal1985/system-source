@@ -1,0 +1,43 @@
+<div class="page-wrap">
+	<mat-card class="container">
+		<img src="assets/images/Systems Source Script_Small.png" alt="Company or Product Logo" class="logo" />
+		<form [formGroup]="loginForm">
+			<mat-error *ngIf="!loginValid">
+				The username and password were not recognized
+			  </mat-error>
+			<mat-form-field>
+				<!-- <input matInput placeholder="Email Address" formControlName="email" type="email" required> -->
+				<input matInput placeholder="UserName" formControlName="uname" type="text" required>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput type="password" placeholder="Password" formControlName="password" required>
+			</mat-form-field>
+			<div class="text-center flex-center remember-me mat-typography">
+				<button [disabled]="!loginForm.valid" mat-raised-button color="primary" class="login" (click)="login()">
+					LOG IN
+				</button>
+      	<!-- <mat-checkbox class="text-center mat-typography" formControlName="remember">Remember Me</mat-checkbox> -->
+      </div>
+<br/>
+      <!-- <div class="flex-center" mat-typography>
+				<a mat-button (click)="signUp" routerLink="/registration" color="primary" href="">Sign Up</a>
+        <a mat-button (click)= "Password" routerLink="/forgot"color="primary" href="">Forgot Password</a>
+			</div> -->
+		</form>
+		<br/>
+		<!-- <img src="https://image.ibb.co/kzkCme/Logo_Samples2_91_min.jpg" alt="Cybersecurity Badge" class="badge-logo">
+		<div class="text-center mat-typography">
+			<h4>
+				By logging in you agree to our
+				<br/>
+
+				<a class="links"href="">Terms and Conditions</a> and
+				<a class ="links"href="">Privacy Policy</a>
+
+			</h4>
+
+		</div> -->
+	</mat-card>
+	
+
+</div>

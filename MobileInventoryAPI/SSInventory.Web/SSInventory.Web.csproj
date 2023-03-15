@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'SSInventory' " />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SSInventory.Web.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SSInventory.Web.xml" />
+    <None Remove="AWSSDK.S3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SSInventory.Web.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="6.0.5" />
+    <PackageReference Include="Hangfire" Version="1.7.31" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="MimeKit" Version="3.2.0" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="SkiaSharp" Version="2.80.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.8.10" />
+    <PackageReference Include="ZXing.Net" Version="0.16.8" />
+    <PackageReference Include="ZXing.Net.Bindings.OpenCV.V4" Version="0.16.8" />
+    <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.12" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SSInventory.Business\SSInventory.Business.csproj" />
+    <ProjectReference Include="..\SSInventory.Core\SSInventory.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\Barcode\InventoryItem\" />
+    <Folder Include="Images\Barcode\Orders\" />
+    <Folder Include="Images\InventoryQRCode\" />
+    <Folder Include="Images\InventoryItemQRCode\" />
+    <Folder Include="SupportFiles\" />
+    <Folder Include="Uploads" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Aws\Aws3Service.cs" />
+  </ItemGroup>
+</Project>

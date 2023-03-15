@@ -1,0 +1,278 @@
+[
+  {
+    "deviceDate": "02/17/2022 22:40",
+    "client": "Bank Of America",
+    "clientId": 10,
+    "status": "InProgress",
+    "dataItemType": [
+      {
+        "itemTypeID": 3,
+        "clientID": 10,
+        "itemCode": "Base",
+        "itemName": "Base",
+        "itemDesc": null,
+        "orderSequence": null,
+        "mainImage": "D1A-0EDC02769207.jpg",
+        "inventoryRowID": 1,
+        "parentRowId": null,
+        "itemTypeOptions": [
+          {
+            "itemTypeOptionID": 76,
+            "itemTypeOptionCode": "Building",
+            "itemTypeOptionName": "Building",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Building 1"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 77,
+            "itemTypeOptionCode": "Floor",
+            "itemTypeOptionName": "Floor",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Floor1"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 78,
+            "itemTypeOptionCode": "GPS",
+            "itemTypeOptionName": "GPS",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "37.785834 / -122.406417"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 75,
+            "itemTypeOptionCode": "AreaOrRoom",
+            "itemTypeOptionName": "Area or Room Number",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Room 1"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 74,
+            "itemTypeOptionCode": "AdditionalDescription",
+            "itemTypeOptionName": "Additional Description",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Addition Desc"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 73,
+            "itemTypeOptionCode": "Manufactory",
+            "itemTypeOptionName": "Manufactory",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": {
+                  "itemTypeOptionLineID": 10,
+                  "clientID": null,
+                  "itemTypeOptionID": 73,
+                  "itemTypeOption": null,
+                  "itemTypeOptionLineCode": "Willson",
+                  "itemTypeOptionLineName": "Willson",
+                  "itemTypeOptionLineDesc": null,
+                  "orderSequence": null
+                }
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 79,
+            "itemTypeOptionCode": "CustomeModular",
+            "itemTypeOptionName": "Custome/Modular/AV - Select all that Apply",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": {
+                  "itemTypeOptionLineID": 35,
+                  "clientID": null,
+                  "itemTypeOptionID": 79,
+                  "itemTypeOption": null,
+                  "itemTypeOptionLineCode": "Custom",
+                  "itemTypeOptionLineName": "Custome",
+                  "itemTypeOptionLineDesc": null,
+                  "orderSequence": null
+                }
+              },
+              {
+                "returnValue": {
+                  "itemTypeOptionLineID": 37,
+                  "clientID": null,
+                  "itemTypeOptionID": 79,
+                  "itemTypeOption": null,
+                  "itemTypeOptionLineCode": "AV-Power",
+                  "itemTypeOptionLineName": "AV-Power",
+                  "itemTypeOptionLineDesc": null,
+                  "orderSequence": null
+                }
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 80,
+            "itemTypeOptionCode": "PartNumber",
+            "itemTypeOptionName": "Part Number",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Part 1"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 84,
+            "itemTypeOptionCode": "Finish",
+            "itemTypeOptionName": "Finish",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Finish 1"
+              },
+              {
+                "returnValue": "Finshish 2"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 83,
+            "itemTypeOptionCode": "Fabric",
+            "itemTypeOptionName": "Fabric",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Fabric 1"
+              },
+              {
+                "returnValue": "Fabric 2"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 70,
+            "itemTypeOptionCode": "TotalCount",
+            "itemTypeOptionName": "Total Count",
+            "itemTypeOptionReturnValue": [
+              {
+                "nameCondition": "Good",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items",
+                    "url": [
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "D1A-0EDC02769207.jpg",
+                        "TempPhotoName": "D1A-0EDC02769207.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "C09-A0C9A5440ACB.jpg",
+                        "TempPhotoName": "C09-A0C9A5440ACB.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "176-65755E400B71.jpg",
+                        "TempPhotoName": "176-65755E400B71.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "746-4AA04514E56C.jpg",
+                        "TempPhotoName": "746-4AA04514E56C.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Good",
+                "txtQuality": "5"
+              },
+              {
+                "nameCondition": "Damaged",
+                "dataCondition": [
+                  {
+                    "itemName": "Item1",
+                    "url": [
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "15E-790D5FF09C7D.jpg",
+                        "TempPhotoName": "15E-790D5FF09C7D.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "634-8E79C6FF40D0.jpg",
+                        "TempPhotoName": "634-8E79C6FF40D0.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "404-738BF25F3693.jpg",
+                        "TempPhotoName": "404-738BF25F3693.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "itemName": "Item2",
+                    "url": [
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "770-280E1C3CF979.jpg",
+                        "TempPhotoName": "770-280E1C3CF979.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "80F-534F2353A036.jpg",
+                        "TempPhotoName": "80F-534F2353A036.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "A6A-667E6C97E214.jpg",
+                        "TempPhotoName": "A6A-667E6C97E214.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "5E8-3C6820F57E0E.jpg",
+                        "TempPhotoName": "5E8-3C6820F57E0E.jpg"
+                      },
+                      {
+                        "width": 200,
+                        "height": 200,
+                        "name": "56E-A594AF8FA1CA.jpg",
+                        "TempPhotoName": "56E-A594AF8FA1CA.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Damaged",
+                "txtQuality": "2"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 68,
+            "itemTypeOptionCode": "Note",
+            "itemTypeOptionName": "Note",
+            "itemTypeOptionReturnValue": [
+              {
+                "returnValue": "Note 1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "isBarScan": false
+  }
+]

@@ -1,0 +1,688 @@
+[
+  {
+    // Submission table
+    "date": "12/16/2021",
+    "time": "22:41",
+    "client": "Bank Of America",
+    "status": "pending",
+    "dataItemType": [
+      {
+        "itemTypeID": 1, // Inventory table - create itemTypeID in Inventory
+        "ItemRowId": 2, // Inventory table - create new column in Inventory
+        "itemTypeName": "Office Chair", 
+        "itemTypeOption": [
+          {
+            "itemTypeOptionID": 26,
+            "itemTypeOptionName": "Building", // Save to InventoryItem table
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": true,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 20,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ] // Save value of this object into Building column in InventoryItem
+          },
+          {
+            "itemTypeOptionID": 27,
+            "itemTypeOptionName": "Floor",
+            "valType": 3,
+            "valTypeDesc": "Dropdown",
+            "isRequired": false,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 40,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 14,
+                "itemTypeOptionLineCode": "Floor1",
+                "itemTypeOptionLineName": "Floor1"
+              },
+              {
+                "itemTypeOptionLineID": 15,
+                "itemTypeOptionLineCode": "Floor2",
+                "itemTypeOptionLineName": "Floor2"
+              },
+              {
+                "itemTypeOptionLineID": 16,
+                "itemTypeOptionLineCode": "Floor3",
+                "itemTypeOptionLineName": "Floor3"
+              }
+            ],
+            "itemTypeOptionReturnValue": [] // Save value of this object into Floor column in InventoryItem
+          },
+          {
+            "itemTypeOptionID": 29,
+            "itemTypeOptionName": "GPS",
+            "valType": 30,
+            "valTypeDesc": "GPS",
+            "isRequired": false,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 50,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ] // Save value of this object into GPS_Localtion column in InventoryItem
+          },
+          {
+            "itemTypeOptionID": 25,
+            "itemTypeOptionName": "Area or Room Number",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": false,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 60,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ] // Save value of this object into mpLoc column in InventoryItem
+          },
+          {
+            "itemTypeOptionID": 24,
+            "itemTypeOptionName": "Additional Description",
+            "valType": 2,
+            "valTypeDesc": "TextParagraph",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 70,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [] // Save value of this object into AdditionalDescription column in Inventory table
+          },
+          {
+            "itemTypeOptionID": 23,
+            "itemTypeOptionName": "Manufactory",
+            "valType": 90,
+            "valTypeDesc": "Dropdown",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 100,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 1,
+                "itemTypeOptionLineCode": "Knoll",
+                "itemTypeOptionLineName": "Knoll",
+                "itemTypeOptionID": 23
+              },
+              {
+                "itemTypeOptionLineID": 2,
+                "itemTypeOptionLineCode": "Willson",
+                "itemTypeOptionLineName": "Willson",
+                "itemTypeOptionID": 23
+              },
+              {
+                "itemTypeOptionLineID": 3,
+                "itemTypeOptionLineCode": "Gomen",
+                "itemTypeOptionLineName": "Gomen",
+                "itemTypeOptionID": 23
+              },
+              {
+                "itemTypeOptionLineID": 4,
+                "itemTypeOptionID": 23,
+                "itemTypeOptionLineCode": "Elite",
+                "itemTypeOptionLineName": "Elite"
+              }
+            ],
+            "itemTypeOptionReturnValue": [] // Save value of this object into manf column in Inventory table
+          },
+          {
+            "itemTypeOptionID": 30, // Create column in Inventory table with name is Modular
+            "itemTypeOptionName": "Custome/Modular/AV - Select all that Apply",
+            "valType": 80,
+            "valTypeDesc": "RadioPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 110,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 11,
+                "itemTypeOptionLineCode": "Custom",
+                "itemTypeOptionLineName": "Custome"
+              },
+              {
+                "itemTypeOptionLineID": 12,
+                "itemTypeOptionLineCode": "Modular",
+                "itemTypeOptionLineName": "Modular"
+              },
+              {
+                "itemTypeOptionLineID": 13,
+                "itemTypeOptionLineCode": "AV-Power",
+                "itemTypeOptionLineName": "AV-Power"
+              }
+            ],
+            "itemTypeOptionReturnValue": [ { "returnValue": "Custome, AV-Power" } ] // Save as string
+          },
+          {
+            "itemTypeOptionID": 31,
+            "itemTypeOptionName": "Part Number",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 115,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ] // Save to Part_number column in Inventory table
+          },
+          {
+            "itemTypeOptionID": 1,
+            "itemTypeOptionName": "Finish",
+            "valType": 50,
+            "valTypeDesc": "TextBoxPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "2",
+            "orderSequence": 119,
+            "itemTypeOptionLine": [],
+            // if one item in array, Save to Finish column in Inventory table
+            // if two items in array, Save to Finish & Finish2 columns in Inventory table
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 35,
+            "itemTypeOptionName": "Fabric",
+            "valType": 50,
+            "valTypeDesc": "TextBoxPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "2",
+            "orderSequence": 130,
+            "itemTypeOptionLine": [],
+            // if one item in array, Save to Fabric column in Inventory table
+            // if two items in array, Save to Fabric & Fabric2 columns in Inventory table
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 15,
+            "itemTypeOptionName": "Total Count",
+            "valType": 40,
+            "valTypeDesc": "CheckAllApply",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "1",
+            "limitMax": "",
+            "orderSequence": 180,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 32,
+                "itemTypeOptionLineCode": "Good",
+                "itemTypeOptionLineName": "Quantity Good"
+              },
+              {
+                "itemTypeOptionLineID": 33,
+                "itemTypeOptionLineCode": "Fair",
+                "itemTypeOptionLineName": "Quantity Fair"
+              },
+              {
+                "itemTypeOptionLineID": 34,
+                "itemTypeOptionLineCode": "Poor",
+                "itemTypeOptionLineName": "Quantity Poor"
+              },
+              {
+                "itemTypeOptionLineID": 35,
+                "itemTypeOptionLineCode": "Damaged",
+                "itemTypeOptionLineName": "Quantity Damaged"
+              },
+              {
+                "itemTypeOptionLineID": 36,
+                "itemTypeOptionLineCode": "MissingParts",
+                "itemTypeOptionLineName": "Quantity Missing Parts"
+              }
+            ],
+            "itemTypeOptionReturnValue": [ // Quanlity can be 6 but it has three conditions good(2), fair(1) and missingparts(3), Damaged(5)
+              {
+                "nameCondition": "Good",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/F1A590D0-956F-4B27-A8C3-73F669C6EE30.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "3F669C6EE30.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Good",
+                // Question: create 3 different new rows OR create 3 new rows with same data of above item options? 
+                "txtQuality": "3" // Insert 3 rows into InventoryItem table 
+              },
+              {
+                "nameCondition": "Fair",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items", // Same logic for Good, Fair, Poor
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Fair",
+                "txtQuality": "1"
+              },
+              {
+                "nameCondition": "MissingParts",
+                "dataCondition": [
+                  {
+                    "itemName": "Item 1", // individual item
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "itemName": "Item 2",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "itemName": "Item 3",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "MissingParts",
+                "txtQuality": "3"
+              },
+              {
+                "nameCondition": "Damaged",
+                "dataCondition": [
+                  {
+                    "itemName": "All Items", // If quantity larger than 5 => itemName will be All Items
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B6813BB0-DB61-46F6-87F9-AA5E08C9FCE7.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "A5E08C9FCE7.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/E86AE978-D016-4EE6-B494-7203C1CBE8E4.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "203C1CBE8E4.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Damaged",
+                "txtQuality": "5"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 13,
+            "itemTypeOptionName": "Note",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 190,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          }
+        ]
+      },
+
+      {
+        "itemTypeID": 2,
+        "itemTypeName": "Meeting Table",
+        "itemTypeOption": [
+          {
+            "itemTypeOptionID": 26,
+            "itemTypeOptionName": "Building",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": true,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 20,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 27,
+            "itemTypeOptionName": "Floor",
+            "valType": 3,
+            "valTypeDesc": "Dropdown",
+            "isRequired": false,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 40,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 14,
+                "itemTypeOptionLineCode": "Floor1",
+                "itemTypeOptionLineName": "Floor1"
+              },
+              {
+                "itemTypeOptionLineID": 15,
+                "itemTypeOptionLineCode": "Floor2",
+                "itemTypeOptionLineName": "Floor2"
+              },
+              {
+                "itemTypeOptionLineID": 16,
+                "itemTypeOptionLineCode": "Floor3",
+                "itemTypeOptionLineName": "Floor3"
+              }
+            ],
+            "itemTypeOptionReturnValue": []
+          },
+          {
+            "itemTypeOptionID": 29,
+            "itemTypeOptionName": "GPS",
+            "valType": 30,
+            "valTypeDesc": "GPS",
+            "isRequired": false,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 50,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 25,
+            "itemTypeOptionName": "Area or Room Number",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": false,
+            "isHide": true,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 60,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 24,
+            "itemTypeOptionName": "Additional Description",
+            "valType": 2,
+            "valTypeDesc": "TextParagraph",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 70,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 23,
+            "itemTypeOptionName": "Manufactory",
+            "valType": 90,
+            "valTypeDesc": "DropdownPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 100,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 1,
+                "itemTypeOptionLineCode": "Knoll",
+                "itemTypeOptionLineName": "Knoll",
+                "itemTypeOptionID": 23
+              },
+              {
+                "itemTypeOptionLineID": 2,
+                "itemTypeOptionLineCode": "Willson",
+                "itemTypeOptionLineName": "Willson",
+                "itemTypeOptionID": 23
+              },
+              {
+                "itemTypeOptionLineID": 3,
+                "itemTypeOptionLineCode": "Gomen",
+                "itemTypeOptionLineName": "Gomen",
+                "itemTypeOptionID": 23
+              },
+              {
+                "itemTypeOptionLineID": 4,
+                "itemTypeOptionID": 23,
+                "itemTypeOptionLineCode": "Elite",
+                "itemTypeOptionLineName": "Elite"
+              }
+            ],
+            "itemTypeOptionReturnValue": []
+          },
+          {
+            "itemTypeOptionID": 30,
+            "itemTypeOptionName": "Custome/Modular/AV - Select all that Apply",
+            "valType": 80,
+            "valTypeDesc": "RadioPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 110,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 11,
+                "itemTypeOptionLineCode": "Custom",
+                "itemTypeOptionLineName": "Custome"
+              },
+              {
+                "itemTypeOptionLineID": 12,
+                "itemTypeOptionLineCode": "Modular",
+                "itemTypeOptionLineName": "Modular"
+              },
+              {
+                "itemTypeOptionLineID": 13,
+                "itemTypeOptionLineCode": "AV-Power",
+                "itemTypeOptionLineName": "AV-Power"
+              }
+            ],
+            "itemTypeOptionReturnValue": []
+          },
+          {
+            "itemTypeOptionID": 31,
+            "itemTypeOptionName": "Part Number",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 115,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 11,
+            "itemTypeOptionName": "Finish",
+            "valType": 50,
+            "valTypeDesc": "TextBoxPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "2",
+            "orderSequence": 126,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 36,
+            "itemTypeOptionName": "Fabric",
+            "valType": 50,
+            "valTypeDesc": "TextBoxPlus",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "2",
+            "orderSequence": 130,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          },
+          {
+            "itemTypeOptionID": 15,
+            "itemTypeOptionName": "Total Count",
+            "valType": 40,
+            "valTypeDesc": "CheckAllApply",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "1",
+            "limitMax": "",
+            "orderSequence": 180,
+            "itemTypeOptionLine": [
+              {
+                "itemTypeOptionLineID": 32,
+                "itemTypeOptionLineCode": "Good",
+                "itemTypeOptionLineName": "Quantity Good"
+              },
+              {
+                "itemTypeOptionLineID": 33,
+                "itemTypeOptionLineCode": "Fair",
+                "itemTypeOptionLineName": "Quantity Fair"
+              },
+              {
+                "itemTypeOptionLineID": 34,
+                "itemTypeOptionLineCode": "Poor",
+                "itemTypeOptionLineName": "Quantity Poor"
+              },
+              {
+                "itemTypeOptionLineID": 35,
+                "itemTypeOptionLineCode": "Damaged",
+                "itemTypeOptionLineName": "Quantity Damaged"
+              },
+              {
+                "itemTypeOptionLineID": 36,
+                "itemTypeOptionLineCode": "MissingParts",
+                "itemTypeOptionLineName": "Quantity Missing Parts"
+              }
+            ],
+            "itemTypeOptionReturnValue": [
+              {
+                "nameCondition": "Damaged",
+                "dataCondition": [
+                  {
+                    "itemName": "Item1",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/161038EB-B8F3-46E9-BB6A-ECCF84CC7F15.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "CCF84CC7F15.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/B2687C21-1EB5-4DBD-A5CC-B6656A6F8A74.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "6656A6F8A74.jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "itemName": "Item2",
+                    "url": [
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/007290BF-F3F6-4538-9089-E66262B3F205.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "66262B3F205.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/1F27D0A4-83C4-491D-92CE-9388BBE72A95.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "388BBE72A95.jpg"
+                      },
+                      {
+                        "uri": "file:///Users/balotainvest/Library/Developer/CoreSimulator/Devices/F0A5AA2D-7653-4DED-A8E3-CC4CFE637E0B/data/Containers/Data/Application/528E7ACD-4146-4040-B3B7-433AF3D9D76F/Library/Caches/Camera/3A0B3333-68AB-413E-B78A-740D6E8D1B1B.jpg",
+                        "width": 200,
+                        "height": 200,
+                        "name": "40D6E8D1B1B.jpg"
+                      }
+                    ]
+                  }
+                ],
+                "type": "Damaged",
+                "txtQuality": "2"
+              }
+            ]
+          },
+          {
+            "itemTypeOptionID": 13,
+            "itemTypeOptionName": "Note",
+            "valType": 1,
+            "valTypeDesc": "TextBox",
+            "isRequired": false,
+            "isHide": false,
+            "limitMin": "",
+            "limitMax": "",
+            "orderSequence": 190,
+            "itemTypeOptionLine": [],
+            "itemTypeOptionReturnValue": [ { "returnValue": "" } ]
+          }
+        ]
+      }
+    ],
+    "isBarScan": false
+  }
+]

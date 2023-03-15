@@ -1,0 +1,13 @@
+<!-- <mat-divider></mat-divider> -->
+<mat-nav-list>
+  <a><img src="./assets/images/silogo.jpg" class="demo-avatar"></a>
+  <a mat-list-item routerLink="/home" >
+    <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+  </a>
+  <mat-list-item [routerLink]="['../']" [queryParams]="{id: category}" (click)="onClick(category)" *ngFor="let category of inventoryCategorylist">
+    <mat-icon>apps</mat-icon>
+    <span class="nav-caption">{{ category }}</span>
+    
+  </mat-list-item>
+</mat-nav-list>        
+<app-main-content [deviceXs]="deviceXs"></app-main-content>

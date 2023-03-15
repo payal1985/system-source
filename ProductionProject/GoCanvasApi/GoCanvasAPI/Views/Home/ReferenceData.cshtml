@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewData["Title"] = "ReferenceData";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+@*@if (ViewBag.Message != null)
+{
+    <div class="modal" tabindex="-1" id="successModal"
+         data-keyboard="false" data-backdrop="static" style="display:block;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        ×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @if (ViewBag.Message == true)
+                    {
+                        <p>All Data Parsed Successfully....</p>
+                    }
+                    else
+                    {
+                        <p>Error Occured Due to Parse the data...</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}*@
+
+@using (@Html.BeginForm("ReferenceData", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        ReferenceData Information
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="referencedatasetname">Reference Dataset Name</label>
+                            <input type="text" id="referencedatasetname" name="refdataset" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="file">Filename (*.csv)</label>
+                            <input type="file" name="file" id="fileupload" class="form-control" />
+                        </div>
+                    </div>
+                    @*<div class="panel-footer">
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="submit"
+                        id="sendButton"
+                        class="btn btn-primary">
+                    Send to GoCanvas
+                </button>
+                @*<button type="button"
+                            id="sendButton"
+                            class="btn btn-primary"
+                            onclick="sendClick();">
+                        Send to GoCanvas
+                    </button>*@
+            </div>
+        </div>
+        <div class="row">
+            @if (ViewBag.Message != null)
+            {
+                @if (ViewBag.Message == false)
+                {
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><span class="glyphicon glyphicon-remove"></span> There are errors due to Parse the data...</strong>
+                    </div>
+                }
+                <!-- display success -->
+                @if (ViewBag.Message == true)
+                {
+                    <div class="alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><span class="glyphicon glyphicon-ok"></span> All Data Parsed Successfully !!!!!! </strong>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+}
+
+<script>
+
+    // Handle click event on Add button
+    function sendClick() {
+        // var id = $(ctl).data("id");
+
+        // Store product id in hidden field
+        var refdatasetname = $("#referencedatasetname").val();
+
+        // Call Web API to get a list of Products
+        var formData = new FormData();
+        formData.append("refdataset", JSON.stringify(refdatasetname));
+        formData.append("attachment", $("#fileupload")[0].files[0]);
+        var array = [1, 2, 3, 4, 5];
+
+        $.ajax('/Home/ReferenceData', {
+            //type: 'POST',  // http method
+            //data: { collection: formData },  // data to submit
+            method: 'post',
+            processData: false,
+            contentType: false,
+            cache: false,
+            data: formData,
+            enctype: 'multipart/form-data',
+            success: function (data, status, xhr) {
+                alert(data);
+            },
+            error: function (jqXhr, textStatus, errorMessage) {
+                alert(errorMessage);
+            }
+        });
+
+
+
+            $(document).ready(function () {
+
+                $(".close").on('click', function () {
+                    $('#successModal').hide();
+                });
+    });
+
+
+
+    }
+</script>

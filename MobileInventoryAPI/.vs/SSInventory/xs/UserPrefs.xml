@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{CCDAFE9E-90A3-4E1D-B1B3-F0B32E7BCCD4}|SSInventory">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="SSInventory.Core/Repositories/AwsS3FileRepository.cs" Line="40" Column="1" />
+      <File FileName="SSInventory.Core/Repositories/InventoryImageRepository.cs" />
+      <File FileName="SSInventory.Web/appsettings.json" Line="7" Column="28" />
+      <File FileName="SSInventory.Web/Controllers/Apis/InventoryItemController.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SSInventory" expanded="True">
+            <Node name="SSInventory.Core" expanded="True" />
+            <Node name="SSInventory.Web" expanded="True">
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SSInventory.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

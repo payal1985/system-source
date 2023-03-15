@@ -1,0 +1,70 @@
+<!-- <div class="container text-center">
+	<div>
+		<mat-form-field appearance="standard">
+			<mat-label>Filter</mat-label>
+			<input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+	  	</mat-form-field>
+	</div>
+  <div>
+	<button mat-icon-button color="primary" title="View Contact"><mat-icon>add</mat-icon></button>
+  </div>
+</div> -->
+<mat-toolbar>
+	<span class="logo"><img src="assets/images/Systems Source Script_Small.png" height="50"></span>
+	<span class="example-spacer"></span>
+	<!-- <h1>Welcome payal</h1>
+	<span class="example-spacer"></span> -->
+	<button mat-raised-button color="primary" (click)="logout()">LOG OUT</button>
+</mat-toolbar>
+
+<mat-form-field appearance="standard">
+	<mat-label>Filter</mat-label>
+	<input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+<!-- Total selected: {{selection?.selected?.leng}}
+<mat-checkbox [checked]="selection.hasValue() && isSelectedPage()">all in is page</mat-checkbox> -->
+<div class="mat-elevation-z8" style="padding: 20px;border:  1px solid black;width:90%;display: inline-block;">
+	<!-- <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary" style="float: right;">Add Row</button> -->
+	<mat-table [dataSource]="dataSource">
+		<!-- Checkbox Column -->
+		<ng-container matColumnDef="select">
+			<mat-header-cell *matHeaderCellDef>Select
+				<!-- <mat-checkbox (change)="$event ? masterToggle() : null"
+					[checked]="selection.hasValue() && isAllSelected()"
+					[indeterminate]="selection.hasValue() && !isAllSelected()">
+				</mat-checkbox> -->
+			</mat-header-cell>
+			<mat-cell *matCellDef="let row">
+				<mat-checkbox (change)="onChange($event,row); false"
+					[checked]=row.has_inventory>
+				</mat-checkbox>
+				<!-- <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+					[checked]="selection.isSelected(row)">
+				</mat-checkbox> -->
+			</mat-cell>
+		</ng-container>
+
+		<!-- Position Column -->
+		<ng-container matColumnDef="client name">
+			<mat-header-cell *matHeaderCellDef> client name </mat-header-cell>
+			<mat-cell *matCellDef="let row"> {{row.client_name}} </mat-cell>
+		</ng-container>
+
+
+		<mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+		<mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+		</mat-row>
+	</mat-table>
+	<mat-paginator [pageSizeOptions]="[10, 20, 50,100]" showFirstLastButtons></mat-paginator>
+	<!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator> -->
+</div>
+<br><br>
+<!-- <div>
+	<button  mat-raised-button (click)="logSelection()">Console Log Selected</button>
+</div> -->
+

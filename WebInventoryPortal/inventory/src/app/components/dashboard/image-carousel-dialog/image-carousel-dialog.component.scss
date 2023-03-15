@@ -1,0 +1,44 @@
+
+  .close-button{
+    float: right;
+    top:-24px;
+    right:-20px;
+  }
+  
+  .close-icon {
+    transition: 1s ease-in-out;
+  }
+
+  
+
+  ::ng-deep .container-fluid { padding:0 !important; }
+  ::ng-deep .sr-only { display: none; }
+  ::ng-deep .carousel-indicators { display: none; }
+
+  .empty-cart-span{
+    display: inline-block;
+  }
+
+
+
+@media(max-width: 1200px) {
+  ngb-carousel {
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}
+
+::ng-deep secured-image img{
+  width: 100%;
+    outline: none;
+}
+
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+}

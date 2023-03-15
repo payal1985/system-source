@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataEntryUI", "DataEntryUI\DataEntryUI.csproj", "{171E4B90-6A46-4BCD-8E4F-342DD4BCDAED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{171E4B90-6A46-4BCD-8E4F-342DD4BCDAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171E4B90-6A46-4BCD-8E4F-342DD4BCDAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171E4B90-6A46-4BCD-8E4F-342DD4BCDAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171E4B90-6A46-4BCD-8E4F-342DD4BCDAED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D563E19-B995-4A57-BE75-749C0B682768}
+	EndGlobalSection
+EndGlobal

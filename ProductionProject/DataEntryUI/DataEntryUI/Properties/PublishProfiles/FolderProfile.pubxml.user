@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Payal\OneDrive - System Source\Documents\_VM Transfer\PublishProject\DataEntryUI</_PublishTargetUrl>
+    <History>True|2021-08-06T17:42:36.4943593Z;True|2021-08-06T10:42:09.8197806-07:00;True|2021-08-05T22:26:14.1127475-07:00;True|2021-08-05T22:05:55.3737688-07:00;True|2021-08-05T22:02:50.4468337-07:00;True|2021-08-05T21:58:58.5438537-07:00;True|2021-08-04T22:45:56.9846699-07:00;True|2021-08-04T18:25:39.6607541-07:00;True|2021-08-04T18:22:44.8535408-07:00;True|2021-08-04T18:12:10.3473845-07:00;True|2021-08-04T18:02:28.2180730-07:00;True|2021-08-03T00:40:10.6881308-07:00;True|2021-08-02T18:53:24.7126852-07:00;True|2021-07-29T18:58:51.7392565-07:00;True|2021-07-29T18:53:50.2985472-07:00;True|2021-07-29T18:47:25.6867537-07:00;True|2021-07-29T18:35:51.9422538-07:00;True|2021-07-29T17:29:03.4226058-07:00;True|2021-07-27T15:02:46.0977789-07:00;</History>
+  </PropertyGroup>
+</Project>

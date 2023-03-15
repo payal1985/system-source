@@ -1,0 +1,173 @@
+
+#spinner {
+	-webkit-animation: frames 1s infinite linear;
+	animation: frames 1s infinite linear;
+	background: transparent;
+	border: 1.35vw solid #FFF;
+	border-radius: 50%;
+	border-top-color: #DF691A;
+	width: 5vw;
+	height: 5vw;
+	opacity: .6;
+	padding: 0;
+	position: absolute;
+	z-index: 999;
+  left: 50%;
+//   margin-left: -1em;
+  margin-top: 20em;
+}
+@keyframes frames {
+  0% {
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+  }
+  100% {
+	-webkit-transform: rotate(359deg);
+	transform: rotate(359deg);
+  }
+}
+
+#pause {
+	display: block;
+	background:
+		rgba(0, 0, 0, 0.66)
+		no-repeat
+		0 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+
+
+// .sk-cube-grid {
+//   width: 40px;
+//   height: 40px;
+//   margin: 100px auto;
+// }
+
+// .sk-cube-grid .sk-cube {
+//   width: 33%;
+//   height: 33%;
+//   background-color: rgb(219, 211, 95);
+//   float: left;
+//   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+//           animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+// }
+// .sk-cube-grid .sk-cube1 {
+//   -webkit-animation-delay: 0.2s;
+//           animation-delay: 0.2s; }
+// .sk-cube-grid .sk-cube2 {
+//   -webkit-animation-delay: 0.3s;
+//           animation-delay: 0.3s; }
+// .sk-cube-grid .sk-cube3 {
+//   -webkit-animation-delay: 0.4s;
+//           animation-delay: 0.4s; }
+// .sk-cube-grid .sk-cube4 {
+//   -webkit-animation-delay: 0.1s;
+//           animation-delay: 0.1s; }
+// .sk-cube-grid .sk-cube5 {
+//   -webkit-animation-delay: 0.2s;
+//           animation-delay: 0.2s; }
+// .sk-cube-grid .sk-cube6 {
+//   -webkit-animation-delay: 0.3s;
+//           animation-delay: 0.3s; }
+// .sk-cube-grid .sk-cube7 {
+//   -webkit-animation-delay: 0s;
+//           animation-delay: 0s; }
+// .sk-cube-grid .sk-cube8 {
+//   -webkit-animation-delay: 0.1s;
+//           animation-delay: 0.1s; }
+// .sk-cube-grid .sk-cube9 {
+//   -webkit-animation-delay: 0.2s;
+//           animation-delay: 0.2s; }
+
+// @-webkit-keyframes sk-cubeGridScaleDelay {
+//   0%, 70%, 100% {
+//     -webkit-transform: scale3D(1, 1, 1);
+//             transform: scale3D(1, 1, 1);
+//   } 35% {
+//     -webkit-transform: scale3D(0, 0, 1);
+//             transform: scale3D(0, 0, 1); 
+//   }
+// }
+
+// @keyframes sk-cubeGridScaleDelay {
+//   0%, 70%, 100% {
+//     -webkit-transform: scale3D(1, 1, 1);
+//             transform: scale3D(1, 1, 1);
+//   } 35% {
+//     -webkit-transform: scale3D(0, 0, 1);
+//             transform: scale3D(0, 0, 1);
+//   } 
+// }
+
+// @keyframes spinner {
+//   0% {
+//     transform: translate3d(-50%, -50%, 0) rotate(0deg);
+//   }
+//   100% {
+//     transform: translate3d(-50%, -50%, 0) rotate(360deg);
+//   }
+// }
+// .spin::before {
+//   animation: 1.5s linear infinite spinner;
+//   animation-play-state: inherit;
+//   border: solid 5px #cfd0d1;
+//   border-bottom-color: #1c87c9;
+//   border-radius: 50%;
+//   content: "";
+//   height: 40px;
+//   width: 40px;
+//   position: absolute;
+//   top: 10%;
+//   left: 10%;
+//   transform: translate3d(-50%, -50%, 0);
+//   will-change: transform;
+// }
+
+
+// @keyframes bouncing {
+//     0% {
+//       top: 40%;
+//     }
+//     100% {
+//       top: 30%;
+//     }
+//   }
+  
+//   @keyframes fadein {
+//     0% {
+//       opacity: 0;
+//     }
+  
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+  
+//   .page-overlay-wrapper {
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     z-index: 1009;
+//     background: rgba(112, 191, 93, 0.5);
+  
+//     .bee-spinner {
+//       width: 20%;
+//       height: 20%;
+//       position: fixed;
+//       top: 40%;
+//       left: calc(50% - 10%);
+//       z-index: 100;
+//       background-image: url(../../assets/bee-spinner.png);
+//       background-repeat: no-repeat;
+//       background-size: 97%;
+//       animation: bouncing 0.4s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite
+//         alternate both;
+//     }
+//   }

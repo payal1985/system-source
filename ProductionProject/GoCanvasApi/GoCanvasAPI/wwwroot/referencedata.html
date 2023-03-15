@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>-->
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+    <style>
+        .error {
+            color: red;
+            /* background-color: #acf;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        ReferenceData Information
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" enctype="multipart/form-data" id="referencedataform">
+                            <div class="form-group">
+                                <label for="referencedatasetname">Reference Dataset Name</label>
+                                <input type="text" id="referencedatasetname" name="refdataset" class="form-control" autofocus required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="file">Filename (*.csv)</label>
+                                <input type="file" name="file" id="fileupload" accept=".csv" class="form-control" autofocus required />
+                            </div>
+                         </form>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="button" id="sendButton" class="btn btn-primary" onclick="sendClick();" style="text-align:center;">Send to GoCanvas</button>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+
+</body>
+</html>

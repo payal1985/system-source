@@ -1,0 +1,1015 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SSInventory.Web</name>
+    </assembly>
+    <members>
+        <member name="T:SSInventory.Web.Constants.ConfigurationHelps">
+            <summary>
+            Configure helper
+            </summary>
+        </member>
+        <member name="F:SSInventory.Web.Constants.ConfigurationHelps.ExpiredTimeTokenDefault">
+            <summary>
+            Expired time token
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Constants.ItemTypeConstants">
+            <summary>
+            Constants for item type
+            </summary>
+        </member>
+        <member name="F:SSInventory.Web.Constants.ItemTypeConstants.MAX_REPRESENTATIVE_IMAGE">
+            <summary>
+            Maximum representative image
+            </summary>
+        </member>
+        <member name="F:SSInventory.Web.Constants.ItemTypeConstants.SHARED_ITEMS_NAME">
+            <summary>
+            Shared item name
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.ClientsController">
+            <summary>
+            Clients controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ClientsController.#ctor(Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.ClientsController},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Client controller constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ClientsController.Get(System.Nullable{System.Int32})">
+            <summary>
+            Get list clients
+            </summary>
+            <response code="200">Success</response>
+            <response code="204">No content</response>
+            <response code="400">Error when getting the data</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.FileController">
+            <summary>
+            File management controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.FileController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.FileController},SSInventory.Web.Services.Aws.FileService)">
+            <summary>
+            File management controller constructor
+            </summary>
+            <param name="config"></param>
+            <param name="logger"></param>
+            <param name="awebs3Service"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.FileController.DownloadPhoto(System.String,System.Int32)">
+            <summary>
+            Download photos
+            </summary>
+            <param name="fileName"></param>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.FileController.DeletePhotos(System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            Delete photos
+            </summary>
+            <param name="photos"></param>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.HistoryController">
+            <summary>
+            History controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.HistoryController.#ctor(SSInventory.Business.Interfaces.IHistoryTableService)">
+            <summary>
+            History constructor
+            </summary>
+            <param name="historyTableService"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.HistoryController.GetHistories(SSInventory.Share.Models.Dto.HistoryTable.HistoryTableRequest)">
+            <summary>
+            Get histories
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.InventoryBuildingsController">
+            <summary>
+            Inventory Building controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryBuildingsController.#ctor(SSInventory.Business.Interfaces.IInventoryBuildingsService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.InventoryBuildingsController})">
+            <summary>
+            Inventory Building controller constructor
+            </summary>
+            <param name="inventoryBuildingsService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryBuildingsController.GetBuildings(System.Int32)">
+            <summary>
+            Get buildings
+            </summary>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.InventoryController">
+            <summary>
+            Inventory API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryController.#ctor(Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.InventoryController},SSInventory.Business.Interfaces.IInventoryService,SSInventory.Business.Interfaces.IInventoryItemService,Microsoft.Extensions.Configuration.IConfiguration,SSInventory.Business.Interfaces.IDapperService,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,SSInventory.Business.Interfaces.IItemTypeService,SSInventory.Web.Services.Aws.FileService,AutoMapper.IMapper,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Inventory constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="inventoryService"></param>
+            <param name="inventoryItemService"></param>
+            <param name="config"></param>
+            <param name="dapperService"></param>
+            <param name="webHostEnvironment"></param>
+            <param name="aws3Service"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryController.GetInventoryInfo(System.Int32,System.Int32)">
+            <summary>
+            Get inventory info
+            </summary>
+            <param name="clientId"></param>
+            <param name="inventoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryController.GetInventoryItemInfo(System.Int32,System.Int32)">
+            <summary>
+            Get inventory item information
+            </summary>
+            <param name="inventoryItemId"></param>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data not found</response>
+            <response code="500">Error occurred while getting image information</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryController.UpdateInventory(SSInventory.Share.Models.Dto.ItemTypes.DataItemType)">
+            <summary>
+            Update Inventory
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Error while processing data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryController.SearchSimpleInventories(SSInventory.Share.Models.Search.SearchSimpleInventoryRequestModel)">
+            <summary>
+            Get simple inventory information
+            </summary>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data not found</response>
+            <response code="500">Error occurred while getting image information</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.InventoryFloorsController">
+            <summary>
+            Inventory Floors controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryFloorsController.#ctor(SSInventory.Business.Interfaces.IInventoryFloorsService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.InventoryFloorsController})">
+            <summary>
+            Inventory Floors controller constructor
+            </summary>
+            <param name="inventoryFloorsService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryFloorsController.GetFloors(System.Int32)">
+            <summary>
+            Get floors
+            </summary>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.InventoryImagesController">
+            <summary>
+            Inventory Images API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryImagesController.#ctor(SSInventory.Business.Interfaces.IInventoryImageService,SSInventory.Business.Interfaces.IInventoryItemService,SSInventory.Web.Services.Aws.FileService,SSInventory.Business.Interfaces.ICurrentUser,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.InventoryImagesController})">
+            <summary>
+            Inventory Images controller constructor
+            </summary>
+            <param name="inventoryImageService"></param>
+            <param name="inventoryItemService"></param>
+            <param name="fileService"></param>
+            <param name="currentUser"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryImagesController.AddAsync(SSInventory.Share.Models.Dto.InventoryImage.AddInventoryImageRequestModel)">
+            <summary>
+            Add inventory image
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryImagesController.DeleteAsync(SSInventory.Share.Models.Dto.InventoryImage.DeleteInventoryImageRequestModel)">
+            <summary>
+            Delete inventory image
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.InventoryItemConditionController">
+            <summary>
+            Inventory Item Condition API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemConditionController.#ctor(SSInventory.Business.Interfaces.IInventoryItemConditionService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.InventoryItemConditionController})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="inventoryItemConditionService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemConditionController.GetConditions">
+            <summary>
+            Get inventory item conditions
+            </summary>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.InventoryItemController">
+            <summary>
+            Inventory Item API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemController.#ctor(SSInventory.Business.Interfaces.IInventoryItemService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.InventoryItemController})">
+            <summary>
+            Inventory Item constructor
+            </summary>
+            <param name="inventoryItemService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemController.UpdateLocations(SSInventory.Share.Models.Dto.InventoryItem.UpdateLocationInputModel)">
+            <summary>
+            Update Inventory Item locations
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="304">Data updates failure</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Error occurred while processing data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemController.SearchInventoryItems(SSInventory.Share.Models.Dto.InventoryItem.SearchByLocationModel)">
+            <summary>
+            Search inventory items
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data not found</response>
+            <response code="500">Error occurred while processing data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemController.GetInventoryItemDetailInfo_NotUsed(System.Int32,System.Int32)">
+            <summary>
+            Search inventory items
+            </summary>
+            <param name="clientId"></param>
+            <param name="inventoryId"></param>
+            <response code="200">Success</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemController.SearchSimpleInventoryItems(SSInventory.Share.Models.Search.SearchSimpleInventoryItem)">
+            <summary>
+            Search simple inventory items
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data not found</response>
+            <response code="500">Error occurred while processing data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.InventoryItemController.UpdateInventoryItem(SSInventory.Share.Models.Dto.InventoryItem.UpdateInventoryModel)">
+            <summary>
+            Update inventory item
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Error while processing data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.ManufactoryController">
+            <summary>
+            Manufactory controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.ManufactoryController.#ctor(SSInventory.Business.Interfaces.IManufactoryService,SSInventory.Business.Interfaces.IItemTypeOptionService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.ManufactoryController},SSInventory.Business.Interfaces.IManufacturerService)">
+            <summary>
+            Manufactory controller constructor
+            </summary>
+            <param name="manufactoryService"></param>
+            <param name="itemTypeOptionService"></param>
+            <param name="logger"></param>
+            <param name="manufacturerService"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.ManufactoryController.GetManufacturers">
+            <summary>
+            Get manufacturers
+            </summary>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.ManufactoryController.SaveManufacturer(SSInventory.Share.Models.Dto.Manufactory.CreateOrEditManufacturerModel)">
+            <summary>
+            Save manufacturer
+            Currently just support create new action
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="409">Existing manufacturer</response>
+            <response code="500">Internal Server Error</response>
+            <returns>List data which had inserted into database to client side</returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.ManufactoryController.SaveManufacturer_backup(SSInventory.Share.Models.Dto.Inventory.CreateManufacturerModel)">
+            <summary>
+            Save manufacturer
+            Currently just support create new action
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+            <response code="500">Internal Server Error</response>
+            <returns>List data which had inserted into database to client side</returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.OrderController">
+            <summary>
+            Order API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderController.#ctor(SSInventory.Business.Interfaces.IOrderService,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.OrderController})">
+            <summary>
+            Order controller constructor
+            </summary>
+            <param name="orderService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderController.GetOrders(SSInventory.Web.Models.Order.GetOrderRequestModel)">
+            <summary>
+            Get list of orders
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderController.SetOrdersToCompleted(SSInventory.Web.Models.Order.OrdersToCompletedRequestModel)">
+            <summary>
+            Set Orders To Completed
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderController.AddBarcode(SSInventory.Web.Models.Order.CreateBarCodeModel)">
+            <summary>
+            Add barcode for order
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.OrderItemController">
+            <summary>
+            Order item API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderItemController.#ctor(SSInventory.Business.Interfaces.IOrderItemService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.OrderItemController})">
+            <summary>
+            Order item controller constructor
+            </summary>
+            <param name="orderService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderItemController.GetOrderItems(SSInventory.Web.Models.OrderItem.GetOrderItemRequestModel)">
+            <summary>
+            Get list of orders items
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.OrderItemController.SetOrderItemsToCompleted(SSInventory.Web.Models.OrderItem.OrderItemsToCompletedRequestModel)">
+            <summary>
+            Set Orders item To Completed
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.QRcodeController">
+            <summary>
+            QRcode API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.QRcodeController.#ctor(Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.QRcodeController},SSInventory.Business.Interfaces.IInventoryService,SSInventory.Business.Interfaces.IInventoryItemService,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            QRcode constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="inventoryService"></param>
+            <param name="inventoryItemService"></param>
+            <param name="webHostEnvironment"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.QRcodeController.InventoryQRcode(System.Int32)">
+            <summary>
+            Download inventory information as QRcode
+            </summary>
+            <param name="inventoryId"></param>
+            <response code="404">Data is not found</response>
+            <response code="500">Data is not found</response>
+            <response code="200">Image file</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.QRcodeController.InventoryItemQRcode(System.Int32)">
+            <summary>
+            Download inventory item information as QRcode
+            </summary>
+            <param name="inventoryItemId"></param>
+            <response code="200">Image file</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data is not found</response>
+            <response code="500">Error while processing data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.SearchController">
+            <summary>
+            Search controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.SearchController.#ctor(SSInventory.Business.Interfaces.IInventoryService,SSInventory.Business.Interfaces.IDapperService,SSInventory.Business.Interfaces.IItemTypeService,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.SearchController})">
+            <summary>
+            Search controller constructor
+            </summary>
+            <param name="inventoryService"></param>
+            <param name="dapperService"></param>
+            <param name="config"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.SearchController.SearchImages(SSInventory.Share.Models.Search.SearchModel)">
+            <summary>
+            Get list of images with search condition
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Error when getting the data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.SearchController.GetImageInfo(SSInventory.Share.Models.Search.SearchImageInfo)">
+            <summary>
+            Get image information
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="204">No content</response>
+            <response code="400">Error when getting the data</response>
+            <response code="403">Forbidden</response>
+            <response code="404">Data not found</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.StatusController">
+            <summary>
+            Status API
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.StatusController.#ctor(Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.StatusController},SSInventory.Business.Interfaces.IStatusService)">
+            <summary>
+            Status API constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="statusService"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.StatusController.GetStatusGroup(System.String)">
+            <summary>
+            Search status group
+            </summary>
+            <param name="statusType"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data not found</response>
+            <response code="500">Error when getting the data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.SubmissionsController">
+            <summary>
+            Submissions controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.SubmissionsController.#ctor(SSInventory.Business.Interfaces.ISubmissionService,SSInventory.Business.Interfaces.IDapperService,SSInventory.Business.Interfaces.IInventoryService,Microsoft.Extensions.Configuration.IConfiguration,SSInventory.Business.Interfaces.IItemTypeService,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.SubmissionsController},AutoMapper.IMapper)">
+            <summary>
+            Submissions controller constructor
+            </summary>
+            <param name="submissionService"></param>
+            <param name="dapperService"></param>
+            <param name="inventoryService"></param>
+            <param name="config"></param>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.SubmissionsController.GetSubmissions">
+            <summary>
+            Get list submission which have been submitted
+            </summary>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.SubmissionsController.GetSubmission(SSInventory.Share.Models.Dto.Submission.SubmissionFilterModel)">
+            <summary>
+            Get submissions based on clientID and InventoryApp paramters
+            </summary>
+            <param name="filter"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Error when getting the data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.TestController.UploadFile">
+            <summary>
+            Delete photos
+            </summary>
+            <param name="photos"></param>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.Apis.UserController">
+            <summary>
+            User controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.Apis.UserController},SSInventory.Business.Interfaces.IUserService)">
+            <summary>
+            User controller constructor
+            </summary>
+            <param name="config"></param>
+            <param name="logger"></param>
+            <param name="userService"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.Login(SSInventory.Web.Models.LoginModel)">
+            <summary>
+            Login
+            </summary>
+            <param name="login"></param>
+            <response code="200">Success</response>
+            <response code="500">Error when getting the data</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.RefreshToken">
+            <summary>
+            Refresh token
+            </summary>
+            <response code="200">Success</response>
+            <response code="400">Error when getting the data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.RevokeToken(SSInventory.Web.Models.Authentications.RevokeTokenRequestModel)">
+            <summary>
+            Revoke user token
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.Logout(SSInventory.Web.Models.Authentications.LogoutModel)">
+            <summary>
+            Logout
+            </summary>
+            <param name="model"></param>
+            <response code="200">Success</response>
+            <response code="400">Token is required</response>
+            <response code="404">Token is not found</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.UpdateUserAcceptRules(SSInventory.Web.Models.Users.AcceptRuleInputModel)">
+            <summary>
+            Update user accept rules
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="404">Data not found</response>
+            <response code="500">Error when getting the data</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.Apis.UserController.SetTokenToCookie(System.String,System.Int32)">
+            <summary>
+            Generate user token
+            </summary>
+            <param name="token"></param>
+            <param name="minutesExpired"></param>
+            <returns>json string</returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.ItemTypeController">
+            <summary>
+            ItemType controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.#ctor(Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Controllers.ItemTypeController},SSInventory.Business.Interfaces.IDapperService,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,AutoMapper.IMapper,SSInventory.Business.Interfaces.ISubmissionService,SSInventory.Business.Interfaces.IInventoryService,SSInventory.Business.Interfaces.IInventoryItemService,SSInventory.Business.Interfaces.IInventoryImageService,Microsoft.Extensions.Configuration.IConfiguration,SSInventory.Business.Interfaces.IItemTypeService,SSInventory.Business.Interfaces.IItemTypeOptionSetService,SSInventory.Web.Services.Aws.FileService,Microsoft.Extensions.Caching.Memory.IMemoryCache,SSInventory.Business.Interfaces.IInventoryItemConditionService,SSInventory.Business.Interfaces.IInventoryBuildingsService)">
+            <summary>
+            ItemType controller contructor
+            </summary>
+            <param name="logger"></param>
+            <param name="dapperService"></param>
+            <param name="webHostEnvironment"></param>
+            <param name="mapper"></param>
+            <param name="submissionService"></param>
+            <param name="inventoryService"></param>
+            <param name="inventoryItemService"></param>
+            <param name="inventoryItemImageService"></param>
+            <param name="config"></param>
+            <param name="itemTypeService"></param>
+            <param name="itemTypeOptionSetService"></param>
+            <param name="fileService"></param>
+            <param name="memoryCache"></param>
+            <param name="inventoryItemConditionService"></param>
+            <param name="inventoryBuildingsService"></param>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.GetItemTypes(System.Int32)">
+            <summary>
+            Get list item type
+            </summary>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.GetItemTypeOptionSet(System.Int32,System.Int32)">
+            <summary>
+            Get item type option set
+            </summary>
+            <param name="clientId"></param>
+            <param name="itemId"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.ProcessJsonPost(System.Collections.Generic.List{SSInventory.Share.Models.Dto.ItemTypes.ItemTypeApiModel},System.Int32)">
+            <summary>
+            Process Main Json
+            </summary>
+            <param name="jsonData"></param>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="409">Existed submission</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.ReUploadTempPhoto(Microsoft.AspNetCore.Http.IFormFile,System.Int32)">
+            <summary>
+            Re-upload failed images
+            Post data via form
+            </summary>
+            <param name="photo" example="Test.jpg"></param>
+            <param name="clientId"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="406">File is not accepted</response>
+            <response code="422">Process fail</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.UploadTempPhotos(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile})">
+            <summary>
+            Upload temporary photos
+            </summary>
+            <param name="photos"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="406">Photo extensions do not acceptable</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.SaveItemType(SSInventory.Share.Models.Dto.ItemTypes.CreateOrUpdateItemTypeModel)">
+            <summary>
+            Save item type
+            </summary>
+            <param name="input"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.DeleteItemTypes(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Delete item types
+            </summary>
+            <param name="itemTypeIds"></param>
+            <response code="200">Success</response>
+            <response code="400">Invalid data</response>
+            <response code="500">Internal server error</response>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.ItemTypeController.SaveInventoryItemImages(System.Collections.Generic.IEnumerable{SSInventory.Share.Models.Dto.InventoryItem.InventoryItemModel},System.Collections.Generic.List{System.Tuple{System.Int32,System.String}})">
+            <summary>
+            Save temporary file to physical folder then upload to AWS if the configure is enable
+            </summary>
+            <param name="saveInventoryItems"></param>
+            <param name="filesNeedUpload"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Controllers.CommonController">
+            <summary>
+            Common controller
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.CommonController.ConvertToItemTypesModel(System.Collections.Generic.List{SSInventory.Share.Models.Dto.ItemTypes.ItemTypeMappingModel},System.Boolean,SSInventory.Share.Models.Dto.ItemTypes.DataItemType,System.Boolean,System.Collections.Generic.List{System.String},SSInventory.Share.Models.Dto.InventoryItem.InventoryItemModel)">
+            <summary>
+            Convert json data to ItemTypes model
+            </summary>
+            <param name="data"></param>
+            <param name="isSearch"></param>
+            <param name="dataItemType"></param>
+            <param name="fetchFirst"></param>
+            <param name="itemTypeOptionCodes"></param>
+            <param name="inventoryItem">Response more inventory item information: StatusId, Condition, NoteForItem</param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.CommonController.SaveFile(System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile},System.String,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Save files
+            </summary>
+            <param name="files"></param>
+            <param name="path"></param>
+            <param name="hostingEnvironment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Controllers.CommonController.SaveBytesToFile(System.Byte[],System.String)">
+            <summary>
+            Save bytes content to file
+            </summary>
+            <param name="bytes"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Helpers.InventoryHelpers">
+            <summary>
+            Inventory helpers
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Helpers.InventoryHelpers.CollectInventoryInfoFromJson(SSInventory.Share.Models.Dto.ItemTypes.ItemTypeOptionApiModel,SSInventory.Share.Models.Dto.Inventory.InventoryModel)">
+            <summary>
+            Collect selected values to save to Inventory table
+            </summary>
+            <param name="itemOption"></param>
+            <param name="inventory"></param>
+        </member>
+        <member name="M:SSInventory.Web.Helpers.InventoryHelpers.CollectInventoryItemInfoFromJson(SSInventory.Share.Models.Dto.ItemTypes.ItemTypeOptionApiModel,SSInventory.Share.Models.Dto.InventoryItem.InventoryItemModel)">
+            <summary>
+            Collect selected values to save to Inventory Item table
+            </summary>
+            <param name="itemOption"></param>
+            <param name="inventoryItem"></param>
+        </member>
+        <member name="M:SSInventory.Web.Helpers.InventoryHelpers.CheckExistingImageInTempFolder(System.String,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,System.String)">
+            <summary>
+            Check an image existed in temporary folder
+            </summary>
+            <param name="fileName"></param>
+            <param name="environment"></param>
+            <param name="folderPath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Models.Authentications.LogoutModel">
+            <summary>
+            Logout model
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.Authentications.LogoutModel.Token">
+            <summary>
+            Token parameter
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Models.Authentications.RevokeTokenRequestModel">
+            <summary>
+            Reveoke token request model
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.Authentications.RevokeTokenRequestModel.Token">
+            <summary>
+            Token parameter
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Models.CleanupAppSettings">
+            <summary>
+            Clean up paramters setting for background job
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.CleanupAppSettings.SaveFileRootPath">
+            <summary>
+            Root file path
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.CleanupAppSettings.CleanupOldFilesExpiration">
+            <summary>
+            Inteval time will executes the background
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.CleanupAppSettings.DeleteFilesAfterXday">
+            <summary>
+            File will be deleted after X day
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.CleanupAppSettings.TemporaryFolderName">
+            <summary>
+            Temporary folder name
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.CleanupAppSettings.UploadOriginFolder">
+            <summary>
+            Orgin folder name
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Models.Client.External.ClientExternalResponseModel">
+            <summary>
+            Client information requested from external service
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.Client.External.ClientExternalResponseModel.ClientID">
+            <summary>
+            Client ID
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.Client.External.ClientExternalResponseModel.ClientName">
+            <summary>
+            Client name
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.Client.External.ClientExternalResponseModel.Inventory_Client_Group_ID">
+            <summary>
+            Inventory client group ID
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Models.LoginModel">
+            <summary>
+            Login paramters
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.LoginModel.LoginEmail">
+            <summary>
+            User email address
+            </summary>
+        </member>
+        <member name="P:SSInventory.Web.Models.LoginModel.LoginPW">
+            <summary>
+            User password
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Models.InventoryItemPayload">
+            <summary>
+            Inventory Item QRCode
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Models.InventoryItemPayload.#ctor(SSInventory.Share.Models.Dto.InventoryItem.InventoryItemQRcodeModel,SSInventory.Share.Enums.QrGeneratorType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="inventoryItem"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:SSInventory.Web.Models.InventoryItemPayload.ToString">
+            <summary>
+            Convert object to string to embed
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Models.Upload.FileUploadOperation">
+            <summary>
+            File upload operation
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Models.Upload.FileUploadOperation.FileContentType">
+            <summary>
+            Indicates swashbuckle should consider the parameter as a file upload
+            </summary>
+        </member>
+        <member name="T:SSInventory.Web.Services.Aws.FileService">
+            <summary>
+            AWS service
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{SSInventory.Web.Services.Aws.FileService},SSInventory.Core.Repositories.Interfaces.IAwsS3FileRepository)">
+            <summary>
+            AWS service constructor
+            </summary>
+            <param name="config"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.GetAwsEndpoint">
+            <summary>
+            Get AWS endpoint
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.DeleteFileAsync(System.String,System.Int32,System.String)">
+            <summary>
+            Delete file from AWS
+            </summary>
+            <param name="fileName"></param>
+            <param name="clientId"></param>
+            <param name="versionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.UploadFilesToAWS(System.Collections.Generic.List{System.Tuple{System.Int32,System.String}})">
+            <summary>
+            Upload files to AWS
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.DownloadFileAsync(System.String,System.String)">
+            <summary>
+            Upload file to AWS
+            </summary>
+            <param name="clientId"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.UploadFileAsync(System.String,System.Int32)">
+            <summary>
+            Upload file to AWS
+            </summary>
+            <param name="filePath"></param>
+            <param name="clientId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Services.Aws.FileService.UploadFileAsync(Microsoft.AspNetCore.Http.IFormFile,System.Int32,System.String)">
+            <summary>
+            Upload file
+            </summary>
+            <param name="file"></param>
+            <param name="clientId"></param>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Services.CleanUpFileService">
+            <summary>
+            Clean up file service
+            Use to delete files in the background with settings <see cref="T:SSInventory.Web.Models.CleanupAppSettings"/>
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Services.CleanUpFileService.#ctor(System.IServiceProvider,Microsoft.Extensions.Options.IOptions{SSInventory.Web.Models.CleanupAppSettings})">
+            <summary>
+            Clean up file service constructor
+            </summary>
+            <param name="serviceProvider"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:SSInventory.Web.Services.CleanUpFileService.StartAsync(System.Threading.CancellationToken)">
+            <summary>
+            Start clean up service timer
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SSInventory.Web.Services.CleanUpFileService.StopAsync(System.Threading.CancellationToken)">
+            <summary>
+            Stop timer
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Utilities.BarcodeUtilities">
+            <summary>
+            Barcode utilities
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Utilities.BarcodeUtilities.CreateBarCode(System.String,System.String)">
+            <summary>
+            Generate barcode image with text
+            </summary>
+            <param name="content"></param>
+            <param name="saveImagePath"></param>
+            <remarks>
+            PureBarcode: show text at the bottom
+            </remarks>
+            <returns>Memory stream array</returns>
+        </member>
+        <member name="M:SSInventory.Web.Utilities.BarcodeUtilities.DecodeBarcode(System.Byte[])">
+            <summary>
+            Decode binary barcode array to text
+            </summary>
+            <param name="barcode"></param>
+            <returns>The text inside barcode image</returns>
+        </member>
+        <member name="M:SSInventory.Web.Utilities.BarcodeUtilities.DecodeBarcode(System.Drawing.Bitmap)">
+            <summary>
+            Decode text inside bitmap image
+            </summary>
+            <param name="bitmap"></param>
+            <returns>The text inside barcode image</returns>
+        </member>
+        <member name="M:SSInventory.Web.Utilities.ExportExcel.CreateExcelPackage(System.String,System.Action{OfficeOpenXml.ExcelPackage})">
+            <summary>
+            Create excel package
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SSInventory.Web.Utilities.QRcodePayloadUtilities">
+            <summary>
+            QRcode Utilities
+            </summary>
+        </member>
+        <member name="M:SSInventory.Web.Utilities.QRcodePayloadUtilities.ToPngByteQRCode(System.String)">
+            <summary>
+            Embed text into QRcode
+            </summary>
+            <param name="text"></param>
+            <returns>byte array</returns>
+        </member>
+    </members>
+</doc>

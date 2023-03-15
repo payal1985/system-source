@@ -1,0 +1,7 @@
+{
+    "/inventory/*": {
+        "target": "https://systemsource.s3.us-west-2.amazonaws.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

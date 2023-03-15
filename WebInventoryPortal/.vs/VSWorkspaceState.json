@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\inventory",
+    "\\inventory\\src",
+    "\\inventory\\src\\app",
+    "\\inventory\\src\\app\\components",
+    "\\inventory\\src\\app\\core",
+    "\\inventory\\src\\app\\core\\http-inteceptor",
+    "\\inventory\\src\\app\\features",
+    "\\inventory\\src\\app\\features\\spinner",
+    "\\inventory\\src\\app\\services"
+  ],
+  "SelectedNode": "\\inventory\\src\\app\\services\\cart.service.ts",
+  "PreviewInSolutionExplorer": false
+}

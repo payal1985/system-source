@@ -1,0 +1,277 @@
+﻿@model IEnumerable<GoCanvasAPI.ViewModel.SubmissionRootObject>
+@{
+    ViewData["Title"] = "Details";
+    var imageModel = ViewBag.ImageModel;
+}
+
+@*<script type="text/javascript" src="js/script.js"></script>*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@*<script src="https://ajax.googleapis.com/ajax/lib/jquery/dist/jquery.min.js"></script>*@
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    .hiddenRow {
+        padding: 0 !important;
+    }
+</style>
+
+<h1>Details</h1>
+
+<div class="container">
+    @*<h2>Download Images</h2>*@
+    @*@Html.HiddenFor("imagemodel", ViewBag.ImageModel);*@
+    @*<button type="submit" name="GetImages" id="getImages" onclick="location.href='@Url.Action("Create", "Home", new { imagesModel = @imageModel })'">Images</button>*@
+    @*<button type="submit" name="GetImages" id="getImages">Images</button>*@
+
+    @*@using (Html.BeginForm("Create", "Home"))
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                <p>@imageModel</p>
+            </div>
+            <button type="submit" name="GetImages">Images 1</button>
+        }*@
+
+    @if (ViewBag.SuccessMsg != null)
+    {
+        <div class="modal" tabindex="-1" id="successModal"
+             data-keyboard="false" data-backdrop="static" style="display:block;">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            ×
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        @if (ViewBag.SuccessMsg == "true")
+                        {
+                            <p>All Data Parsed Successfully....</p>
+                        }
+                        else
+                        {
+                            <p>Error Occured Due to Parse the data...</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+@*@if (Model != null && Model.Count() >= 1)
+    {
+        <div class="panel-body">
+            <table class="table">
+                @foreach (var mainloop in Model.FirstOrDefault().Submissions.Submission)
+                {
+                    @foreach (var item in mainloop.Sections.Section[1].Screens.Screen.FirstOrDefault().ResponseGroups.ResponseGroup)
+                    {
+                        <tr class="accordion-toggle" data-toggle="collapse" data-target="#AA_@(item.Response.Value.Text)">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Response.Label.Text)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Response.Value.Text)
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="hiddenRow">
+                                <div class="accordian-body collapse" id="AA_@(item.Response.Value.Text)">
+                                    <table>
+                                        @foreach (var inneritem in item.Section.Screens.Screen)
+                                        {
+                                            @foreach (var data in inneritem.Responses.Response)
+                                            {
+                                                <tr>
+                                                    <td>@Html.DisplayFor(modelItem => data.Label.Text)</td>
+                                                    <td>@Html.DisplayFor(modelItem => data.Value.Text)</td>
+                                                </tr>
+                                                @if (data.Numbers != null && data.Numbers.Number != null)
+                                                {
+                                                    @foreach (var image in data.Numbers.Number)
+                                                    {
+                                                        <tr>
+                                                            <td>@Html.DisplayFor(modelItem => image.Text)</td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+                }
+            </table>
+
+        </div>
+
+    }*@
+
+<script type="text/javascript">
+    $('.table .accordian-body').on('show.bs.collapse', function () {
+        $(this).closest("table")
+            .find(".collapse.in")
+            .not(this)
+            .collapse('toggle')
+    })
+
+    $(document).ready(function () {
+        $('.close').click(function (e) {
+            $('#successModal').remove();
+           // $('#successModal').modal("hide");
+        });
+        $('#getImages').click(function (e) {
+
+            //var things = [
+            //    { ImageId: '11293236239', Number: 1 },
+            //   { Imageid: '11293236239', Number: 2 }
+            //];
+
+            ////things = JSON.stringify({ 'things': things });
+
+
+            //$.ajax({
+            //    contentType: "application/json; charset=utf-8",
+            //    dataType: 'json',
+            //    type: 'POST',
+            //    url: '/Home/Create',
+            //    data: JSON.stringify({ str: 'hello', things: things }),
+            //    success: function () {
+            //       // $('#result').html('"PassThings()" successfully called.');
+            //    },
+            //    failure: function (response) {
+            //       // $('#result').html(response);
+            //    }
+            //});
+
+
+            //var array = [1, 2, 3, 4, 5];
+            var array = [{ ImageId: '11293236239', Number: 1 },
+              { Imageid: '11293236239', Number: 2 }];
+
+            @*var model = @Html.Raw(@ViewBag.ImageModel); //Accessing the Json Object from ViewBag
+            var newmodel = JSON.stringify(model);*@
+
+            //$.post('api/files', $.param({ data: array }, true), function (data) { });
+            var url = "http://localhost:25197/api/files/PostData?data=101";
+            $.ajax({
+                type: "POST",
+                url: url,
+                dataType: "json",
+                //data: $.param({ data: array }),
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                },
+                error: function (x, y, z) {
+                }
+            });
+
+        //    var things =
+        //        { ImageId: '11293236239', Number: 1 };
+        //       // { Imageid: '11293236239', Number: 1 }
+
+
+        //    $.ajax({
+
+        //        type: "POST",
+        //        url: "/Home/Create",
+        //        traditional: true,
+        //        data: JSON.stringify({ 'items': things }),
+        //        async: false,
+        //        success: function (data, textStatus, jqXHR) {
+        //            //Do Stuff
+        //            alert("result is: ", data)
+        //        },
+        //        error: function (jqXHR, textStatus, errorThrown) {
+        //            //Do Stuff or Nothing
+        //        }
+        //});
+
+
+
+            ////var newmodel = JSON.parse(model);;
+            ////alert("Text is: ", newmodel);
+            ////console.log(model);
+
+            ////var postData = { imagesModel: model };
+            //var formData = new FormData();
+            //formData.append("modelArray", JSON.stringify(model));
+
+            //$.ajax({
+            //    type: "POST",
+            //    url: 'http://localhost:25197/Home/Create/',
+            //    contentType: false,
+            //    processData: false,
+            //    data: newmodel,
+            //    success: function (result) {
+            //        //$('#SMSFileUpload').val('');
+            //        //$("#descriptionText").val('');
+            //        //alert(result);
+            //        //$("#SMSCOPUploadModal").hide();
+            //        //location.reload();
+            //    },
+            //    error: function (xhr, status, p3, p4) {
+            //        var err = "Error " + " " + status + " " + p3 + " " + p4;
+            //        if (xhr.responseText && xhr.responseText[0] == "{")
+            //            err = JSON.parse(xhr.responseText).Message;
+            //        // console.log(err);
+            //        alert(err);
+            //    }
+            //});
+
+            //$.ajax({
+            //    type: 'GET',
+            //    dataType: 'json',
+            //    cache: false,
+            //    url: 'http://localhost:25197/Home/Create',
+            //    data: { "imagesModel": model },
+            //    async: false,
+            //    success: function (data, textStatus, jqXHR) {
+            //        //Do Stuff
+            //        alert("result is: ", data)
+            //    },
+            //    error: function (jqXHR, textStatus, errorThrown) {
+            //        //Do Stuff or Nothing
+            //    }
+            //});
+
+        });
+    });
+
+
+    //function changeProposalNotes(note, clientId, reqId, propId, poNum) {
+    //    $.ajax({
+    //        type: 'POST',
+    //        url: '/static/ajax/request.pl',
+    //        data: { "op": "changeExtendedProposalNotes", "note": note, "cid": clientId, "rid": reqId, "propId": propId, "pon": poNum },
+    //        dataType: 'text',
+    //        global: false,
+    //        success: function (data) {
+    //            if (data.indexOf('Error:', 0) == 0) {
+    //                alert(data);
+    //                return false;
+    //            }
+    //            $("#spanProposalNotes" + poNum).html("Proposal Note Saved");
+    //            $("#spanProposalNotes" + poNum).show();
+    //            $("#spanProposalNotes" + poNum).delay(1000).hide("fade", {}, 1000);
+    //            return true;
+    //        }
+    //    });
+    //}
+</script>
+
+

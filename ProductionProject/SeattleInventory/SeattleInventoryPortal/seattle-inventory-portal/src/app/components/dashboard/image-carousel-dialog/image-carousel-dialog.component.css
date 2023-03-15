@@ -1,0 +1,301 @@
+/* ngb-carousel .wrapper {
+    position: relative;
+    height: 0;
+    padding-top: 55%; 
+    
+  } */
+  
+  /* ngb-carousel .wrapper>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  } */
+
+
+  .close-button{
+    float: right;
+    top:-24px;
+    right:-20px;
+  }
+  
+  .close-icon {
+    transition: 1s ease-in-out;
+  }
+
+  /* ngb-carousel img {
+   
+    object-fit: cover;
+} */
+  /* .mat-dialog-container {
+   
+    padding: 5px 5px 5px 5px;
+ 
+} */
+  
+
+  ::ng-deep .container-fluid { padding:0 !important; }
+  ::ng-deep .sr-only { display: none; }
+
+
+/* ::ng-deep .carousel-control-prev
+{
+    display:none;
+}
+::ng-deep .carousel-control-next {
+    display: none;
+} */
+
+@media(max-width: 1200px) {
+  ngb-carousel {
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+    /* object-fit: cover; */
+}
+
+::ng-deep secured-image img{
+  width: 100%;
+    outline: none;
+}
+
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+
+/* .carousel-inner {
+    overflow: visible;
+}
+
+.carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+} */
+
+
+}
+
+/* ::ng-deep .first .carousel-control-prev
+{
+    display:none;
+}
+::ng-deep .last .carousel-control-next {
+    display: none;
+} */
+  /* ::ng-deep .carousel-inner{
+    padding-left:70px;
+    padding-right:70px;
+  }
+
+  ::ng-deep .carousel-control-next,.carousel-control-prev{
+    background:rgb(185, 71, 71);
+  } */
+
+  /* ::ng-deep .carousel-control-next {
+  display: none !important;
+} */
+
+/* .first .carousel-control-prev {
+  display: none !important;
+} */
+
+  /* ::ng-deep .first .carousel-control-prev
+{
+    display:none;
+}
+::ng-deep .last .carousel-control-next {
+    display: none;
+} */
+
+  /* ::ng-deep .carousel-indicators li {
+    background-color: rgb(190, 190, 199) ;
+    height: 5px;
+    width: 30px;
+    z-index: 5 !important;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  ::ng-deep .carousel-indicators li.active {
+    background-color: #0e65d1fa;
+    height: 5px;
+    width: 30px;
+    z-index: 5 !important;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+
+
+  ::ng-deep .carousel-control-next-icon .carousel-control-prev-icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-position: 40%;
+    background-size: 100% 100%;
+} */
+
+  /* ::ng-deep .carousel-control-prev {
+    z-index: 20 !important;
+    width: 20px;
+}
+
+::ng-deep .carousel-control-next {
+    z-index: 5 !important;
+    width: 20px;
+} */
+
+  /* ::ng-deep img
+  {    
+    object-fit: fill;
+    width: 100%;
+    height: 50%;
+  }
+   */
+
+  /* .cover {
+    width: 260px;
+    object-fit: cover;
+  } */
+
+  /* .mat-dialog-container {
+	padding: 0;
+	background: grey;
+} */
+
+/* .carousel-inner.sr-only {
+    display: none;
+    
+ } */
+
+
+
+ /* carousel-control-next.sr-only {    
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+} */
+
+/* img {
+ 
+    object-fit: cover;
+  }
+
+  .ngb-carousel.wrapper.div{
+      background-color: blueviolet;
+  }
+
+  .carousel-inner.sr-only{
+      display: none;
+      visibility: hidden;
+  } */
+  /* .carousel-indicators.li { visibility: hidden; }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+
+  padding: 0;
+
+  text-align: center;
+  background: none;
+  border: 0;
+
+
+
+
+}
+.carousel-control-prev {
+  left: 0;
+}
+.carousel-control-next {
+  right: 0;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+ 
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+
+carousel-control-prev, .carousel-control-next {display: none;}
+ */
+
+ /* ngb-carousel {
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}
+
+ngb-carousel {
+    width: inherit;
+    height: inherit;
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.sr-only {
+    display: none;
+    visibility: hidden;
+}
+
+.carousel-item {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+}
+
+.carousel-item.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+     z-index: 20;
+     
+}
+
+.carousel-control-next {
+     z-index: 20;
+}
+
+.carousel-indicators{
+    z-index: 20;
+} */
+

@@ -1,0 +1,52 @@
+<div class="page">
+
+    <h3>DEMO</h3>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th><strong>ngx-mat-datetime-picker</strong></th>
+          <th><strong>ngx-mat-timepicker</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+           Demo for Date Time Picker
+          </td>
+          
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
+                [disabled]="disabled">
+              <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
+              <ngx-mat-datetime-picker #picker>
+              </ngx-mat-datetime-picker>
+            </mat-form-field>
+          </td>          
+        </tr>
+        <tr>
+          <td>
+            <strong>Errors (min, max, parse...):</strong>
+            <pre> {{dateControl.errors | json}}</pre>
+          </td>          
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>
+            {{dateControl.value?.toLocaleString()}}
+          </th>
+          <th>
+            <!-- Date: {{date?.toLocaleString()}} -->
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  
+  
+  
+  
+  </div>

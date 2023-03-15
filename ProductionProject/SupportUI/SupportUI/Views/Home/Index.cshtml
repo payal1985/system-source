@@ -1,0 +1,289 @@
+﻿@model SupportUI.Models.ProductModel
+
+@{
+    ViewData["Title"] = "Index";
+    //var result = @ViewBag.Message;
+}
+@*<script src="~/js/site.js"></script>*@
+<h4>Create Product</h4>
+
+<h4>@*Product*@</h4>
+<hr />
+<div class="row">
+    <div class="col-sm-8"></div>
+    <div class="col-sm-4">
+        <a href="#" title="click to upload the images" onclick="ShowInPopup('@Url.Action("ImageUpload","Home",Context.Request.Scheme)', 'New ImageUpload')">Images Upload</a>
+
+    </div>
+    @*<button type="button" class="btn btn-primary" onclick="ShowInPopup('@Url.Action("ImageUpload","Home",Context.Request.Scheme)', 'New ImageUpload')">Form Data</button>*@
+    @*<a onclick="ShowInPopup('@Url.Action("ImageUpload","Home",null,Context.Request.Scheme)', 'New ImageUpload')" class="btn btn-success text-white">Images Upload</a>*@
+</div>
+<div class="row">
+    <div class="col-sm-8">
+        <form asp-action="Index" method="post">
+            <!-- display success -->
+            @if (ViewBag.Message != null)
+            {
+                @if (ViewBag.Message.Contains("Data are inserted successfully"))
+                {
+                    <div class="alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><span class="glyphicon glyphicon-ok"></span>@ViewBag.Message</strong>
+                    </div>
+                }
+                else
+                {
+                    <!-- display errors -->
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><span class="glyphicon glyphicon-remove"></span>@ViewBag.Message</strong>
+                    </div>
+                }
+            }
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Manufacturer" class="col-sm-4 col-form-label control-label"></label>
+                <input asp-for="Manufacturer" class="col-sm-6 form-control" autofocus />
+                <span asp-validation-for="Manufacturer" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Rep" class="col-sm-4 control-label"></label>
+                <input asp-for="Rep" class="col-sm-6 form-control" />
+                <span asp-validation-for="Rep" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Mfg" class="col-sm-4 control-label"></label>
+                <input asp-for="Mfg" class="col-sm-6 form-control" />
+                <span asp-validation-for="Mfg" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Cat" class="col-sm-4 control-label"></label>
+                <input asp-for="Cat" class="col-sm-6 form-control" />
+                <span asp-validation-for="Cat" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Manufactured" class="col-sm-4 control-label"></label>
+                <input asp-for="Manufactured" class="col-sm-6 form-control" />
+                <span asp-validation-for="Manufactured" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="PartNumber" class="col-sm-4 control-label"></label>
+                <input asp-for="PartNumber" class="col-sm-6 form-control" />
+                <span asp-validation-for="PartNumber" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Components" class="col-sm-4 control-label"></label>
+                <input asp-for="Components" class="col-sm-6 form-control" />
+                <span asp-validation-for="Components" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="PartDescription" class="col-sm-4 control-label"></label>
+                @*<input asp-for="PartDescription" class="col-sm-6 form-control" />*@
+                <textarea asp-for="PartDescription" class="col-sm-6 form-control" text-wrap:normal" type="text"></textarea>
+                <span asp-validation-for="PartDescription" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Series" class="col-sm-4 control-label"></label>
+                <input asp-for="Series" class="col-sm-6 form-control" />
+                <span asp-validation-for="Series" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Category" class="col-sm-4 control-label"></label>
+                @*<input asp-for="Category" class="col-sm-6 form-control" />*@
+                <select asp-for="Category" class="col-sm-6 form-control" asp-items="Model.Categories"></select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="SubCategory" class="col-sm-4 control-label"></label>
+                @*<input asp-for="SubCategory" class="col-sm-6 form-control" />*@
+                <select asp-for="SubCategory" class="col-sm-6 form-control" asp-items="Model.SubCategories">@*<option value="">Other</option>*@</select>
+                <span asp-validation-for="SubCategory" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="HeightDD" class="col-sm-4 control-label"></label>
+                @*<input asp-for="HeightDD" class="col-sm-6 form-control" />*@
+                @*<select asp-for="HeightDD"
+                    class="col-sm-6 form-control"
+                    asp-items="@(new SelectList(Enum.GetValues(typeof(Height))))">
+            </select>*@
+                <select asp-for="HeightDD" class="col-sm-6 form-control" asp-items="Model.Heights"></select>
+                <span asp-validation-for="HeightDD" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Misc" class="col-sm-4 control-label"></label>
+                <input asp-for="Misc" class="col-sm-6 form-control" />
+                <span asp-validation-for="Misc" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="SeatActions" class="col-sm-4 control-label"></label>
+                <input asp-for="SeatActions" class="col-sm-6 form-control" />
+                <span asp-validation-for="SeatActions" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="FabricDetail" class="col-sm-4 control-label"></label>
+                <input asp-for="FabricDetail" class="col-sm-6 form-control" />
+                <span asp-validation-for="FabricDetail" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Modular" class="col-sm-4 control-label"></label>
+                <input asp-for="Modular" class="col-sm-6 form-control" />
+                <span asp-validation-for="Modular" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Shape" class="col-sm-4 control-label"></label>
+                <input asp-for="Shape" class="col-sm-6 form-control" />
+                <span asp-validation-for="Shape" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Seats" class="col-sm-4 control-label"></label>
+                <input asp-for="Seats" class="col-sm-6 form-control" />
+                <span asp-validation-for="Seats" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="BaseAttribute" class="col-sm-4 control-label"></label>
+                @*<input asp-for="BaseAttribute" class="col-sm-6 form-control" />*@
+                <select asp-for="BaseAttribute" class="col-sm-6 form-control" asp-items="Model.BaseAttributes">
+                </select>
+                <span asp-validation-for="BaseAttribute" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                @*<label asp-for="BaseAttribute" class="col-sm-4 control-label"></label>*@
+                <label class="col-sm-4 control-label"></label>
+                <input asp-for="BaseAttributeOther" class="col-sm-6 form-control" style="display:none" />
+                <span asp-validation-for="BaseAttribute" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="COM" class="col-sm-4 control-label"></label>
+                <input asp-for="COM" class="col-sm-6 form-control" />
+                <span asp-validation-for="COM" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="GRADE3_C_List" class="col-sm-4 control-label"></label>
+                <input asp-for="GRADE3_C_List" class="col-sm-6 form-control" />
+                <span asp-validation-for="GRADE3_C_List" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="LeadTime" class="col-sm-4 control-label"></label>
+                <input asp-for="LeadTime" class="col-sm-6 form-control" />
+                <span asp-validation-for="LeadTime" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <span class="col-sm-1"></span>
+                <label asp-for="Height" class="col-sm-1 control-label"></label>
+                <input asp-for="Height" class="col-sm-2 form-control" />
+                <span asp-validation-for="Height" class="col-sm-1 text-danger"></span>
+
+                <label asp-for="Depth" class="col-sm-1 control-label"></label>
+                <input asp-for="Depth" class="col-sm-2 form-control" />
+                <span asp-validation-for="Depth" class="col-sm-1 text-danger"></span>
+
+                <label asp-for="Width" class="col-sm-1 control-label"></label>
+                <input asp-for="Width" class="col-sm-2 form-control" />
+                <span asp-validation-for="Width" class="col-sm-1 text-danger"></span>
+            </div>
+            @*<div class="col-md-12 form-group form-inline">
+            <span asp-validation-for="Height" class="text-danger"></span>
+            <span asp-validation-for="Depth" class="text-danger"></span>
+            <span asp-validation-for="Width" class="text-danger"></span>
+        </div>*@
+            @*<div class="col-md-12 form-group form-inline">
+            <label asp-for="Depth" class="col-sm-4 control-label"></label>
+            <input asp-for="Depth" class="col-sm-6 form-control" />
+            <span asp-validation-for="Depth" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-group form-inline">
+            <label asp-for="Width" class="col-sm-4 control-label"></label>
+            <input asp-for="Width" class="col-sm-6 form-control" />
+            <span asp-validation-for="Width" class="text-danger"></span>
+        </div>*@
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="SeatHeight" class="col-sm-4 control-label"></label>
+                <input asp-for="SeatHeight" class="col-sm-6 form-control" />
+                <span asp-validation-for="SeatHeight" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="ArmHeight" class="col-sm-4 control-label"></label>
+                <input asp-for="ArmHeight" class="col-sm-6 form-control" />
+                <span asp-validation-for="ArmHeight" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="DIA" class="col-sm-4 control-label"></label>
+                <input asp-for="DIA" class="col-sm-6 form-control" />
+                <span asp-validation-for="DIA" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Designer" class="col-sm-4 control-label"></label>
+                <input asp-for="Designer" class="col-sm-6 form-control" />
+                <span asp-validation-for="Designer" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Yardage" class="col-sm-4 control-label"></label>
+                <input asp-for="Yardage" class="col-sm-6 form-control" />
+                <span asp-validation-for="Yardage" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="LeatherSqFeet" class="col-sm-4 control-label"></label>
+                <input asp-for="LeatherSqFeet" class="col-sm-6 form-control" />
+                <span asp-validation-for="LeatherSqFeet" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="leatherSqMeters" class="col-sm-4 control-label"></label>
+                <input asp-for="leatherSqMeters" class="col-sm-6 form-control" />
+                <span asp-validation-for="leatherSqMeters" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="cf" class="col-sm-4 control-label"></label>
+                <input asp-for="cf" class="col-sm-6 form-control" />
+                <span asp-validation-for="cf" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Environmental_1" class="col-sm-4 control-label"></label>
+                <input asp-for="Environmental_1" class="col-sm-6 form-control" />
+                <span asp-validation-for="Environmental_1" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Environmental_2" class="col-sm-4 control-label"></label>
+                <input asp-for="Environmental_2" class="col-sm-6 form-control" />
+                <span asp-validation-for="Environmental_2" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Environmental_3" class="col-sm-4 control-label"></label>
+                <input asp-for="Environmental_3" class="col-sm-6 form-control" />
+                <span asp-validation-for="Environmental_3" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <label asp-for="Environmental_4" class="col-sm-4 control-label"></label>
+                <input asp-for="Environmental_4" class="col-sm-6 form-control" />
+                <span asp-validation-for="Environmental_4" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 form-group form-inline">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@*<div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $("#BaseAttribute").on("change", function () {
+            //alert("changed!");
+            if ($("#BaseAttribute").val() == 'Other') {
+                //$("#BaseAttributeOther").attr('type', 'text');
+                //$("#BaseAttributeOther").show();
+
+                $("#BaseAttributeOther").show();
+            }
+            else {
+                $("#BaseAttributeOther").hide();
+
+            }
+
+        });
+    </script>
+}

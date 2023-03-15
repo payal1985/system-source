@@ -1,0 +1,31 @@
+<p-table [value]="sales">
+    <ng-template pTemplate="caption">
+        <div class="p-d-flex">
+           
+            <button type="button" pButton pRipple icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success p-mr-2">Excel</button>
+           
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            
+            <th pSortableColumn="brand">Brand <p-sortIcon field="brand"></p-sortIcon></th>
+            <th>Last Year Sale</th>
+            <th>This Year Sale</th>
+            <th>Last Year Profit</th>
+            <th>This Year Profit</th>
+            <th>Image</th>
+        </tr>
+        
+    </ng-template>
+    <ng-template pTemplate="body" let-sale>
+        <tr>
+            <td>{{sale.brand}}</td>
+            <td>{{sale.lastYearSale}}</td>
+            <td>{{sale.thisYearSale}}</td>
+            <td>{{sale.lastYearProfit}}</td>
+            <td>{{sale.thisYearProfit}}</td>
+            <td><img src={{sale.imageurl}} height="50px" width="50px"/></td>
+        </tr>
+    </ng-template>
+</p-table>

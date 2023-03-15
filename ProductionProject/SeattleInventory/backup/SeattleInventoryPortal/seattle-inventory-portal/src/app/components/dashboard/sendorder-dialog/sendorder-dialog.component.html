@@ -1,0 +1,144 @@
+<!-- <mat-dialog-content [formGroup]="createOrderForm">
+
+    <mat-form-field >
+        <mat-label>Email of Requestor (Your Name)</mat-label>
+        <input matInput formControlName="requestorFormControl" [formControl]="emailFormControl" placeholder="" type="email"> 
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+    
+      </mat-form-field>
+  
+      <mat-form-field >
+          <mat-label class="required">Request for (individual or Project Name)</mat-label>
+          <input matInput formControlName="requestorFormControl" placeholder="" type="text"> 
+        </mat-form-field>
+  
+      <mat-form-field >
+          <mat-select placeholder="Destination Building" formControlName="dest_buildingFormControl">
+              <mat-option *ngFor="let dest_buld of inventoryBuldinglist"
+                  [value]="dest_buld">
+                  {{dest_buld}}
+              </mat-option>
+          </mat-select> 
+      </mat-form-field>
+  
+        <mat-form-field >
+          <mat-label class="required">Destinat Floor</mat-label>
+          <mat-select placeholder="Destinat Floor" formControlName="dest_floorFormControl">
+              <mat-option *ngFor="let dest_floor of inventoryFloorlist"
+                  [value]="dest_floor">
+                  {{dest_floor}}
+              </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+      <mat-form-field >
+          <mat-label class="required">Destination Room/Floor/Area</mat-label>
+          <input type="text" matInput formControlName="dest_locFormControl" placeholder="">      
+      </mat-form-field> 
+
+      <mat-form-field >
+          <mat-label>Comments</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..." formControlName="commentFormControl"></textarea>
+      </mat-form-field>    
+      
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label class="required">Requested Installation Date</mat-label>
+        <input matInput  formControlName="req_inst_date">
+     
+    </mat-form-field>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+</mat-dialog-actions> -->
+
+<form class="example-form" [formGroup]="createOrderForm">
+    <mat-form-field >
+      <mat-label>Email of Requestor (Your Name)</mat-label>
+      <input matInput formControlName="emailFormControl" placeholder="Ex. test@test.com" type="email"> 
+      <mat-error *ngIf="createOrderForm.get('emailFormControl').hasError('required') && firstError === 'emailFormControl'">
+        Email of Requestor is Required!
+      </mat-error>
+      <mat-error *ngIf="createOrderForm.get('emailFormControl').hasError('email')">
+        Please enter valid email!
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label class="required">Request for (individual or Project Name)</mat-label>
+        <input matInput formControlName="requestorFormControl" placeholder="" type="text"> 
+        <mat-error *ngIf="createOrderForm.get('requestorFormControl').hasError('required') && firstError === 'requestorFormControl'">
+          Request for (individual or Project Name) is Required!
+        </mat-error>
+      </mat-form-field>
+
+    <mat-form-field >
+        <mat-select placeholder="Destination Building" formControlName="dest_buildingFormControl">
+            <mat-option *ngFor="let dest_buld of inventoryBuldinglist"
+                [value]="dest_buld">
+                {{dest_buld}}
+            </mat-option>
+        </mat-select> 
+        <mat-error *ngIf="createOrderForm.get('dest_buildingFormControl').hasError('required') && firstError === 'dest_buildingFormControl'">
+          Destination Building is Required!
+        </mat-error>
+    </mat-form-field>
+
+      <mat-form-field >
+        <!-- <mat-label class="required">Destinat Floor</mat-label> -->
+        <mat-select placeholder="Destinat Floor" formControlName="dest_floorFormControl">
+            <mat-option *ngFor="let dest_floor of inventoryFloorlist"
+                [value]="dest_floor">
+                {{dest_floor}}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="createOrderForm.get('dest_floorFormControl').hasError('required') && firstError === 'dest_floorFormControl'">
+          Destination Building is Required!
+        </mat-error>
+      </mat-form-field>
+      
+    <mat-form-field >
+        <mat-label class="required">Destination Room/Floor/Area</mat-label>
+        <input type="text" matInput formControlName="dest_locFormControl" placeholder="">      
+    </mat-form-field> 
+ 
+    <mat-form-field>
+      <mat-label>Requested Installation Date</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" formControlName="req_inst_date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label>Comments</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..." formControlName="commentFormControl"></textarea>
+    </mat-form-field>    
+     
+<div>
+  <button mat-button mat-dialog-close >Close</button>
+  <!-- <button class="mat-flat-button">Close</button> -->
+  <button mat-button mat-primary (click)="save()">Save</button>
+</div>
+</form>
+
+   <!-- <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label class="required">Requested Installation Date</mat-label>
+        <input matInput  formControlName="req_inst_date">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          
+        </mat-datepicker>
+    </mat-form-field> -->
+
+        <!-- <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+               placeholder="Ex. pat@example.com">      
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error> -->
