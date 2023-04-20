@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Payal\OneDrive - System Source\Documents\_VM Transfer\PublishProject\S3DownloadApi</_PublishTargetUrl>
+    <History>True|2023-02-04T06:59:06.3674042Z;True|2023-01-30T21:37:32.9258134-08:00;True|2023-01-23T22:45:35.6056414-08:00;True|2022-11-28T17:27:35.8327127-08:00;True|2022-11-03T17:27:08.3271428-07:00;True|2022-10-31T17:51:17.8171425-07:00;True|2022-10-25T13:09:15.5195047-07:00;True|2022-10-20T14:12:34.9473484-07:00;True|2022-10-17T22:41:50.4840315-07:00;True|2022-10-17T22:38:43.3555640-07:00;True|2022-10-17T21:39:38.6925205-07:00;True|2022-10-12T14:39:27.5297285-07:00;True|2022-10-12T14:09:13.2463938-07:00;True|2022-10-11T18:19:07.5347159-07:00;True|2022-10-11T18:00:17.1559184-07:00;True|2022-10-10T16:45:17.5101304-07:00;True|2022-10-10T16:45:01.2542962-07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
