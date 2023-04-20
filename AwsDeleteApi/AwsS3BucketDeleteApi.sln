@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsS3BucketDeleteApi", "AwsS3BucketDeleteApi\AwsS3BucketDeleteApi.csproj", "{ADF1C33F-EDA2-4D2E-B4B0-3DEC280DFF26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADF1C33F-EDA2-4D2E-B4B0-3DEC280DFF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF1C33F-EDA2-4D2E-B4B0-3DEC280DFF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF1C33F-EDA2-4D2E-B4B0-3DEC280DFF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF1C33F-EDA2-4D2E-B4B0-3DEC280DFF26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85EF5F3D-7E6D-4BB3-A37A-E7E8F32F6975}
+	EndGlobalSection
+EndGlobal

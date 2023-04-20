@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\Payal\OneDrive - System Source\Documents\_VM Transfer\PublishProject\AwsS3BucketDeleteApi</_PublishTargetUrl>
+    <History>True|2022-08-17T01:10:45.8038560Z;</History>
+  </PropertyGroup>
+</Project>

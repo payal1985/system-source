@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Middleware",
+    "\\Repository"
+  ],
+  "SelectedNode": "\\Middleware\\CustomMiddleware.cs",
+  "PreviewInSolutionExplorer": false
+}
